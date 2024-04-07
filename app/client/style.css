@@ -26,3 +26,14 @@ body {
   padding-top: 10px;
   padding-bottom: 20px;
 }
+
+.header-background {
+  background-color: #FFBD59;
+}
+
+.green-background {
+  background-color: #024732;
+  color: white;
+}
+
+

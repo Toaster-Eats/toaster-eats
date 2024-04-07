@@ -6,7 +6,7 @@ const Landing = () => (
   <Container id="landing-page" fluid>
     <Row className="align-middle text-center header-background">
       <Col className="justify-content-center">
-        <Image src="/images/header_test.png" height="300px"/>
+        <Image src="/images/header_banner.png" height="270px" />
 
       </Col>
     </Row>

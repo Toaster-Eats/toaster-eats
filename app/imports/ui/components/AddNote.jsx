@@ -20,7 +20,7 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /* Renders the AddStuff page for adding a document. */
-const AddNote = (owner, ingredientId) => {
+const AddNote = ({ owner, ingredientId }) => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {

@@ -17,6 +17,7 @@ const Ingredient = ({ ingredient, notes }) => (
       <ListGroup variant="flush">
         {notes.map((note) => <Note key={note._id} note={note} />)}
       </ListGroup>
+      {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
       <AddNote ingredientId={ingredient._id} />
       //<Link to={`/edit/${ingredient._id}`}>Edit</Link>
     </Card.Body>

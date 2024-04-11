@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import { Alert, Card, Col, Container, Image, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
@@ -41,10 +41,16 @@ const SignIn = () => {
   }
   // Otherwise return the Login form.
   return (
-    <Container id="signin-page" className="py-3">
+    <Container id="signin-page" fluid>
+      <Row className="align-middle text-center header-background">
+        <Col className="justify-content-center">
+          <Image src="/images/header_banner.png" height="270px" />
+        </Col>
+      </Row>
       <Row className="justify-content-center">
-        <Col xs={5}>
+        <Col xs={2}>
           <Col className="text-center">
+            <br />
             <h2>Login to your account</h2>
           </Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
@@ -53,7 +59,7 @@ const SignIn = () => {
                 <TextField id="signin-form-email" name="email" placeholder="E-mail address" />
                 <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
                 <ErrorsField />
-                <SubmitField id="signin-form-submit" />
+                <SubmitField id="signin-form-submit" className="text-center" />
               </Card.Body>
             </Card>
           </AutoForm>

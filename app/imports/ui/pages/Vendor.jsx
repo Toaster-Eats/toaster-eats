@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Image, Row, Button } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 
 /* A simple static component to render some text for the landing page. */
 const Vendor = () => (
@@ -13,33 +13,30 @@ const Vendor = () => (
     <Row className="align-middle text-center pt-4">
       <Col>
         {/* eslint-disable-next-line max-len,jsx-a11y/control-has-associated-label */}
-        <a href="https://easydrawingguides.com/wp-content/uploads/2022/11/how-to-draw-a-shop-featured-image-1200.png"><Image src="/images/https://easydrawingguides.com/wp-content/uploads/2022/11/how-to-draw-a-shop-featured-image-1200.png" width="320px" roundedCircle /> </a>
+        <a href="https://easydrawingguides.com/wp-content/uploads/2022/11/how-to-draw-a-shop-featured-image-1200.png"><Image src="/images/shop.png" width="320px" roundedCircle /> </a>
       </Col>
       <Col>
         <br /><br /><br />
         {/* eslint-disable-next-line max-len */}
-        <p>College students encounter various challenges that can hinder their ability to maintain a healthy lifestyle. Balancing academic demands with limited time and resources often leads to difficulties in prioritizing nutritious meals.
-          Additionally, many students face constraints such as limited kitchen facilities, cooking skills, and access to affordable, fresh ingredients. This, coupled with the allure of convenient but often unhealthy fast food options,
-          exacerbates the struggle to maintain a balanced diet. As a result, students may find themselves resorting to quick, processed meals or snacks from vending machines, compromising their overall health and well-being.
-        </p>
+        <h1>Welcome, Vendor Partner</h1>
+        <h4>Connect your store to UH students!</h4>
       </Col>
     </Row>
     <Row className="align-middle pt-4">
       <Col className="green-background py-4">
-        <h3>The Solution?</h3><br />
+        <h3>Vendor Tools</h3><br />
         <h5>
-          Our website serves as a comprehensive solution to the nutritional challenges faced by college students, offering practical assistance in the following ways:
+          Ways Market to UH students on our Website:
         </h5><br />
         <ul>
-          <li>Recipe Database: We provide a diverse array of recipes tailored specifically for students, taking into account limited kitchen facilities, time constraints, and budget considerations.</li>
-          <li>Ingredient Accessibility: Through our platform, students can easily find recipes using ingredients available within walking distance of their campus, eliminating the need for extensive shopping trips.</li>
-          <li>Dietary Preferences: Our database includes filters for dietary restrictions such as vegan, gluten-free, and more, ensuring that students with specific dietary needs can find suitable options.</li>
+          <li>Your Store Profile: Include pictures, hours and other details of your store. Students can browse the list of stores and find your profile. </li>
+          <li>Ingredient Accessibility: Through the ingredients page, you can indicate if an ingredient is in stock, with its price and sizes. </li>
+          <li>Recipes: Vendors can also contribute to the recipe list, increasing  your exposure to students as they browse our recipes. </li>
           <li>Cost-Efficiency: Each recipe includes estimated costs per serving, empowering students to make informed decisions based on their budget.</li>
-          <li>Time Management: With estimated preparation times provided for each recipe, students can plan meals that fit seamlessly into their busy schedules, reducing reliance on fast food or vending machine snacks.</li>
         </ul>
       </Col>
       <Col className="py-4">
-        <h3>Key Features:</h3><br />
+        <h3>Key Features of our Website:</h3><br />
         <ul>
           <li>
             User Roles: The platform encompasses three primary user roles: students, vendors, and admins, each with distinct responsibilities and permissions.
@@ -68,8 +65,7 @@ const Vendor = () => (
     <Row className="align-middle">
       <Col />
       <Col className="align-middle text-center py-5">
-        <h3>Get Cooking with Us! Sign up for free to gain access to hundreds of mouthwatering recipes designed to fit your busy student lifestyle.</h3><br />
-        <Button variant="success">Sign Up</Button>{' '}
+        <h3> Get Cooking With Us! </h3><br />
       </Col>
       <Col />
     </Row>

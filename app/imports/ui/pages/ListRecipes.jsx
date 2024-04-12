@@ -1,6 +1,6 @@
 import React from 'react';
-import Recipe from '../components/Recipe';
 import { Image, Row, Col, Container } from 'react-bootstrap';
+import Recipe from '../components/Recipe';
 
 const recipesData = [
   {

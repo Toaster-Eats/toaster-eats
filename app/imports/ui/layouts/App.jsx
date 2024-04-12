@@ -18,6 +18,7 @@ import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Vendor from '../pages/Vendor';
+// eslint-disable-next-line no-unused-vars
 import AddIngredient from '../pages/AddIngredient';
 import ListRecipes from '../pages/ListRecipes';
 

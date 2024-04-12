@@ -6,7 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import PropTypes from 'prop-types';
-import { Contacts } from '../../api/contact/Contacts';
+// import { Contacts } from '../../api/contact/Contacts';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
@@ -25,6 +25,7 @@ const AddIngredient = () => {
   const submit = (data, formRef) => {
     const { name, image, description } = data;
     const owner = Meteor.user().username;
+    // eslint-disable-next-line no-undef
     Contacts.collection.insert(
       { name, image, description, owner },
       (error) => {

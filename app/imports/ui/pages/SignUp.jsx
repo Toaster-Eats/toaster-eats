@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, Navigate } from 'react-router-dom';
 import { Accounts } from 'meteor/accounts-base';
-import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
+import { Alert, Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
@@ -40,11 +40,19 @@ const SignUp = ({ location }) => {
     return <Navigate to={from} />;
   }
   return (
-    <Container id="signup-page" className="py-3">
+    <Container id="signup-page" fluid>
+      <Row className="align-middle text-center header-background">
+        <Col className="justify-content-center">
+          <Image src="/images/header_banner.png" height="270px" />
+        </Col>
+      </Row>
       <Row className="justify-content-center">
-        <Col xs={5}>
+        <Col xs={2}>
           <Col className="text-center">
-            <h2>Register your account</h2>
+            <br />
+            <br />
+            <br />
+            <h2>Create New Account</h2>
           </Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
@@ -52,14 +60,18 @@ const SignUp = ({ location }) => {
                 <TextField name="email" placeholder="E-mail address" />
                 <TextField name="password" placeholder="Password" type="password" />
                 <ErrorsField />
-                <SubmitField />
+                <SubmitField className="text-center" />
               </Card.Body>
             </Card>
           </AutoForm>
+          <br />
+          <br />
+          <br />
           <Alert variant="light">
-            Already have an account? Login
-            {' '}
-            <Link to="/signin">here</Link>
+            <div className="text-center">
+              Already have an account? <br />
+              <Button as={Link} to="/signin" variant="primary">Login Here</Button>
+            </div>
           </Alert>
           {error === '' ? (
             ''

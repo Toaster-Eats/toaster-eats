@@ -51,7 +51,9 @@ const SignIn = () => {
         <Col xs={2}>
           <Col className="text-center">
             <br />
-            <h2>Login to your account</h2>
+            <br />
+            <br />
+            <h2>Login</h2>
           </Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
@@ -68,6 +70,7 @@ const SignIn = () => {
           <br />
           <Alert variant="light">
             <div className="text-center">
+              Don&#39;t have an account? <br />
               <Button as={Link} to="/signup" variant="primary">Create new Account</Button>
             </div>
           </Alert>

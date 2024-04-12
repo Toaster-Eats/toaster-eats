@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Alert, Card, Col, Container, Image, Row } from 'react-bootstrap';
+import { Alert, Card, Col, Container, Image, Row, Button } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
@@ -63,8 +63,13 @@ const SignIn = () => {
               </Card.Body>
             </Card>
           </AutoForm>
+          <br />
+          <br />
+          <br />
           <Alert variant="light">
-            <Link to="/signup">Click here to Register</Link>
+            <div className="text-center">
+              <Button as={Link} to="/signup" variant="primary">Create new Account</Button>
+            </div>
           </Alert>
           {error === '' ? (
             ''

@@ -18,7 +18,6 @@ import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Vendor from '../pages/Vendor';
-// import AddIngredient from '../pages/AddIngredient';
 import ListRecipes from '../pages/ListRecipes';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */

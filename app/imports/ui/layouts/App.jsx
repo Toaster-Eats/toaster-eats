@@ -22,7 +22,6 @@ import ListRecipes from '../pages/ListRecipes';
 import AddRecipe from '../pages/AddRecipe';
 import Profile from '../pages/Profile';
 
-
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
   const { ready } = useTracker(() => {

@@ -4,7 +4,6 @@ import { Card, CardBody, Image, CardText, ListGroup, ListGroupItem } from 'react
 
 /** Renders a single recipe card with details. */
 const Recipe = ({ recipe }) => {
-  // Filter out empty lines from the instructions
   const instructions = recipe.instructions.split('. ').filter((step) => step.trim().length > 0);
 
   return (

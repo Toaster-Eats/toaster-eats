@@ -1,5 +1,6 @@
 import React from 'react';
-import { Image, Row, Col, Container } from 'react-bootstrap';
+import { Image, Row, Col, Container, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import Recipe from '../components/Recipe';
 
 const recipesData = [
@@ -35,7 +36,6 @@ const recipesData = [
 ];
 
 /** Renders a list of recipes. */
-/** Renders a list of recipes. */
 const ListRecipes = () => (
   <Container fluid id="landing-page"> {/* Add Container with id */}
     <Row className="align-middle text-center header-background"> {/* Add Row with classes */}
@@ -50,6 +50,13 @@ const ListRecipes = () => (
         </div>
       ))}
     </div>
+    <Row className="mb-2 justify-content-center"> {/* Adjusted top margin */}
+      <Col className="text-center">
+        <Link to="/add-recipe">
+          <Button variant="primary">Add a Recipe!</Button>
+        </Link>
+      </Col>
+    </Row>
   </Container>
 );
 

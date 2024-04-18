@@ -18,8 +18,10 @@ const Profile = () => (
 
         <ul>
           <h3>Philip Johnson</h3>
-          <h3>Sophomore</h3>
-          <h3>Dietary Preferences: gluten-free</h3>
+          <h3>Favorite Recipes</h3>
+          <h3>Recipes Add</h3>
+          <h3>Login Information</h3>
+          <h3>Admin or not</h3>
         </ul>
       </Col>
 

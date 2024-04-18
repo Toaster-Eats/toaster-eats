@@ -47,10 +47,11 @@ const App = () => {
           <Route path="/vendor" element={<ProtectedRoute><Vendor /></ProtectedRoute>} />
           <Route path="/recipes" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
           <Route path="/add-recipe" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
+          <Route path="/Profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Landing />} />
-          <Route path="/Profile" element={<Profile />} />
+
         </Routes>
         <Footer />
       </div>
@@ -96,6 +97,18 @@ const VendorProtectedRoute = ({ ready, children }) => {
   return (isLogged && isAdmin) ? children : <Navigate to="/notauthorized" />;
 };
 
+const ProfileProtectedRoute = ({ ready, children }) => {
+  const isLogged = Meteor.userId() !== null;
+  if (!isLogged) {
+    return <Navigate to="/signin" />;
+  }
+  if (!ready) {
+    return <LoadingSpinner />;
+  }
+  const isAdmin = Roles.userIsInRole(Meteor.userId(), 'profile');
+  return (isLogged && isAdmin) ? children : <Navigate to="/notauthorized" />;
+};
+
 // Require a component and location to be passed to each ProtectedRoute.
 ProtectedRoute.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
@@ -122,6 +135,16 @@ VendorProtectedRoute.propTypes = {
 };
 
 VendorProtectedRoute.defaultProps = {
+  ready: false,
+  children: <Landing />,
+};
+
+ProfileProtectedRoute.propTypes = {
+  ready: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+};
+
+ProfileProtectedRoute.defaultProps = {
   ready: false,
   children: <Landing />,
 };

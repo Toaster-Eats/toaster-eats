@@ -40,7 +40,7 @@ test('Test: Ingredients Page Displays', async (testController) => {
   await ingredientsPage.isDisplayed(testController);
 });
 
-test('Test: Recipes Page Displays', async (testController) => {
+test('Test: Recipes Page is Displayed', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoRecipesPage(testController);

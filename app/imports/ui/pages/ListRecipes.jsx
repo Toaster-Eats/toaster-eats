@@ -37,7 +37,7 @@ const recipesData = [
 
 /** Renders a list of recipes. */
 const ListRecipes = () => (
-  <Container fluid id="landing-page"> {/* Add Container with id */}
+  <Container fluid id="recipes-page"> {/* Add Container with id */}
     <Row className="align-middle text-center header-background"> {/* Add Row with classes */}
       <Col className="justify-content-center">
         <Image src="/images/header_banner.png" height="270px" />

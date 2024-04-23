@@ -81,6 +81,7 @@ const AddIngredient = () => {
               </Card.Body>
             </Card>
           </AutoForm>
+          <br />
         </Col>
       </Row>
     </Container>

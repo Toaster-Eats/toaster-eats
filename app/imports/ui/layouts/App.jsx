@@ -23,6 +23,7 @@ import AddRecipe from '../pages/AddRecipe';
 import Profile from '../pages/Profile';
 import ListIngredients from '../pages/ListIngredients';
 import EditRecipe from '../pages/EditRecipe';
+import AddIngredient from '../pages/AddIngredient';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
           <Route path="/recipes" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
           <Route path="/ingredients" element={<ProtectedRoute><ListIngredients /></ProtectedRoute>} />
           <Route path="/add-recipe" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
+          <Route path="/add-ingredient" element={<ProtectedRoute><AddIngredient /></ProtectedRoute>} />
           <Route path="/edit-recipe/:_id" element={<ProtectedRoute><EditRecipe /></ProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />

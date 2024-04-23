@@ -28,6 +28,7 @@ const NavBar = () => {
                 <Nav.Link id="list-recipes-nav" as={NavLink} to="/recipes" key="recipes">Recipes</Nav.Link>
                 <Nav.Link id="list-ingredients-nav" as={NavLink} to="/ingredients" key="ingredients">Ingredients</Nav.Link>
                 <Nav.Link id="list-recipes-nav" as={NavLink} to="/add-recipe" key="add">Add a Recipe</Nav.Link>
+                <Nav.Link id="add-ingredients-nav" as={NavLink} to="/add-ingredient" key="add">Add an Ingredient</Nav.Link>
                 <Nav.Link id="vendor-nav" as={NavLink} to="/vendor" key="vendor">Stores Near Campus</Nav.Link>
               </>
             ) : ''}

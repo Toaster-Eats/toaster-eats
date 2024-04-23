@@ -18,7 +18,7 @@
       "owner": "admin@foo.com",
       "image": "images/pasta_carbonara.jpg",
       "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
-      "instructions": "Cook pasta according to package instructions. Cook pancetta in a large skillet until crispy. In a bowl, whisk together eggs, Parmesan, and black pepper. Drain pasta and toss with pancetta. Quickly stir in egg mixture until creamy. Serve immediately.",
+      "instructions": "Cook pasta according to package instructions. Cook pancetta in a large skillet until crispy. In a bowl, whisk together eggs, parmesan, and black pepper. Drain pasta and toss with pancetta. Quickly stir in egg mixture until creamy. Serve immediately.",
       "dietaryRestrictions": "No Dietary Restriction",
       "ingredients": [
         { "name": "Spaghetti", "cost": 1.99, "location": "Pantry" },
@@ -50,21 +50,21 @@
       "name": "Salt",
       "image": "images/salt.jpg",
       "price": 0.99,
-      "location": "Pantry",
+      "location": "Times Supermarket",
       "owner": "admin@foo.com"
     },
     {
       "name": "Sugar",
       "image": "images/sugar.jpg",
       "price": 1.49,
-      "location": "Pantry",
+      "location": "Safeway",
       "owner": "admin@foo.com"
     },
     {
       "name": "Flour",
       "image": "images/flour.jpg",
       "price": 2.99,
-      "location": "Pantry",
+      "location": "Foodland",
       "owner": "admin@foo.com"
     }
   ]

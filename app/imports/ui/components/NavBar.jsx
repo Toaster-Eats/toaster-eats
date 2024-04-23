@@ -24,14 +24,25 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
-            {currentUser ? ([
-              <Nav.Link id="add-stuff-nav" as={NavLink} to="/add" key="add">Recipes</Nav.Link>,
-              <Nav.Link id="list-stuff-nav" as={NavLink} to="/list" key="list">Ingredients</Nav.Link>,
-              <Nav.Link id="list-stuff-nav" as={NavLink} to="/list" key="list">Stores Near Campus</Nav.Link>,
-            ]) : ''}
-            {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
-              <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Your Store&apos;s Profile</Nav.Link>
+
+            {currentUser ? (
+              <>
+                <Nav.Link id="list-recipes-nav" as={NavLink} to="/recipes" key="recipes">Recipes</Nav.Link>
+                <Nav.Link id="list-ingredients-nav" as={NavLink} to="/ingredients" key="ingredients">Ingredients</Nav.Link>
+                <Nav.Link id="add-recipes-nav" as={NavLink} to="/add-recipe" key="add">Add  Recipe</Nav.Link>
+                <Nav.Link id="add-ingredients-nav" as={NavLink} to="/add-ingredient" key="add">Add Ingredient</Nav.Link>
+                <Nav.Link id="vendor-nav" as={NavLink} to="/vendor" key="vendor">Stores Near Campus</Nav.Link>
+              </>
             ) : ''}
+            {/* eslint-disable-next-line no-nested-ternary */}
+            {Meteor.userId() ? (
+              Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
+                <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin"> Store Profile</Nav.Link>
+              ) : (
+                <Nav.Link id="your-profile-nav" as={NavLink} to="/your-profile" key="your-profile">Your Profile</Nav.Link>
+              )
+            ) : null}
+
           </Nav>
           <Nav className="justify-content-end">
             {currentUser === '' ? (

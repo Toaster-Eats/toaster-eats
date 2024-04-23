@@ -2,7 +2,7 @@ import { landingPage } from './landing.page';
 import { vendorPage } from './vendor.page';
 import { ingredientsPage } from './ingredients.page';
 import { recipesPage } from './recipes.page';
-import { addRecipesPage} from './addrecipes.page';
+import { addRecipesPage } from './addrecipes.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';

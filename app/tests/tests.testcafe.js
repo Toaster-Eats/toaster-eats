@@ -2,6 +2,7 @@ import { landingPage } from './landing.page';
 import { vendorPage } from './vendor.page';
 import { ingredientsPage } from './ingredients.page';
 import { recipesPage } from './recipes.page';
+import { addRecipesPage} from './addrecipes.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
@@ -45,4 +46,11 @@ test('Test: Recipes Page is Displayed', async (testController) => {
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoRecipesPage(testController);
   await recipesPage.isDisplayed(testController);
+});
+
+test('Test: Add Recipes Page is Displayed', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoAddRecipesPage(testController);
+  await addRecipesPage.isDisplayed(testController);
 });

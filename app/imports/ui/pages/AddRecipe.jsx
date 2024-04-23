@@ -54,7 +54,7 @@ const AddRecipe = () => {
 
   let fRef = null;
   return (
-    <Container className="py-0" fluid>
+    <Container id="addrecipes-page" className="py-0" fluid>
       <Row className="align-middle text-center header-background">
         <Col className="justify-content-center">
           <Image src="/images/header_banner.png" height="270px" />

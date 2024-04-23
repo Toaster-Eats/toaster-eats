@@ -64,6 +64,10 @@ class NavBar {
   async gotoRecipesPage(testController) {
     await testController.click('#list-recipes-nav');
   }
+
+  async gotoAddRecipesPage(testController) {
+    await testController.click('#add-recipes-nav');
+  }
 }
 
 export const navBar = new NavBar();

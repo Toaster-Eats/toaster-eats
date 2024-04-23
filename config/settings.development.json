@@ -15,6 +15,7 @@
   "defaultRecipes": [
     {
       "title": "Pasta Carbonara",
+      "owner": "admin@foo.com",
       "image": "images/pasta_carbonara.jpg",
       "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
       "instructions": "Cook pasta according to package instructions. Cook pancetta in a large skillet until crispy. In a bowl, whisk together eggs, Parmesan, and black pepper. Drain pasta and toss with pancetta. Quickly stir in egg mixture until creamy. Serve immediately.",
@@ -25,11 +26,11 @@
         { "name": "Eggs", "cost": 2.99, "location": "Refrigerator" },
         { "name": "Parmesan", "cost": 4.99, "location": "Refrigerator" },
         { "name": "Black Pepper", "cost": 0.99, "location": "Pantry" }
-      ],
-      "owner": "admin@foo.com"
+      ]
     },
     {
       "title": "Vegetable Stir Fry",
+      "owner": "admin@foo.com",
       "image": "images/stir_fry.jpg",
       "description": "A healthy and flavorful vegan stir fry loaded with colorful vegetables and served over rice.",
       "instructions": "Heat oil in a large skillet or wok over medium heat. Add chopped vegetables and stir-fry until tender. Add sauce and continue cooking until heated through. Serve over cooked rice.",
@@ -40,8 +41,7 @@
         { "name": "Carrots", "cost": 1.29, "location": "Refrigerator" },
         { "name": "Soy Sauce", "cost": 3.99, "location": "Pantry" },
         { "name": "Rice", "cost": 2.49, "location": "Pantry" }
-      ],
-      "owner": "admin@foo.com"
+      ]
     }
   ]
 }

@@ -1,63 +1,49 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Image, Row, Col, Container, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom';
+import { useTracker } from 'meteor/react-meteor-data';
+import LoadingSpinner from '../components/LoadingSpinner';
 import Recipe from '../components/Recipe';
+import { Recipes } from '../../api/recipe/Recipe';
 
-const recipesData = [
-  {
-    title: 'Pasta Carbonara',
-    image: 'images/pasta_carbonara.jpg',
-    description: 'A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.',
-    // eslint-disable-next-line max-len
-    instructions: 'Cook pasta according to package instructions. Cook pancetta in a large skillet until crispy. In a bowl, whisk together eggs, Parmesan, and black pepper. Drain pasta and toss with pancetta. Quickly stir in egg mixture until creamy. Serve immediately.',
-    dietaryRestrictions: 'No Dietary Restriction',
-    ingredients: [
-      { name: 'Spaghetti', cost: 1.99, location: 'Pantry' },
-      { name: 'Pancetta', cost: 3.49, location: 'Refrigerator' },
-      { name: 'Eggs', cost: 2.99, location: 'Refrigerator' },
-      { name: 'Parmesan', cost: 4.99, location: 'Refrigerator' },
-      { name: 'Black Pepper', cost: 0.99, location: 'Pantry' },
-    ],
-  },
-  {
-    title: 'Vegetable Stir Fry',
-    image: 'images/stir_fry.jpg',
-    description: 'A healthy and flavorful vegan stir fry loaded with colorful vegetables and served over rice.',
-    instructions: 'Heat oil in a large skillet or wok over medium heat. Add chopped vegetables and stir-fry until tender. Add sauce and continue cooking until heated through. Serve over cooked rice.',
-    dietaryRestrictions: 'Vegan',
-    ingredients: [
-      { name: 'Broccoli', cost: 2.49, location: 'Refrigerator' },
-      { name: 'Bell Pepper', cost: 1.99, location: 'Refrigerator' },
-      { name: 'Carrots', cost: 1.29, location: 'Refrigerator' },
-      { name: 'Soy Sauce', cost: 3.99, location: 'Pantry' },
-      { name: 'Rice', cost: 2.49, location: 'Pantry' },
-    ],
-  },
-];
+/** Renders a list of recipes from the database. */
+const ListRecipes = () => {
+  const { ready, recipes } = useTracker(() => {
+    const subscription = Meteor.subscribe(Recipes.userPublicationName);
+    const rdy = subscription.ready();
+    const recipeItems = Recipes.collection.find({}).fetch();
+    return {
+      recipes: recipeItems,
+      ready: rdy,
+    };
+  }, []);
 
-/** Renders a list of recipes. */
-const ListRecipes = () => (
-  <Container fluid id="recipes-page"> {/* Add Container with id */}
-    <Row className="align-middle text-center header-background"> {/* Add Row with classes */}
-      <Col className="justify-content-center">
-        <Image src="/images/header_banner.png" height="270px" />
-      </Col>
-    </Row>
-    <div className="row">
-      {recipesData.map((recipe, index) => (
-        <div className="col-lg-6 mb-3" key={index}>
-          <Recipe recipe={recipe} />
-        </div>
-      ))}
-    </div>
-    <Row className="mb-2 justify-content-center"> {/* Adjusted top margin */}
-      <Col className="text-center">
-        <Link to="/add-recipe">
-          <Button variant="primary">Add a Recipe!</Button>
-        </Link>
-      </Col>
-    </Row>
-  </Container>
-);
+  return ready ? (
+    <Container fluid id="recipes-page">
+      <Row className="align-middle text-center header-background">
+        <Col className="justify-content-center">
+          <Image src="/images/header_banner.png" height="270px" alt="Recipes Banner" />
+        </Col>
+      </Row>
+      <Row xs={1} md={2} lg={3} className="g-4">
+        {recipes.map((recipe) => (
+          <Col lg={6} key={recipe._id}>
+            <Recipe recipe={recipe} />
+          </Col>
+        ))}
+      </Row>
+      <Row className="mb-3 justify-content-center">
+        <Col className="text-center">
+          <Link to="/add-recipe">
+            <Button variant="primary">Add a Recipe!</Button>
+          </Link>
+        </Col>
+      </Row>
+    </Container>
+  ) : (
+    <LoadingSpinner />
+  );
+};
 
 export default ListRecipes;

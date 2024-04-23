@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
-import { AutoForm, ErrorsField, ArrayField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import React, { useState } from 'react';
+import { Card, Col, Container, Row, Button, Image } from 'react-bootstrap';
+import { AutoForm, SubmitField, TextField, ErrorsField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -12,6 +12,7 @@ const formSchema = new SimpleSchema({
   dietaryRestrictions: String,
   description: String,
   instructions: String,
+  image: String,
   ingredients: Array,
   'ingredients.$': Object,
   'ingredients.$.name': String,
@@ -22,11 +23,24 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 const AddRecipe = () => {
+  const [ingredients, setIngredients] = useState([{ name: '', cost: '', location: '' }]);
+
+  const handleAddIngredient = () => {
+    setIngredients([...ingredients, { name: '', cost: '', location: '' }]);
+  };
+
+  const handleRemoveIngredient = (index) => {
+    const newIngredients = [...ingredients];
+    newIngredients.splice(index, 1);
+    setIngredients(newIngredients);
+  };
+
   const submit = (data, formRef) => {
-    const { title, dietaryRestrictions, description, instructions, ingredients } = data;
+    // eslint-disable-next-line no-shadow
+    const { image, title, dietaryRestrictions, description, instructions, ingredients } = data;
     const owner = Meteor.user().username;
     Recipes.collection.insert(
-      { title, dietaryRestrictions, description, instructions, ingredients, owner },
+      { image, title, dietaryRestrictions, description, instructions, ingredients, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -40,22 +54,72 @@ const AddRecipe = () => {
 
   let fRef = null;
   return (
-    <Container className="py-3">
-      <Row className="justify-content-center">
+    <Container className="py-0" fluid>
+      <Row className="align-middle text-center header-background">
+        <Col className="justify-content-center">
+          <Image src="/images/header_banner.png" height="270px" />
+        </Col>
+      </Row>
+      <Row className="justify-content-center pt-4">
         <Col xs={10}>
-          <Col className="text-center"><h2>Add Recipe</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
-                <TextField name="title" />
-                <TextField name="dietaryRestrictions" />
-                <TextField name="description" />
-                <TextField name="instructions" />
-                <ArrayField name="ingredients">
-                  <TextField name="$" />
-                </ArrayField>
-                <SubmitField />
-                <ErrorsField />
+                <h7>Image Link</h7>
+                <TextField name="image" label="" />
+
+                <h7>Recipe Title</h7>
+                <TextField name="title" label="" />
+
+                <h7>Dietary Restrictions</h7>
+                <TextField name="dietaryRestrictions" label="" />
+
+                <h7>Description</h7>
+                <TextField name="description" label="" />
+
+                <h7>Cooking Instructions</h7>
+                <TextField name="instructions" label="" />
+
+                <h7>Ingredients</h7>
+                {ingredients.map((ingredient, index) => (
+                  <Row key={index} className="mb-3 align-items-center">
+                    <Col>
+                      <TextField
+                        name={`ingredients.${index}.name`}
+                        label=""
+                        placeholder="Name"
+                      />
+                    </Col>
+                    <Col>
+                      <TextField
+                        name={`ingredients.${index}.cost`}
+                        label=""
+                        placeholder="Cost"
+                      />
+                    </Col>
+                    <Col>
+                      <TextField
+                        name={`ingredients.${index}.location`}
+                        label=""
+                        placeholder="Location"
+                      />
+                    </Col>
+                    <Col className="d-flex justify-content-end">
+                      <Button variant="danger" onClick={() => handleRemoveIngredient(index)}>Remove</Button>
+                    </Col>
+                  </Row>
+                ))}
+                <Row>
+                  <Col xs={12}>
+                    <Button className="mr-3" variant="secondary" onClick={handleAddIngredient}>Add Ingredient</Button>
+                  </Col>
+                </Row>
+                <Row className="justify-content-center">
+                  <Col xs={12} className="text-center">
+                    <SubmitField />
+                    <ErrorsField />
+                  </Col>
+                </Row>
               </Card.Body>
             </Card>
           </AutoForm>

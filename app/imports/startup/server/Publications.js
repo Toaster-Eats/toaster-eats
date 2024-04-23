@@ -3,6 +3,15 @@ import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipe/Recipe';
 
+// Allows viewing all recipes as long as you are logged in
+Meteor.publish(Recipes.userPublicationName, function () {
+  if (this.userId) {
+    return Recipes.collection.find();
+  }
+  return this.ready();
+});
+
+/* Keep below code for future permission lock for ability to edit Recipes based on owner
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.
 Meteor.publish(Recipes.userPublicationName, function () {
@@ -21,6 +30,7 @@ Meteor.publish(Recipes.adminPublicationName, function () {
   }
   return this.ready();
 });
+*/
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.

@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
+import { Tracker } from 'meteor/tracker';
 
 class RecipesCollection {
   constructor() {
@@ -7,6 +8,7 @@ class RecipesCollection {
     this.collection = new Mongo.Collection(this.name);
     this.schema = new SimpleSchema({
       title: String,
+      owner: String,
       image: String,
       description: String,
       instructions: String,
@@ -16,7 +18,7 @@ class RecipesCollection {
       'ingredients.$.name': String,
       'ingredients.$.cost': Number,
       'ingredients.$.location': String,
-    });
+    }, { tracker: Tracker });
     this.collection.attachSchema(this.schema);
     this.userPublicationName = `${this.name}.publication.user`;
     this.adminPublicationName = `${this.name}.publication.admin`;

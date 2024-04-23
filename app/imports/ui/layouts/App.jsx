@@ -21,6 +21,7 @@ import Vendor from '../pages/Vendor';
 import ListRecipes from '../pages/ListRecipes';
 import AddRecipe from '../pages/AddRecipe';
 import Profile from '../pages/Profile';
+import ListIngredients from '../pages/ListIngredients';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
           <Route path="/vendor" element={<ProtectedRoute><Vendor /></ProtectedRoute>} />
           <Route path="/recipes" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
+          <Route path="/ingredients" element={<ProtectedRoute><ListIngredients /></ProtectedRoute>} />
           <Route path="/add-recipe" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />

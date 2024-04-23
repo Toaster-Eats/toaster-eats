@@ -9,7 +9,7 @@ const Recipe = ({ recipe }) => {
   return (
     <Card className="h-100">
       <Card.Header className="d-flex flex-column align-items-center">
-        <Image src={recipe.image} width={200} />
+        <Image src={recipe.image} height={250} width={250} style={{ objectFit: 'cover' }} />
         <div className="text-center mt-3">
           <Card.Title>{recipe.title}</Card.Title>
           <Card.Subtitle>{recipe.dietaryRestrictions}</Card.Subtitle>

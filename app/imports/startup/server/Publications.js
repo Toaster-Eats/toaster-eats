@@ -2,6 +2,15 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipe/Recipe';
+import { Ingredients } from '../../api/ingredient/Ingredient';
+
+// Allows viewing all ingredients as long as you are logged in
+Meteor.publish(Ingredients.userPublicationName, function () {
+  if (this.userId) {
+    return Ingredients.collection.find();
+  }
+  return this.ready();
+});
 
 // Allows viewing all recipes as long as you are logged in
 Meteor.publish(Recipes.userPublicationName, function () {

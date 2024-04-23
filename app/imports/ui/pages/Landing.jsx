@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Image, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -69,7 +70,9 @@ const Landing = () => (
       <Col />
       <Col className="align-middle text-center py-5">
         <h3>Get Cooking with Us! Sign up for free to gain access to hundreds of mouthwatering recipes designed to fit your busy student lifestyle.</h3><br />
-        <Button variant="success">Sign Up</Button>{' '}
+        <Link to="/signup">
+          <Button variant="success">Sign Up</Button>{' '}
+        </Link>
       </Col>
       <Col />
     </Row>

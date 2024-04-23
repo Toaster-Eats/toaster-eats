@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardBody, Image, CardText, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, CardBody, Image, CardText, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 /** Renders a single recipe card with details. */
 const Recipe = ({ recipe }) => {
@@ -14,6 +15,9 @@ const Recipe = ({ recipe }) => {
           <Card.Title>{recipe.title}</Card.Title>
           <Card.Subtitle>{recipe.dietaryRestrictions}</Card.Subtitle>
         </div>
+        <Link to={`/edit-recipe/${recipe._id}`}>
+          <Button variant="success" className="mt-2">Edit</Button>
+        </Link>
       </Card.Header>
       <CardBody>
         <CardText>
@@ -42,6 +46,7 @@ const Recipe = ({ recipe }) => {
 // Require a document to be passed to this component.
 Recipe.propTypes = {
   recipe: PropTypes.shape({
+    _id: PropTypes.string, // Add _id here to link to the correct page
     title: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,

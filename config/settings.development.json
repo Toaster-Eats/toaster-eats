@@ -43,5 +43,29 @@
         { "name": "Rice", "cost": 2.49, "location": "Pantry" }
       ]
     }
+  ],
+
+  "defaultIngredients": [
+    {
+      "name": "Salt",
+      "image": "images/salt.jpg",
+      "price": 0.99,
+      "location": "Pantry",
+      "owner": "admin@foo.com"
+    },
+    {
+      "name": "Sugar",
+      "image": "images/sugar.jpg",
+      "price": 1.49,
+      "location": "Pantry",
+      "owner": "admin@foo.com"
+    },
+    {
+      "name": "Flour",
+      "image": "images/flour.jpg",
+      "price": 2.99,
+      "location": "Pantry",
+      "owner": "admin@foo.com"
+    }
   ]
 }

@@ -1,46 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Image, ListGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import Note from './Note';
-import AddNote from './AddNote';
+import { Card, CardBody, Image, CardText, CardTitle, CardSubtitle } from 'react-bootstrap';
 
-/** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-const Ingredient = ({ ingredient, notes }) => (
+/** Renders a single ingredient card with details. */
+const Ingredient = ({ ingredient }) => (
   <Card className="h-100">
-    <Card.Header>
-      <Image src={ingredient.image} width={75} />
-      <Card.Title>{ingredient.name} </Card.Title>
+    <Card.Header className="d-flex flex-column align-items-center">
+      <Image src={ingredient.image} height={250} width={250} style={{ objectFit: 'cover' }} />
+      <div className="text-center mt-3">
+        <CardTitle>{ingredient.name}</CardTitle>
+        <CardSubtitle>
+          <strong>Location:</strong> {ingredient.location || 'N/A'}
+        </CardSubtitle>
+      </div>
     </Card.Header>
-    <Card.Body>
-      <Card.Text>{ingredient.description}</Card.Text>
-      <ListGroup variant="flush">
-        {notes.map((note) => <Note key={note._id} note={note} />)}
-      </ListGroup>
-      {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-      <AddNote ingredientId={ingredient._id} />
-      //<Link to={`/edit/${ingredient._id}`}>Edit</Link>
-    </Card.Body>
+    <CardBody>
+      <CardText>
+        <strong>Price:</strong> ${ingredient.price ? ingredient.price.toFixed(2) : 'N/A'}
+      </CardText>
+    </CardBody>
   </Card>
 );
 
-// Require a document to be passed to this component.
+// Define the PropTypes for the ingredient object.
 Ingredient.propTypes = {
   ingredient: PropTypes.shape({
-    name: PropTypes.string,
     image: PropTypes.string,
-    description: PropTypes.string,
-    owner: PropTypes.string,
-    _id: PropTypes.string,
-  }).isRequired, notes: PropTypes.arrayOf(PropTypes.shape({
-    price: PropTypes.string,
-    store: PropTypes.string,
-    size: PropTypes.string,
-    ingredientId: PropTypes.string,
-    owner: PropTypes.string,
-    createdAt: PropTypes.instanceOf(Date),
-    _id: PropTypes.string,
-  })).isRequired,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    location: PropTypes.string,
+  }).isRequired,
 };
 
 export default Ingredient;

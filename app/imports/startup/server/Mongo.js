@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipe/Recipe';
+import { Ingredients } from '../../api/ingredient/Ingredient';
 
 /* eslint-disable no-console */
 
@@ -29,5 +30,18 @@ if (Recipes.collection.find().count() === 0) {
   if (Meteor.settings.defaultRecipes) {
     console.log('Creating default recipes.');
     Meteor.settings.defaultRecipes.forEach(recipe => addRecipe(recipe));
+  }
+}
+
+const addIngredient = (ingredient) => {
+  console.log(`  Adding Ingredient: ${ingredient.name}`);
+  Ingredients.collection.insert(ingredient);
+};
+
+// Initialize the Ingredients collection if empty.
+if (Ingredients.collection.find().count() === 0) {
+  if (Meteor.settings.defaultIngredients) {
+    console.log('Creating default ingredients.');
+    Meteor.settings.defaultIngredients.forEach(ingredient => addIngredient(ingredient));
   }
 }

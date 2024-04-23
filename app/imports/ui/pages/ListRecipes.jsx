@@ -26,6 +26,7 @@ const ListRecipes = () => {
           <Image src="/images/header_banner.png" height="270px" alt="Recipes Banner" />
         </Col>
       </Row>
+      <br />
       <Row xs={1} md={2} lg={3} className="g-4">
         {recipes.map((recipe) => (
           <Col lg={6} key={recipe._id}>
@@ -33,6 +34,7 @@ const ListRecipes = () => {
           </Col>
         ))}
       </Row>
+      <br />
       <Row className="mb-3 justify-content-center">
         <Col className="text-center">
           <Link to="/add-recipe">

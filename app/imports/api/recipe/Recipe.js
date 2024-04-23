@@ -1,7 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 
-// Schema and variables for Recipe  Collection
 class RecipesCollection {
   constructor() {
     this.name = 'RecipesCollection';
@@ -24,4 +23,8 @@ class RecipesCollection {
   }
 }
 
+/**
+ * The singleton instance of the RecipesCollection.
+ * @type {RecipesCollection}
+ */
 export const Recipes = new RecipesCollection();

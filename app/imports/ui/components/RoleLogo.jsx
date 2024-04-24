@@ -17,7 +17,7 @@ const RoleLogo = ({ currentUser }) => {
       rolelogo = (
         // eslint-disable-next-line jsx-a11y/control-has-associated-label
         <a href="https://pngimg.com/d/key_PNG103643.png">
-          <Image src="/images/key_PNG103643.png" width="300px"  />
+          <Image src="/images/key_PNG103643.png" width="300px" />
         </a>
       );
     } else if (Roles.userIsInRole(Meteor.userId(), 'vendor')) {

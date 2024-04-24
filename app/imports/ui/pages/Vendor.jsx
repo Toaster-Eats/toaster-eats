@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
+import WelcomeMsg from '../components/WelcomeMsg';
 
 /* A simple static component to render some text for the landing page. */
 const Vendor = () => (
@@ -18,8 +19,9 @@ const Vendor = () => (
       <Col>
         <br /><br /><br />
         {/* eslint-disable-next-line max-len */}
-        <h1>Welcome, Vendor Partner</h1>
-        <h4>Connect your store to UH students!</h4>
+        <div>
+          <WelcomeMsg />
+        </div>
       </Col>
     </Row>
     <Row className="align-middle pt-4">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Image, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import WelcomeMsg from '../components/WelcomeMsg';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -19,10 +20,9 @@ const Landing = () => (
       <Col>
         <br /><br /><br />
         {/* eslint-disable-next-line max-len */}
-        <p>College students encounter various challenges that can hinder their ability to maintain a healthy lifestyle. Balancing academic demands with limited time and resources often leads to difficulties in prioritizing nutritious meals.
-          Additionally, many students face constraints such as limited kitchen facilities, cooking skills, and access to affordable, fresh ingredients. This, coupled with the allure of convenient but often unhealthy fast food options,
-          exacerbates the struggle to maintain a balanced diet. As a result, students may find themselves resorting to quick, processed meals or snacks from vending machines, compromising their overall health and well-being.
-        </p>
+        <div>
+          <WelcomeMsg />
+        </div>
       </Col>
     </Row>
     <Row className="align-middle pt-4">

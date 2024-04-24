@@ -2,6 +2,7 @@ import React from 'react';
 import { Col, Container, Image, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import WelcomeMsg from '../components/WelcomeMsg';
+import RoleLogo from '../components/RoleLogo';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -14,8 +15,9 @@ const Landing = () => (
     </Row>
     <Row className="align-middle text-center pt-4">
       <Col>
-        {/* eslint-disable-next-line max-len,jsx-a11y/control-has-associated-label */}
-        <a href="https://www.freepik.com/free-vector/hand-drawn-fast-food-illustration_15593063.htm#fromView=search&page=1&position=38&uuid=89ae87c3-4ed4-4f57-90f8-9f2bf4646215"><Image src="/images/junk_food.jpg" width="320px" roundedCircle /> <br /></a>
+        <div>
+          <RoleLogo />
+        </div>
       </Col>
       <Col>
         <br /><br /><br />

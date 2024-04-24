@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import WelcomeMsg from '../components/WelcomeMsg';
+import RoleLogo from '../components/RoleLogo';
 
 /* A simple static component to render some text for the landing page. */
 const Vendor = () => (
@@ -13,8 +14,9 @@ const Vendor = () => (
     </Row>
     <Row className="align-middle text-center pt-4">
       <Col>
-        {/* eslint-disable-next-line max-len,jsx-a11y/control-has-associated-label */}
-        <a href="https://easydrawingguides.com/wp-content/uploads/2022/11/how-to-draw-a-shop-featured-image-1200.png"><Image src="/images/shop.png" width="320px" roundedCircle /> </a>
+        <div>
+          <RoleLogo />
+        </div>
       </Col>
       <Col>
         <br /><br /><br />

@@ -13,8 +13,8 @@ const WelcomeMsg = ({ currentUser }) => {
       welcomemsg = 'Hello admin';
       smallmsg = 'Hello';
     } else if (Roles.userIsInRole(Meteor.userId(), 'vendor')) {
-      welcomemsg = 'Hello vendor';
-      smallmsg = 'Hello';
+      welcomemsg = 'Welcome, Vendor Partner';
+      smallmsg = 'Connect your store to UH students!';
     } else {
       welcomemsg = 'Hi';
       smallmsg = 'Hello';

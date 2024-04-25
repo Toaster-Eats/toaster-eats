@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { Ingredients } from '../../api/ingredient/Ingredient';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+// New form
 const bridge = new SimpleSchema2Bridge(Ingredients.schema);
 
 const EditIngredient = () => {

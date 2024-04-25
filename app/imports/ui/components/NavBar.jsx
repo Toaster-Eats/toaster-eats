@@ -6,20 +6,19 @@ import { Roles } from 'meteor/alanning:roles';
 import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import { BoxArrowRight, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
 
-// Custom inline style for proper horizontal alignment
+// Inline style for horizontal alignment
 const inlineStyle = {
   display: 'flex',
   alignItems: 'center',
 };
 
 const customNavDropdownStyle = {
-  paddingRight: '5px', // Adjust this value to bring the dropdown arrow closer to the text
+  paddingRight: '5px',
 };
 
 const NavBar = () => {
-  const { currentUser, userId } = useTracker(() => ({
+  const { currentUser } = useTracker(() => ({
     currentUser: Meteor.user() ? Meteor.user().username : '',
-    userId: Meteor.userId(),
   }), []);
 
   return (
@@ -59,9 +58,11 @@ const NavBar = () => {
               </>
             ) : null}
 
-            {userId && Roles.userIsInRole(userId, 'vendor') ? (
+            {Meteor.userId() && Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
               <Nav.Link id="admin-nav" as={NavLink} to="/admin">Store Profile</Nav.Link>
-            ) : null}
+            ) : (
+              <Nav.Link id="your-profile-nav" as={NavLink} to="/your-profile">Your Profile</Nav.Link>
+            )}
           </Nav>
           <Nav className="justify-content-end">
             {currentUser === '' ? (

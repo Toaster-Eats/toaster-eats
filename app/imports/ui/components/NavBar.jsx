@@ -26,10 +26,22 @@ const NavBar = () => {
 
             {currentUser ? (
               <>
-                <Nav.Link id="list-recipes-nav" as={NavLink} to="/recipes" key="recipes">Recipes</Nav.Link>
-                <Nav.Link id="list-ingredients-nav" as={NavLink} to="/ingredients" key="ingredients">Ingredients</Nav.Link>
-                <Nav.Link id="add-recipes-nav" as={NavLink} to="/add-recipe" key="add">Add  Recipe</Nav.Link>
-                <Nav.Link id="add-ingredients-nav" as={NavLink} to="/add-ingredient" key="add">Add Ingredient</Nav.Link>
+                <NavDropdown title="Recipes" id="navbar-recipes">
+                  <NavDropdown.Item id="list-recipes-nav" as={NavLink} to="/recipes">
+                    View All Recipes
+                  </NavDropdown.Item>
+                  <NavDropdown.Item id="add-recipes-nav" as={NavLink} to="/add-recipe">
+                    Add a Recipe
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Ingredients" id="navbar-ingredients">
+                  <NavDropdown.Item id="list-ingredients-nav" as={NavLink} to="/ingredients">
+                    View All Ingredients
+                  </NavDropdown.Item>
+                  <NavDropdown.Item id="add-ingredients-nav" as={NavLink} to="/add-ingredient">
+                    Add an Ingredient
+                  </NavDropdown.Item>
+                </NavDropdown>
                 <Nav.Link id="vendor-nav" as={NavLink} to="/vendor" key="vendor">Stores Near Campus</Nav.Link>
               </>
             ) : ''}

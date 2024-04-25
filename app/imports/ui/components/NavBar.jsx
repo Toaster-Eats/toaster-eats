@@ -35,11 +35,13 @@ const NavBar = () => {
           <Nav className="me-auto justify-content-start">
             {currentUser ? (
               <>
+                {/* Dropdown for Recipes */}
                 <NavDropdown className="custom-dropdown" title="Recipes" id="recipes-dropdown" style={customNavDropdownStyle}>
                   <NavDropdown.Item as={NavLink} to="/recipes">All Our Recipes!</NavDropdown.Item>
                   <NavDropdown.Item as={NavLink} to="/add-recipe">Add a Recipe!</NavDropdown.Item>
                 </NavDropdown>
 
+                {/* Dropdown for Ingredients */}
                 <NavDropdown className="custom-dropdown" title="Ingredients" id="ingredients-dropdown" style={customNavDropdownStyle}>
                   <NavDropdown.Item as={NavLink} to="/ingredients">All Available Ingredients!</NavDropdown.Item
                   >

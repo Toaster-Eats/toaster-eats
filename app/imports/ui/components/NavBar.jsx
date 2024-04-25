@@ -2,12 +2,11 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import { NavLink } from 'react-router-dom';
-import { Roles } from 'meteor/alanning:roles';
 import { Container, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import { BoxArrowRight, PersonFill, PersonPlusFill } from 'react-bootstrap-icons';
+import { Roles } from 'meteor/alanning:roles';
 
 const NavBar = () => {
-  // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { currentUser } = useTracker(() => ({
     currentUser: Meteor.user() ? Meteor.user().username : '',
   }), []);
@@ -23,47 +22,45 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
-
             {currentUser ? (
               <>
-                <Nav.Link id="list-recipes-nav" as={NavLink} to="/recipes" key="recipes">Recipes</Nav.Link>
-                <Nav.Link id="list-ingredients-nav" as={NavLink} to="/ingredients" key="ingredients">Ingredients</Nav.Link>
-                <Nav.Link id="add-recipes-nav" as={NavLink} to="/add-recipe" key="add">Add  Recipe</Nav.Link>
-                <Nav.Link id="add-ingredients-nav" as={NavLink} to="/add-ingredient" key="add">Add Ingredient</Nav.Link>
-                <Nav.Link id="vendor-nav" as={NavLink} to="/vendor" key="vendor">Stores Near Campus</Nav.Link>
+                {/* Adjusting dropdowns to ensure correct selectors for TestCafe */}
+                <NavDropdown id="recipes-dropdown" title="Recipes">
+                  <NavDropdown.Item id="list-recipes-nav" as={NavLink} to="/recipes">View Recipes</NavDropdown.Item>
+                  <NavDropdown.Item id="add-recipes-nav" as={NavLink} to="/add-recipe">Add Recipe</NavDropdown.Item>
+                </NavDropdown>
+
+                <NavDropdown id="ingredients-dropdown" title="Ingredients">
+                  <NavDropdown.Item id="list-ingredients-nav" as={NavLink} to="/ingredients">View Ingredients</NavDropdown.Item>
+                  <NavDropdown.Item id="add-ingredients-nav" as={NavLink} to="/add-ingredient">Add Ingredient</NavDropdown.Item>
+                </NavDropdown>
+
+                <Nav.Link id="vendor-nav" as={NavLink} to="/vendor">Stores Near Campus</Nav.Link>
               </>
-            ) : ''}
+            ) : null}
             {/* eslint-disable-next-line no-nested-ternary */}
             {Meteor.userId() ? (
               Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
-                <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin"> Store Profile</Nav.Link>
+                <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin">Store Profile</Nav.Link>
               ) : (
-                <Nav.Link id="your-profile-nav" as={NavLink} to="/your-profile" key="your-profile">Your Profile</Nav.Link>
+                <Nav.Link id="your-profile-nav" as={NavLink} to="/your-profile">Your Profile</Nav.Link>
               )
             ) : null}
-
           </Nav>
           <Nav className="justify-content-end">
             {currentUser === '' ? (
               <NavDropdown id="login-dropdown" title="Login">
                 <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
-                  <PersonFill />
-                  Sign
-                  in
+                  <PersonFill /> Sign in
                 </NavDropdown.Item>
                 <NavDropdown.Item id="login-dropdown-sign-up" as={NavLink} to="/signup">
-                  <PersonPlusFill />
-                  Sign
-                  up
+                  <PersonPlusFill /> Sign up
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
               <NavDropdown id="navbar-current-user" title={currentUser}>
                 <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
-                  <BoxArrowRight />
-                  {' '}
-                  Sign
-                  out
+                  <BoxArrowRight /> Sign out
                 </NavDropdown.Item>
               </NavDropdown>
             )}

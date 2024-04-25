@@ -18,7 +18,6 @@ const NavBar = () => {
         <Navbar.Brand as={NavLink} to="/">
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Image src="/images/logo.png" width="80px" />
-            <h2>Toaster Eats</h2>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

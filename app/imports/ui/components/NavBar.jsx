@@ -23,6 +23,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-start">
+
             {currentUser ? (
               <>
                 <NavDropdown title="Recipes" id="navbar-recipes">
@@ -33,7 +34,6 @@ const NavBar = () => {
                     Add a Recipe
                   </NavDropdown.Item>
                 </NavDropdown>
-
                 <NavDropdown title="Ingredients" id="navbar-ingredients">
                   <NavDropdown.Item id="list-ingredients-nav" as={NavLink} to="/ingredients">
                     View All Ingredients
@@ -42,8 +42,7 @@ const NavBar = () => {
                     Add an Ingredient
                   </NavDropdown.Item>
                 </NavDropdown>
-
-                <Nav.Link id="vendor-nav" as={NavLink} to="/vendor">Stores Near Campus</Nav.Link>
+                <Nav.Link id="vendor-nav" as={NavLink} to="/vendor" key="vendor">Stores Near Campus</Nav.Link>
               </>
             ) : ''}
             {/* eslint-disable-next-line no-nested-ternary */}

@@ -15,8 +15,10 @@ const Recipe = ({ recipe }) => {
           <Card.Title>{recipe.title}</Card.Title>
           <Card.Subtitle>{recipe.dietaryRestrictions}</Card.Subtitle>
         </div>
+        <Link to={`/edit-recipe/${recipe._id}`}>
+          <Button variant="success" className="mt-2">Edit</Button>
+        </Link>
       </Card.Header>
-
       <CardBody>
         <CardText>
           <h5>Description:</h5>
@@ -28,21 +30,14 @@ const Recipe = ({ recipe }) => {
             ))}
           </ol>
         </CardText>
-
         <h5>Ingredients:</h5>
         <ListGroup>
           {recipe.ingredients.map((ingredient, index) => (
             <ListGroupItem key={index}>
-              {/* Rounds price to two decimal places */}
-              <strong>{ingredient.name}</strong> - ${ingredient.cost.toFixed(2)} - {ingredient.location}
+              <strong>{ingredient.name}</strong> - ${ingredient.cost} - {ingredient.location}
             </ListGroupItem>
           ))}
         </ListGroup>
-        <div className="d-flex justify-content-center mt-2">
-          <Link to={`/edit-recipe/${recipe._id}`}>
-            <Button variant="success" size="sm">Edit</Button>
-          </Link>
-        </div>
       </CardBody>
     </Card>
   );

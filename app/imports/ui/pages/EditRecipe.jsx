@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Col, Container, Row, Button, Image } from 'react-bootstrap';
+import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import { AutoForm, SubmitField, TextField, ErrorsField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Recipes } from '../../api/recipe/Recipe';
@@ -13,7 +13,6 @@ const bridge = new SimpleSchema2Bridge(Recipes.schema);
 
 const EditRecipe = () => {
   const { _id } = useParams();
-  const navigate = useNavigate(); // Initialize the useNavigate hook
   const { doc, ready } = useTracker(() => {
     const subscription = Meteor.subscribe(Recipes.userPublicationName);
     const rdy = subscription.ready();
@@ -33,22 +32,13 @@ const EditRecipe = () => {
   }, [doc]);
 
   const handleAddIngredient = () => {
-    const newIngredient = { name: '', cost: '0', location: '' }; // Create a blank ingredient
-    const newIngredients = [...ingredients, newIngredient]; // Add the new blank ingredient to the list
-    setIngredients(newIngredients); // Update the state with the new list
+    setIngredients([...ingredients, { name: '', cost: 0, location: '' }]);
   };
 
   const handleRemoveIngredient = (index) => {
     const newIngredients = [...ingredients];
-    newIngredients.splice(index, 1); // Remove the ingredient from the state
+    newIngredients.splice(index, 1);
     setIngredients(newIngredients);
-
-    // Update the recipe in the database after removing the ingredient
-    Recipes.collection.update(_id, { $set: { ingredients: newIngredients } }, (error) => {
-      if (error) {
-        swal('Error', error.message, 'error');
-      }
-    });
   };
 
   const submit = (data) => {
@@ -58,41 +48,35 @@ const EditRecipe = () => {
       if (error) {
         swal('Error', error.message, 'error');
       } else {
-        swal('Success', 'Recipe updated successfully', 'success').then(() => {
-          navigate('/recipes'); // Redirect after successful update
-        });
+        swal('Success', 'Recipe updated successfully', 'success');
       }
     });
   };
 
   return ready ? (
-    <Container className="py-0" fluid>
-      <Row className="align-middle text-center header-background">
-        <Col>
-          <Image src="/images/header_banner.png" height={270} />
-        </Col>
-      </Row>
-      <Row className="justify-content-center py-3">
+    <Container className="py-3">
+      <Row className="justify-content-center">
         <Col xs={10}>
+          <Col className="text-center"><h2>Edit Recipe</h2></Col>
           <AutoForm schema={bridge} onSubmit={submit} model={doc}>
             <Card>
               <Card.Body>
-                <h6>Image</h6>
-                <TextField name="image" label="" placeholder="Link" />
+                <h7>Image Link</h7>
+                <TextField name="image" label="" />
 
-                <h6>Recipe</h6>
-                <TextField name="title" label="" placeholder="Name" />
+                <h7>Recipe Title</h7>
+                <TextField name="title" label="" />
 
-                <h6>Dietary Restrictions</h6>
-                <TextField name="dietaryRestrictions" label="" placeholder="None, Vegan, Fish, etc." />
+                <h7>Dietary Restrictions</h7>
+                <TextField name="dietaryRestrictions" label="" />
 
-                <h6>Description</h6>
-                <TextField name="description" label="" placeholder="Describe your dish" />
+                <h7>Description</h7>
+                <TextField name="description" label="" />
 
-                <h6>Instructions</h6>
-                <TextField name="instructions" label="" placeholder="How is it made?" />
+                <h7>Cooking Instructions</h7>
+                <TextField name="instructions" label="" />
 
-                <h6>Ingredients</h6>
+                <h7>Ingredients</h7>
                 {ingredients.map((ingredient, index) => (
                   <Row key={index} className="mb-3 align-items-center">
                     <Col>
@@ -112,7 +96,7 @@ const EditRecipe = () => {
 
                 <Row>
                   <Col>
-                    <Button variant="secondary" onClick={handleAddIngredient}>Add Ingredient</Button>
+                    <Button className="mr-3" variant="secondary" onClick={handleAddIngredient}>Add Ingredient</Button>
                   </Col>
                 </Row>
 

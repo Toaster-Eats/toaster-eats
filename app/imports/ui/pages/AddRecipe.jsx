@@ -5,8 +5,10 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
+import { useNavigate } from 'react-router-dom';
 import { Recipes } from '../../api/recipe/Recipe';
 
+// Schema for the form
 const formSchema = new SimpleSchema({
   title: String,
   dietaryRestrictions: String,
@@ -24,6 +26,7 @@ const bridge = new SimpleSchema2Bridge(formSchema);
 
 const AddRecipe = () => {
   const [ingredients, setIngredients] = useState([{ name: '', cost: '', location: '' }]);
+  const navigate = useNavigate(); // Initialize the useNavigate hook
 
   const handleAddIngredient = () => {
     setIngredients([...ingredients, { name: '', cost: '', location: '' }]);
@@ -38,21 +41,24 @@ const AddRecipe = () => {
   const submit = (data, formRef) => {
     // eslint-disable-next-line no-shadow
     const { image, title, dietaryRestrictions, description, instructions, ingredients } = data;
-    const owner = Meteor.user().username;
+    const owner = Meteor.user()?.username; // Ensure proper null safety
     Recipes.collection.insert(
       { image, title, dietaryRestrictions, description, instructions, ingredients, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Recipe added successfully', 'success');
-          formRef.reset();
+          swal('Success', 'Recipe added successfully', 'success').then(() => {
+            navigate('/recipes'); // Navigate to the recipes page after success
+          });
+          formRef.reset(); // Reset the form after successful submission
         }
       },
     );
   };
 
-  let fRef = null;
+  let fRef = null; // Form reference for AutoForm
+
   return (
     <Container id="addrecipes-page" className="py-0" fluid>
       <Row className="align-middle text-center header-background">
@@ -65,50 +71,64 @@ const AddRecipe = () => {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
-                <h7>Image Link</h7>
-                <TextField name="image" label="" />
-
-                <h7>Recipe Title</h7>
-                <TextField name="title" label="" />
-
-                <h7>Dietary Restrictions</h7>
-                <TextField name="dietaryRestrictions" label="" />
-
-                <h7>Description</h7>
-                <TextField name="description" label="" />
-
-                <h7>Cooking Instructions</h7>
-                <TextField name="instructions" label="" />
-
-                <h7>Ingredients</h7>
-                {ingredients.map((ingredient, index) => (
-                  <Row key={index} className="mb-3 align-items-center">
-                    <Col>
-                      <TextField
-                        name={`ingredients.${index}.name`}
-                        label=""
-                        placeholder="Name"
-                      />
-                    </Col>
-                    <Col>
-                      <TextField
-                        name={`ingredients.${index}.cost`}
-                        label=""
-                        placeholder="Cost"
-                      />
-                    </Col>
-                    <Col>
-                      <TextField
-                        name={`ingredients.${index}.location`}
-                        label=""
-                        placeholder="Location"
-                      />
-                    </Col>
-                    <Col className="d-flex justify-content-end">
-                      <Button variant="danger" onClick={() => handleRemoveIngredient(index)}>Remove</Button>
-                    </Col>
-                  </Row>
-                ))}
+                <Row>
+                  <Col>
+                    <h6>Image</h6>
+                    <TextField name="image" label="" placeholder="Link" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h6>Recipe</h6>
+                    <TextField name="title" label="" placeholder="Name" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h6>Dietary Restrictions</h6>
+                    <TextField name="dietaryRestrictions" label="" placeholder="None, Vegan, Fish, etc." />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h6>Description</h6>
+                    <TextField name="description" label="" placeholder="Describe your dish" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h6>Instructions</h6>
+                    <TextField name="instructions" label="" placeholder="How is it made?" />
+                  </Col>
+                </Row>
+                <Row>
+                  <h6>Ingredients</h6>
+                  {ingredients.map((ingredient, index) => (
+                    <Row key={index} className="mb-3 align-items-center">
+                      <Col>
+                        <TextField
+                          name={`ingredients.${index}.name`}
+                          placeholder="Item"
+                        />
+                      </Col>
+                      <Col>
+                        <TextField
+                          name={`ingredients.${index}.cost`}
+                          placeholder="Price"
+                        />
+                      </Col>
+                      <Col>
+                        <TextField
+                          name={`ingredients.${index}.location`}
+                          placeholder="Place"
+                        />
+                      </Col>
+                      <Col className="d-flex justify-content-end">
+                        <Button variant="danger" onClick={() => handleRemoveIngredient(index)}>Remove</Button>
+                      </Col>
+                    </Row>
+                  ))}
+                </Row>
                 <Row>
                   <Col xs={12}>
                     <Button className="mr-3" variant="secondary" onClick={handleAddIngredient}>Add Ingredient</Button>

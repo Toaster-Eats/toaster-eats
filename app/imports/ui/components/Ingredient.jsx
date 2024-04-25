@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardBody, Image, CardTitle, CardSubtitle, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'; // For navigation to the edit page
+import { Card, CardBody, Image, CardText, CardTitle, CardSubtitle } from 'react-bootstrap';
 
-/** Renders a single ingredient card with details and an edit button. */
+/** Renders a single ingredient card with details. */
 const Ingredient = ({ ingredient }) => (
   <Card className="h-100">
     <Card.Header className="d-flex flex-column align-items-center">
@@ -16,13 +15,9 @@ const Ingredient = ({ ingredient }) => (
       </div>
     </Card.Header>
     <CardBody>
-      {/* Rounds price to two decimal places */}
-      <strong>Price:</strong> ${ingredient.price ? ingredient.price.toFixed(2) : 'N/A'}
-      <div className="d-flex justify-content-center mt-1">
-        <Link to={`/edit-ingredient/${ingredient._id}`}>
-          <Button variant="success" size="sm">Edit</Button>
-        </Link>
-      </div>
+      <CardText>
+        <strong>Price:</strong> ${ingredient.price ? ingredient.price.toFixed(2) : 'N/A'}
+      </CardText>
     </CardBody>
   </Card>
 );
@@ -30,7 +25,6 @@ const Ingredient = ({ ingredient }) => (
 // Define the PropTypes for the ingredient object.
 Ingredient.propTypes = {
   ingredient: PropTypes.shape({
-    _id: PropTypes.string,
     image: PropTypes.string,
     name: PropTypes.string,
     price: PropTypes.number,

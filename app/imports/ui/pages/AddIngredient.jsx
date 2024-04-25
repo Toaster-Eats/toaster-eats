@@ -5,7 +5,6 @@ import swal from 'sweetalert';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { Meteor } from 'meteor/meteor';
-import { useNavigate } from 'react-router-dom';
 import { Ingredients } from '../../api/ingredient/Ingredient';
 
 // Define a schema for adding new ingredients
@@ -19,9 +18,7 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema); // Create the bridge for schema validation
 
 const AddIngredient = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
-
-  const submit = (data) => {
+  const submit = (data, formRef) => {
     const { name, image, price, location } = data;
     const owner = Meteor.user()?.username || 'unknown'; // Get the current user as the owner
     Ingredients.collection.insert(
@@ -30,9 +27,8 @@ const AddIngredient = () => {
         if (error) {
           swal('Error', error.message, 'error'); // Display error message
         } else {
-          swal('Success', 'Ingredient added successfully', 'success').then(() => {
-            navigate('/ingredients'); // Redirect to the ingredients page after success
-          }); // Navigate to the ingredients page
+          swal('Success', 'Ingredient added successfully', 'success'); // Success message
+          formRef.reset(); // Reset the form on success
         }
       },
     );
@@ -54,26 +50,26 @@ const AddIngredient = () => {
               <Card.Body>
                 <Row>
                   <Col>
-                    <h6>Image</h6>
-                    <TextField name="image" label="" placeholder="Link" />
+                    <h7>Image Link</h7>
+                    <TextField name="image" label="" />
                   </Col>
                 </Row>
                 <Row>
                   <Col>
-                    <h6>Ingredient</h6>
-                    <TextField name="name" label="" placeholder="Name" />
+                    <h7>Ingredient Name</h7>
+                    <TextField name="name" label="" />
                   </Col>
                 </Row>
                 <Row>
                   <Col>
-                    <h6>Location</h6>
-                    <TextField name="location" label="" placeholder="Safeway, Foodland, etc." />
+                    <h7>Cost</h7>
+                    <TextField name="price" label="" />
                   </Col>
                 </Row>
                 <Row>
                   <Col>
-                    <h6>Cost</h6>
-                    <TextField name="price" label="" placeholder="$" />
+                    <h7>Location</h7>
+                    <TextField name="location" label="" />
                   </Col>
                 </Row>
                 <Row>

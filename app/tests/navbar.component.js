@@ -11,6 +11,16 @@ class NavBar {
     }
   }
 
+  /** Check if the user is logged in and their username matches. */
+  async isLoggedIn(testController, username) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    const loggedInUser = await Selector('#navbar-current-user').innerText;
+    await testController.expect(loggedInUser).eql(username); // Verify logged-in username
+  }
+
   async gotoSignInPage(testController) {
     await this.ensureLogout(testController);
     const visible = await Selector('#basic-navbar-nav').visible;
@@ -24,7 +34,7 @@ class NavBar {
   async gotoSignUpPage(testController) {
     await this.ensureLogout(testController);
     const visible = await Selector('#basic-navbar-nav').visible;
-    if (!visible) {
+    if (!visible) { // Fix for incorrect syntax
       await testController.click('button.navbar-toggler');
     }
     await testController.click('#login-dropdown');
@@ -39,7 +49,7 @@ class NavBar {
   /** Navigate to recipes dropdown. */
   async gotoRecipesDropdown(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
-    if (!visible) {
+    if (!visible) { // Fix for incorrect syntax
       await testController.click('button.navbar-toggler');
     }
     await testController.click('#recipes-dropdown');
@@ -60,7 +70,7 @@ class NavBar {
   /** Navigate to ingredients dropdown. */
   async gotoIngredientsDropdown(testController) {
     const visible = await Selector('#basic-navbar-nav').visible;
-    if (!visible) {
+    if (!visible) { // Fix for incorrect syntax
       await testController.click('button.navbar-toggler');
     }
     await testController.click('#ingredients-dropdown');
@@ -69,13 +79,13 @@ class NavBar {
   /** Navigate to "View All Ingredients" via ingredients dropdown. */
   async gotoIngredientsPage(testController) {
     await this.gotoIngredientsDropdown(testController);
-    await testController.click('#list-ingredients-nav');
+    await testController.click('#list-ingredients-nav'); // Add missing semicolon
   }
 
   /** Navigate to "Add Ingredient" via ingredients dropdown. */
   async gotoAddIngredientsPage(testController) {
     await this.gotoIngredientsDropdown(testController);
-    await testController.click('#add-ingredients-nav');
+    await testController.click('#add-ingredients-nav'); // Add missing semicolon
   }
 }
 

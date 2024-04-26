@@ -29,7 +29,7 @@ const NavBar = () => {
                     View All Recipes
                   </NavDropdown.Item>
                   <NavDropdown.Item id="add-recipes-nav" as={NavLink} to="/add-recipe" key="add-recipe">
-                    Add Recipe
+                    Add a Recipe
                   </NavDropdown.Item>
                 </NavDropdown>
 
@@ -38,7 +38,7 @@ const NavBar = () => {
                     View All Ingredients
                   </NavDropdown.Item>
                   <NavDropdown.Item id="add-ingredients-nav" as={NavLink} to="/add-ingredient" key="add-ingredient">
-                    Add Ingredient
+                    Add an Ingredient
                   </NavDropdown.Item>
                 </NavDropdown>
 

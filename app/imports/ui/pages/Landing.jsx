@@ -3,6 +3,8 @@ import { Col, Container, Image, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import WelcomeMsg from '../components/WelcomeMsg';
 import RoleLogo from '../components/RoleLogo';
+import BottomMsg from '../components/BottomMsg';
+import KeyFeatures from '../components/KeyFeatures';
 
 /* A simple static component to render some text for the landing page. */
 const Landing = () => (
@@ -42,28 +44,12 @@ const Landing = () => (
         </ul>
       </Col>
       <Col className="py-4">
-        <h3>Key Features:</h3><br />
+        <h3>Your Tools:</h3><br />
         <ul>
           <li>
-            User Roles: The platform encompasses three primary user roles: students, vendors, and admins, each with distinct responsibilities and permissions.
-          </li>
-          <li>
-            {/* eslint-disable-next-line max-len */}
-            Student Contributions: Students can browse, search, and contribute recipes tailored to their constraints, including limited kitchen facilities, time, and budget. They can also upload photos and provide detailed descriptions of their recipes.
-          </li>
-          <li>
-            {/* eslint-disable-next-line max-len */}
-            Vendor Integration: Local vendors, such as grocery stores and farmer&apos;s markets, can create profiles and input information regarding ingredient availability, pricing, and store locations. This data enhances the accuracy and accessibility of recipe details for students.
-          </li>
-          <li>
-            Ingredient Information: For each recipe, the platform aggregates information on ingredient availability and pricing from various local vendors, allowing users to make informed purchasing decisions.
-          </li>
-          <li>
-            Dietary Filters: Users can filter recipes based on dietary preferences and restrictions, such as vegan, gluten-free, or allergen-free options, ensuring inclusivity and catering to diverse dietary needs.
-          </li>
-          <li>
-            {/* eslint-disable-next-line max-len */}
-            Admin Oversight: Admins maintain content integrity by monitoring user-generated content, removing inappropriate material, and managing user roles. They also have the authority to designate users as vendors and oversee platform functionality.
+            <div>
+              <KeyFeatures />
+            </div>
           </li>
         </ul>
       </Col>
@@ -71,10 +57,15 @@ const Landing = () => (
     <Row className="align-middle">
       <Col />
       <Col className="align-middle text-center py-5">
-        <h3>Get Cooking with Us! Sign up for free to gain access to hundreds of mouthwatering recipes designed to fit your busy student lifestyle.</h3><br />
-        <Link to="/signup">
-          <Button variant="success">Sign Up</Button>{' '}
-        </Link>
+        <div>
+          <BottomMsg />
+        </div>
+        {/* eslint-disable-next-line no-undef */}
+        {!Meteor.userId() ? (
+          <Link to="/signup">
+            <Button variant="success">Sign Up</Button>{' '}
+          </Link>
+        ) : null}
       </Col>
       <Col />
     </Row>

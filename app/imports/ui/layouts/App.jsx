@@ -17,7 +17,6 @@ import NavBar from '../components/NavBar';
 import SignIn from '../pages/SignIn';
 import NotAuthorized from '../pages/NotAuthorized';
 import LoadingSpinner from '../components/LoadingSpinner';
-import Vendor from '../pages/Vendor';
 import ListRecipes from '../pages/ListRecipes';
 import AddRecipe from '../pages/AddRecipe';
 import Profile from '../pages/Profile';
@@ -48,7 +47,6 @@ const App = () => {
           <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
-          <Route path="/vendor" element={<Vendor />} />
           <Route path="/recipes" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
           <Route path="/ingredients" element={<ProtectedRoute><ListIngredients /></ProtectedRoute>} />
           <Route path="/add-recipe" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />

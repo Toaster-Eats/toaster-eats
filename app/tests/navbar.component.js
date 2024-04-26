@@ -71,13 +71,13 @@ class NavBar {
   /** Navigate to "View All Recipes" via the recipes dropdown. */
   async gotoRecipesPage(testController) {
     await this.gotoRecipesDropdown(testController);
-    await testController.click('#list-recipes-nav'); // Missing semicolon
+    await testController.click('#list-recipes-nav');
   }
 
   /** Navigate to "Add Recipe" via the recipes dropdown. */
   async gotoAddRecipesPage(testController) {
     await this.gotoRecipesDropdown(testController);
-    await testController.click('#add-recipes-nav'); // Missing semicolon
+    await testController.click('#add-recipes-nav');
   }
 
   /** Navigate to the ingredients dropdown. */

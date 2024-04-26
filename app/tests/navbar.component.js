@@ -92,13 +92,13 @@ class NavBar {
   /** Navigate to "View All Ingredients" via the ingredients dropdown. */
   async gotoIngredientsPage(testController) {
     await this.gotoIngredientsDropdown(testController);
-    await testController.click('#list-ingredients-nav'); // Missing semicolon
+    await testController.click('#list-ingredients-nav');
   }
 
   /** Navigate to "Add Ingredient" via the ingredients dropdown. */
   async gotoAddIngredientsPage(testController) {
     await this.gotoIngredientsDropdown(testController);
-    await testController.click('#add-ingredients-nav'); // Missing semicolon
+    await testController.click('#add-ingredients-nav');
   }
 }
 

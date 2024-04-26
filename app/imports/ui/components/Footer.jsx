@@ -7,15 +7,15 @@ const Footer = () => (
     <Container>
       <Row>
         <Col className="text-center">
-          <Image src="/images/logo.png" width="80px" alt="Logo"/>
+          <Image src="/images/logo.png" width="80px" alt="Logo" />
           Toaster Eats
           {' '}
-          <br/>
+          <br />
           University of Hawaii
-          <br/>
+          <br />
           Honolulu, HI 96822
           {' '}
-          <br/>
+          <br />
           <a href="https://toaster-eats.github.io/">
             Our Project Page |
           </a>

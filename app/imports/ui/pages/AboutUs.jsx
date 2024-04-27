@@ -18,7 +18,7 @@ const AboutUs = () => (
           <Image src="/images/find_recipes.jpg" height={250} width={250} style={{ objectFit: 'cover' }} alt="Our Story" />
         </Col>
         <Col xs={8}>
-          <h3 className="text-center py-2">Discover New Recipes</h3>
+          <h3 className="text-center pt-4 py-2">Discover New Recipes</h3>
           <p>
             {/* eslint-disable-next-line max-len */}
             On our platform, you can easily discover a variety of recipes designed specifically for college students. Whether it&apos;s simple dishes you can whip up in a dorm kitchen or more elaborate meals for those with full kitchens, our site has you covered.
@@ -31,7 +31,7 @@ const AboutUs = () => (
 
       <Row className="py-4">
         <Col xs={8}>
-          <h3 className="text-center">Instant Recipe Availability</h3>
+          <h3 className="text-center pt-4 py-2">Instant Recipe Availability</h3>
           <p>
             Are you craving something specific? Our platform helps you find recipes that match your current mood and available ingredients. No more scrounging through your pantry; just check the site and let your cravings guide you.
           </p>
@@ -44,8 +44,8 @@ const AboutUs = () => (
         </Col>
       </Row>
 
-      <Row className="py-4">
-        <Col xs={4} className="text-center py-2"> {/* Image on the left */}
+      <Row className="py-5">
+        <Col xs={4} className="text-center pt-4">
           <Image src="/images/users.jpg" height={250} width={250} style={{ objectFit: 'cover' }} alt="What Can Users Do?" />
         </Col>
         <Col xs={8}>

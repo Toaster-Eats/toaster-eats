@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Col, Container, Row, Button, Image } from 'react-bootstrap';
-import { AutoForm, SubmitField, TextField, ErrorsField } from 'uniforms-bootstrap5';
+import { AutoForm, SubmitField, TextField, ErrorsField, LongTextField } from 'uniforms-bootstrap5';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import { useParams, useNavigate } from 'react-router-dom';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { useTracker } from 'meteor/react-meteor-data';
+import { TrashFill } from 'react-bootstrap-icons';
 import { Recipes } from '../../api/recipe/Recipe';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+// Create schema bridge from Recipes schema
 const bridge = new SimpleSchema2Bridge(Recipes.schema);
 
 const EditRecipe = () => {
@@ -33,17 +35,16 @@ const EditRecipe = () => {
   }, [doc]);
 
   const handleAddIngredient = () => {
-    const newIngredient = { name: '', cost: '0', location: '' }; // Create a blank ingredient
-    const newIngredients = [...ingredients, newIngredient]; // Add the new blank ingredient to the list
-    setIngredients(newIngredients); // Update the state with the new list
+    const newIngredient = { name: '', cost: '0', location: '' };
+    setIngredients([...ingredients, newIngredient]); // Add new ingredient to list
   };
 
   const handleRemoveIngredient = (index) => {
     const newIngredients = [...ingredients];
-    newIngredients.splice(index, 1); // Remove the ingredient from the state
+    newIngredients.splice(index, 1); // Remove ingredient at specified index
     setIngredients(newIngredients);
 
-    // Update the recipe in the database after removing the ingredient
+    // Update the database after removing an ingredient
     Recipes.collection.update(_id, { $set: { ingredients: newIngredients } }, (error) => {
       if (error) {
         swal('Error', error.message, 'error');
@@ -53,23 +54,28 @@ const EditRecipe = () => {
 
   const submit = (data) => {
     // eslint-disable-next-line no-shadow
-    const { image, title, dietaryRestrictions, description, instructions, ingredients } = data;
-    Recipes.collection.update(_id, { $set: { image, title, dietaryRestrictions, description, instructions, ingredients } }, (error) => {
-      if (error) {
-        swal('Error', error.message, 'error');
-      } else {
-        swal('Success', 'Recipe updated successfully', 'success').then(() => {
-          navigate('/recipes'); // Redirect after successful update
-        });
-      }
-    });
+    const { image, title, dietaryRestrictions, description, instructions, ingredients, estimations } = data;
+
+    Recipes.collection.update(
+      _id,
+      { $set: { image, title, dietaryRestrictions, description, instructions, ingredients, estimations } },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'Recipe updated successfully', 'success').then(() => {
+            navigate('/recipes'); // Navigate to recipes after successful update
+          });
+        }
+      },
+    );
   };
 
   return ready ? (
     <Container className="py-0" fluid>
       <Row className="align-middle text-center header-background">
         <Col>
-          <Image src="/images/header_banner.png" height={270} />
+          <Image src="/images/header_banner.png" height={270} alt="Edit Recipe Banner" />
         </Col>
       </Row>
       <Row className="justify-content-center py-3">
@@ -90,33 +96,48 @@ const EditRecipe = () => {
                 <TextField name="description" label="" placeholder="Describe your dish" />
 
                 <h6>Instructions</h6>
-                <TextField name="instructions" label="" placeholder="How is it made?" />
+                <LongTextField name="instructions" label="" placeholder="How is it made? (new line for new step)" />
 
                 <h6>Ingredients</h6>
                 {ingredients.map((ingredient, index) => (
                   <Row key={index} className="mb-3 align-items-center">
                     <Col>
-                      <TextField name={`ingredients.${index}.name`} placeholder="Name" />
+                      <TextField name={`ingredients.${index}.name`} label="" placeholder="Name" />
                     </Col>
                     <Col>
-                      <TextField name={`ingredients.${index}.cost`} placeholder="Cost" />
+                      <TextField name={`ingredients.${index}.cost`} label="" placeholder="Cost" />
                     </Col>
                     <Col>
-                      <TextField name={`ingredients.${index}.location`} placeholder="Location" />
+                      <TextField name={`ingredients.${index}.location`} label="" placeholder="Location" />
                     </Col>
-                    <Col className="d-flex justify-content-end">
-                      <Button variant="danger" onClick={() => handleRemoveIngredient(index)}>Remove</Button>
+                    <Col className="d-flex justify-content-end pb-4">
+                      <Button variant="danger" onClick={() => handleRemoveIngredient(index)}>
+                        <TrashFill />
+                      </Button>
                     </Col>
                   </Row>
                 ))}
 
                 <Row>
-                  <Col>
-                    <Button variant="secondary" onClick={handleAddIngredient}>Add Ingredient</Button>
+                  <Col xs={4}>
+                    <Button className="mr-3" variant="secondary" onClick={handleAddIngredient}>Add an Ingredient</Button>
                   </Col>
                 </Row>
 
-                <Row className="justify-content-center">
+                <h6 className="pt-4">Estimations</h6>
+                <Row>
+                  <Col>
+                    <TextField name="estimations.costPerServing" label="" placeholder="Cost Per Serving" />
+                  </Col>
+                  <Col>
+                    <TextField name="estimations.numberOfServings" label="" placeholder="Number of Servings" />
+                  </Col>
+                  <Col>
+                    <TextField name="estimations.totalTime" label="" placeholder="Total Time" />
+                  </Col>
+                </Row>
+
+                <Row className="justify-content-center pt-2">
                   <Col xs={12} className="text-center">
                     <SubmitField />
                     <ErrorsField />

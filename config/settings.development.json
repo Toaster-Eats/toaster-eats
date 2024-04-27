@@ -26,7 +26,12 @@
         { "name": "Eggs", "cost": 2.99, "location": "Refrigerator" },
         { "name": "Parmesan", "cost": 4.99, "location": "Refrigerator" },
         { "name": "Black Pepper", "cost": 0.99, "location": "Pantry" }
-      ]
+      ],
+      "estimations": {
+        "costPerServing": 3.50,
+        "numberOfServings": 4,
+        "totalTime": "30 minutes"
+      }
     },
     {
       "title": "Vegetable Stir Fry",
@@ -41,7 +46,12 @@
         { "name": "Carrots", "cost": 1.29, "location": "Refrigerator" },
         { "name": "Soy Sauce", "cost": 3.99, "location": "Pantry" },
         { "name": "Rice", "cost": 2.49, "location": "Pantry" }
-      ]
+      ],
+      "estimations": {
+        "costPerServing": 2.50,
+        "numberOfServings": 3,
+        "totalTime": "20 minutes"
+      }
     }
   ],
 

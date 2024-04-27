@@ -24,7 +24,7 @@ const AboutUs = () => (
             On our platform, you can easily discover a variety of recipes designed specifically for college students. Whether it&apos;s simple dishes you can whip up in a dorm kitchen or more elaborate meals for those with full kitchens, our site has you covered.
           </p>
           <p>
-            You can also find out what’s on the menu in campus food trucks and cafeterias, and stay in the loop on your favorite dishes.
+            Sign up to be updated and stay in the loop on your favorite dishes and other mouthwatering meals.
           </p>
         </Col>
       </Row>

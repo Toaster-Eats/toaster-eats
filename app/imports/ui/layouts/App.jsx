@@ -24,6 +24,7 @@ import ListIngredients from '../pages/ListIngredients';
 import EditRecipe from '../pages/EditRecipe';
 import AddIngredient from '../pages/AddIngredient';
 import EditIngredient from '../pages/EditIngredient';
+import AboutUs from '../pages/AboutUs';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,7 +43,7 @@ const App = () => {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
-          <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
           <Route path="/add" element={<ProtectedRoute><AddStuff /></ProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />

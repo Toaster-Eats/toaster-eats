@@ -10,7 +10,7 @@ const KeyFeatures = ({ currentUser }) => {
   let msg2 = 'Ingredient Information: For each recipe, the platform aggregates information on ingredient availability and pricing from various local vendors, allowing users to make informed purchasing decisions.';
   let msg3 = 'Dietary Filters: Users can filter recipes based on dietary preferences and restrictions, such as vegan, gluten-free, or allergen-free options, ensuring inclusivity and catering to diverse dietary needs.';
   // eslint-disable-next-line max-len
-  let msg4 = 'Vendor Integration: Local vendors, such as grocery stores and farmer&apos;s markets, can create profiles and input information regarding ingredient availability, pricing, and store locations. This data enhances the accuracy and accessibility of recipe details for students.';
+  let msg4 = "Vendor Integration: Local vendors, such as grocery stores and farmer's markets, can create profiles and input information regarding ingredient availability, pricing, and store locations. This data enhances the accuracy and accessibility of recipe details for students.";
   // eslint-disable-next-line max-len
   let msg5 = 'Admin Oversight: Admins maintain content integrity by monitoring user-generated content, removing inappropriate material, and managing user roles. They also have the authority to designate users as vendors and oversee platform functionality.';
 

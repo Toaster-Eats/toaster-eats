@@ -63,7 +63,16 @@ const Landing = () => (
         {/* eslint-disable-next-line no-undef */}
         {!Meteor.userId() ? (
           <Link to="/signup">
-            <Button variant="success">Sign Up</Button>{' '}
+            <Button
+              variant="success"
+              style={{
+                fontFamily: 'Titillium Web, sans-serif',
+                fontWeight: 400,
+                fontStyle: 'normal',
+              }}
+            >
+              Sign Up!
+            </Button>
           </Link>
         ) : null}
       </Col>

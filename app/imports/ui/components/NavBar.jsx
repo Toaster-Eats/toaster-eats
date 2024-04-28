@@ -19,7 +19,6 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="w-100 justify-content-between">
-            {/* Left side */}
             <Nav className="justify-content-start">
               <Nav.Link id="about-us-nav" as={NavLink} to="/aboutus" key="about-us">About Us</Nav.Link>
               {currentUser && (
@@ -38,8 +37,6 @@ const NavBar = () => {
                 </>
               )}
             </Nav>
-
-            {/* Right side */}
             <Nav className="justify-content-end">
               {currentUser === '' ? (
                 <NavDropdown id="login-dropdown" title="Login">

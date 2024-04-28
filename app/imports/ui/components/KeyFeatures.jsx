@@ -24,7 +24,7 @@ const KeyFeatures = ({ currentUser }) => {
       msg5 = 'This App was built by UH students, for UH students and community!';
     } else if (Roles.userIsInRole(Meteor.userId(), 'vendor')) {
       // eslint-disable-next-line max-len
-      welcomemsg = 'Vendor Integration: Local vendors, such as grocery stores and farmer&apos;s markets, can create profiles and input information regarding ingredient availability, pricing, and store locations. This data enhances the accuracy and accessibility of recipe details for students.';
+      welcomemsg = "Vendor Integration: Local vendors, such as grocery stores and farmer's markets, can create profiles and input information regarding ingredient availability, pricing, and store locations. This data enhances the accuracy and accessibility of recipe details for students.";
       msg2 = 'Your Store Profile: Include pictures, hours and other details of your store. Students can browse the list of stores and find your profile.';
       msg3 = 'Ingredient Accessibility: Through the ingredients page, you can indicate if an ingredient is in stock, with its price and sizes.';
       msg4 = 'Recipes: Vendors can also contribute to the recipe list, increasing  your exposure to students as they browse our recipes.';

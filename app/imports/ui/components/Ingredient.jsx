@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'; // For navigation to the edit page
 const Ingredient = ({ ingredient }) => (
   <Card className="h-100">
     <Card.Header className="d-flex flex-column align-items-center">
-      <Image src={ingredient.image} height={250} width={250} style={{ objectFit: 'cover' }} />
+      <Image className="mt-2" src={ingredient.image} height={250} width={250} style={{ objectFit: 'cover' }} />
       <div className="text-center mt-3">
-        <CardTitle>{ingredient.name}</CardTitle>
+        <CardTitle className="fw-bold">{ingredient.name}</CardTitle>
         <CardSubtitle>
           <strong>Location:</strong> {ingredient.location || 'N/A'}
         </CardSubtitle>

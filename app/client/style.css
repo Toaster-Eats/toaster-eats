@@ -1,17 +1,44 @@
-/* Use Open Sans as the default sans serif font. */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
+/* Use Titillium Web as the default sans-serif font. */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400&display=swap");
 
 /* Set up some CSS variables to theme the application. */
 :root {
   --matr-navbar-bg: #ECECEC;
   --matr-navbar-bg-rgb: 236, 236, 236;
+  --highlight-text-color: #FFBD59;
 }
 
-/* Change bootstrap variable values.
- See https://getbootstrap.com/docs/5.2/customize/css-variables/
- */
+/* Change bootstrap variable values. */
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
+}
+
+/* Apply Titillium Web font to specific elements */
+h1, h2, h3, h4, h5, h6,
+p,
+ul, li,
+strong,
+nav,
+.card,
+.button,
+.footer-background /* Footer */ {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Highlights text on navbar */
+.navbar a, /* Apply hover effect to navbar links */
+.navbar a:link, /* Unvisited link */
+.navbar a:visited, /* Visited link */
+.navbar a:hover, /* Hovered link */
+.navbar a:active { /* Active link */
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--highlight-text-color); /* Change text color to khaki on hover */
 }
 
 /* Set the alert background on the signin and signup pages. */

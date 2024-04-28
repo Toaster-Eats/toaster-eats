@@ -18,7 +18,7 @@ const AboutUs = () => (
           <Image src="/images/find_recipes.jpg" height={250} width={250} style={{ objectFit: 'cover' }} alt="Our Story" />
         </Col>
         <Col xs={8}>
-          <h3 className="text-center pt-4 py-2">Discover New Recipes</h3>
+          <h3 className="text-center pt-4 py-2 fw-semibold">Discover New Recipes</h3>
           <p>
             {/* eslint-disable-next-line max-len */}
             On our platform, you can easily discover a variety of recipes designed specifically for college students. Whether it&apos;s simple dishes you can whip up in a dorm kitchen or more elaborate meals for those with full kitchens, our site has you covered.
@@ -31,7 +31,7 @@ const AboutUs = () => (
 
       <Row className="py-4">
         <Col xs={8}>
-          <h3 className="text-center pt-4 py-2">Instant Recipe Availability</h3>
+          <h3 className="text-center pt-4 py-2 fw-semibold">Instant Recipe Availability</h3>
           <p>
             Are you craving something specific? Our platform helps you find recipes that match your current mood and available ingredients. No more scrounging through your pantry; just check the site and let your cravings guide you.
           </p>
@@ -49,12 +49,12 @@ const AboutUs = () => (
           <Image src="/images/users.jpg" height={250} width={250} style={{ objectFit: 'cover' }} alt="What Can Users Do?" />
         </Col>
         <Col xs={8}>
-          <h3 className="text-center py-2">What Can Users Do?</h3>
+          <h3 className="text-center py-2 fw-semibold">What Can Users Do?</h3>
           <ul>
             <li><strong>Student Contributions:</strong> Users can browse, search, and contribute recipes tailored to their constraints, including limited kitchen facilities, time, and budget.</li>
-            <li><strong>Ingredient Information:</strong> Our platform aggregates ingredient availability and pricing from various local vendors, allowing users to make informed purchasing decisions.</li>
-            <li><strong>Dietary Filters:</strong> Users can filter recipes based on dietary preferences and restrictions, such as vegan, gluten-free, or allergen-free options.</li>
-            <li><strong>Vendor Integration:</strong> Local vendors can create profiles and input ingredient information like pricing and store locations.</li>
+            <li className="pt-2"><strong>Ingredient Information:</strong> Our platform aggregates ingredient availability and pricing from various local vendors, allowing users to make informed purchasing decisions.</li>
+            <li className="pt-2"><strong>Dietary Filters:</strong> Users can filter recipes based on dietary preferences and restrictions, such as vegan, gluten-free, or allergen-free options.</li>
+            <li className="pt-2"><strong>Vendor Integration:</strong> Local vendors can create profiles and input ingredient information like pricing and store locations.</li>
           </ul>
         </Col>
       </Row>

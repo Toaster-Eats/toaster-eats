@@ -38,7 +38,17 @@ const ListIngredients = () => {
       <Row className="mb-3 justify-content-center">
         <Col className="text-center">
           <Link to="/add-ingredient">
-            <Button variant="primary">Add an Ingredient!</Button>
+            {/* CSS class won't apply to this button specifically */}
+            <Button
+              variant="primary"
+              style={{
+                fontFamily: 'Titillium Web, sans-serif',
+                fontWeight: 400,
+                fontStyle: 'normal',
+              }}
+            >
+              Add an Ingredient!
+            </Button>
           </Link>
         </Col>
       </Row>

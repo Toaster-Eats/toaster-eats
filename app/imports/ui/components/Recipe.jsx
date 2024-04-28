@@ -34,9 +34,9 @@ const Recipe = ({ recipe }) => {
   return (
     <Card className="h-100">
       <Card.Header className="d-flex flex-column align-items-center">
-        <Image src={recipe.image} height={250} width={250} style={{ objectFit: 'cover' }} />
-        <div className="text-center mt-3">
-          <Card.Title>{recipe.title}</Card.Title>
+        <Image className="mt-2" src={recipe.image} height={250} width={250} style={{ objectFit: 'cover' }} />
+        <div className="text-center mt-2">
+          <Card.Title className="fw-bold">{recipe.title}</Card.Title>
           <Card.Subtitle>{recipe.dietaryRestrictions}</Card.Subtitle>
         </div>
       </Card.Header>
@@ -64,7 +64,7 @@ const Recipe = ({ recipe }) => {
             </tbody>
           </Table>
 
-          <h5 className="pt-2">Ingredients:</h5>
+          <h5 className="pt-2 fw-bold">Ingredients:</h5>
           <ListGroup>
             {recipe.ingredients.map((ingredient, index) => (
               <ListGroupItem key={index}>
@@ -73,7 +73,7 @@ const Recipe = ({ recipe }) => {
             ))}
           </ListGroup>
 
-          <h5 className="pt-4">Instructions:</h5>
+          <h5 className="pt-4 fw-bold">Instructions:</h5>
           <ol>
             {recipe.instructions.split('\n').map((step, index) => (
               <li key={index}>{step}</li>

@@ -47,13 +47,13 @@ const SignIn = () => {
           <Image src="/images/header_banner.png" height="270px" />
         </Col>
       </Row>
-      <Row className="justify-content-center">
-        <Col xs={2}>
+      <Row className="justify-content-center pb-5">
+        <Col xs={5}>
           <Col className="text-center">
             <br />
             <br />
             <br />
-            <h2>Login</h2>
+            <h3 className="fw-semibold">Sign In</h3>
           </Col>
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
@@ -68,10 +68,28 @@ const SignIn = () => {
           <br />
           <br />
           <br />
-          <Alert variant="light">
+          <Alert
+            style={{
+              fontFamily: 'Titillium Web, sans-serif',
+              fontWeight: 400,
+              fontStyle: 'normal',
+            }}
+            variant="light"
+          >
             <div className="text-center">
               Don&#39;t have an account? <br />
-              <Button as={Link} to="/signup" variant="primary">Create new Account</Button>
+              <Button
+                className="mt-2"
+                as={Link}
+                to="/signup"
+                variant="primary"
+                style={{
+                  fontFamily: 'Titillium Web, sans-serif',
+                  fontWeight: 400,
+                  fontStyle: 'normal',
+                }}
+              >Create a new account
+              </Button>
             </div>
           </Alert>
           {error === '' ? (

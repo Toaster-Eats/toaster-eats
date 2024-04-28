@@ -21,9 +21,9 @@ class RecipesCollection {
       'ingredients.$.cost': Number,
       'ingredients.$.location': String,
       estimations: Object,
-      'estimations.costPerServing': Number, // Estimated cost per serving
-      'estimations.numberOfServings': Number, // Estimated number of servings
-      'estimations.totalTime': String, // Total time for preparation (flexible string format)
+      'estimations.costPerServing': Number,
+      'estimations.numberOfServings': Number,
+      'estimations.totalTime': String,
     }, { tracker: Tracker });
     this.collection.attachSchema(this.schema);
     this.userPublicationName = `${this.name}.publication.user`;

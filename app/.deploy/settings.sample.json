@@ -1,1 +1,428 @@
-{"defaultAccounts":[{"email":"tom@foo.com","password":"changeme","role":"vendor"},{"email":"admin@foo.com","password":"changeme","role":"admin"},{"email":"john@foo.com","password":"changeme"}],"defaultData":[{"name":"Basket","quantity":3,"owner":"john@foo.com","condition":"excellent"},{"name":"Bicycle","quantity":2,"owner":"john@foo.com","condition":"poor"},{"name":"Banana","quantity":2,"owner":"admin@foo.com","condition":"good"},{"name":"Boogie Board","quantity":2,"owner":"admin@foo.com","condition":"excellent"}],"monti":{"appId":"changeme","appSecret":"changeme"},"defaultRecipes":[{"title":"Pasta Carbonara","owner":"admin@foo.com","image":"images/pasta_carbonara.jpg","description":"An Italian classic, this pasta carbonara features a creamy sauce made from eggs, cheese, crispy pancetta, and black pepper.","instructions":"Bring a large pot of salted water to a rolling boil and cook spaghetti according to package directions.\nWhile the pasta is cooking, sauté pancetta in a large skillet over medium heat until crispy, about 5-7 minutes.\nIn a separate bowl, whisk together eggs, grated parmesan cheese, and a generous amount of freshly ground black pepper.\nDrain the pasta, reserving a cup of cooking water, and add the pasta to the skillet with the pancetta.\nRemove the skillet from heat and quickly stir in the egg mixture, tossing until the sauce thickens and coats the pasta, adding a splash of the reserved pasta water if necessary to achieve the right consistency.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Spaghetti","cost":1.99,"location":"Pantry"},{"name":"Pancetta","cost":3.49,"location":"Refrigerator"},{"name":"Eggs","cost":2.99,"location":"Refrigerator"},{"name":"Parmesan Cheese","cost":4.99,"location":"Refrigerator"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"30 minutes"}},{"title":"Vegetable Stir Fry","owner":"admin@foo.com","image":"images/stir_fry.jpg","description":"A vibrant and healthy stir fry packed with a variety of colorful vegetables, cooked in a savory soy-based sauce and served over rice.","instructions":"Cook rice and keep warm for serving.\nHeat oil in a large skillet or wok over medium-high heat.\nAdd the chopped vegetables like broccoli, bell peppers, and carrots. Stir-fry for 5-7 minutes, until they begin to soften but still retain a crisp texture.\nAdd your preferred stir fry sauce, such as soy sauce or a combination of soy sauce and other flavorings, and continue to cook, stirring occasionally, for another 2-3 minutes. Allow the vegetables to fully absorb the sauce.\nServe the vegetable stir fry over the cooked rice, and garnish with chopped green onions or sesame seeds if desired.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Broccoli","cost":2.49,"location":"Refrigerator"},{"name":"Bell Pepper","cost":1.99,"location":"Refrigerator"},{"name":"Carrots","cost":1.29,"location":"Refrigerator"},{"name":"Soy Sauce","cost":3.99,"location":"Pantry"},{"name":"Rice","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":3,"totalTime":"20-25 minutes"}},{"title":"Avocado Toast","owner":"john@foo.com","image":"images/avocado_toast.jpg","description":"A creamy mashed avocado spread on toasted bread, topped with a flavorful mix of seasonings. It's a simple yet satisfying dish that's perfect for breakfast or a quick snack.","instructions":"Toast your bread of choice until it's golden brown and crisp. You may toast until you achieve your desired level of crisp. \nCut a ripe avocado in half and remove the pit. Scoop the avocado flesh into a bowl and mash it with a fork until smooth or slightly chunky, depending on your preference. Add a pinch of salt and a dash of black pepper to the mashed avocado, stirring to combine. \nSpread the mashed avocado evenly over the toasted bread.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Ripe Avocados","cost":2.99,"location":"Refrigerator"},{"name":"Whole Grain Bread","cost":3.49,"location":"Pantry"},{"name":"Salt","cost":0.99,"location":"Pantry"},{"name":"Pepper","cost":0.99,"location":"Pantry"}],"estimations":{"costPerServing":1.5,"numberOfServings":2,"totalTime":"5 minutes"}},{"title":"Hummus and Veggie Wraps","owner":"john@foo.com","image":"images/hummus_wraps.jpg","description":"A tasty combination of creamy hummus and an assortment of fresh vegetables, all rolled into soft wraps. Ideal for a quick lunch or snack, they're easy to customize with your favorite veggies and seasonings.","instructions":"Warm the whole grain wraps in a microwave to make them easier to roll. \nUse a spatula to spread a layer of hummus evenly across the entire surface of each wrap. \nThinly slice cucumbers and bell peppers. Shred carrots using a box grater or a food processor. Wash and pat dry lettuce leaves. \nStart by laying the lettuce leaves flat on top of the hummus layer. Add the sliced cucumbers, bell peppers, and shredded carrots evenly over the lettuce. \nStart at one end and tightly roll the wrap, tucking in the sides as you go to ensure the filling stays in place. Roll until you reach the end, then gently press to seal. \nArrange the wraps on a serving platter or individual plates.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Hummus","cost":3.99,"location":"Refrigerator"},{"name":"Whole Grain Wraps","cost":2.99,"location":"Pantry"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Bell Peppers","cost":2.49,"location":"Refrigerator"},{"name":"Shredded Carrots","cost":1.99,"location":"Refrigerator"},{"name":"Lettuce","cost":1.29,"location":"Refrigerator"}],"estimations":{"costPerServing":4.25,"numberOfServings":2,"totalTime":"10 minutes"}},{"title":"Chickpea Salad","owner":"tom@foo.com","image":"images/chickpea_salad.jpg","description":"Hearty chickpeas with a medley of fresh vegetables and a zesty dressing. It's a versatile dish that's great as a light meal or a side, with a satisfying mix of textures and flavors.","instructions":"Dice the cucumber, tomatoes, and red onion into small, bite-sized pieces. \nFinely chop a handful of fresh parsley leaves. \nIn a large mixing bowl, combine the drained chickpeas, diced cucumber, diced tomatoes, diced red onion, and chopped parsley. \nIn a separate small bowl, whisk together the lemon juice, olive oil, salt, and pepper to make the dressing. \nPour the dressing over the chickpea and vegetable mixture. Stir gently to coat the ingredients evenly with the dressing. \nCover the salad and refrigerate for at least 30 minutes to allow the flavors to meld. \nStir quickly together before serving. ","dietaryRestrictions":"Vegan","ingredients":[{"name":"Chickpeas","cost":0.99,"location":"Pantry"},{"name":"Cucumber","cost":1.29,"location":"Refrigerator"},{"name":"Tomatoes","cost":2.99,"location":"Refrigerator"},{"name":"Lemon Juice","cost":3.99,"location":"Pantry"},{"name":"Olive Oil","cost":3.99,"location":"Pantry"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Fruit Salad","owner":"tom@foo.com","image":"images/fruit_salad.jpg","description":"A variety of fresh, juicy fruits for a colorful and refreshing dish. Light and sweet, it's perfect for a healthy dessert or a vibrant addition to any meal.","instructions":"Thoroughly wash all fruits under cold running water to remove any dirt or pesticides.\nIn a large mixing bowl, combine all the chopped fruits. \nTo enhance flavor, prepare a simple dressing by whisking together honey and fresh lime or lemon juice. \nPour the dressing over the mixed fruit and toss gently to coat evenly. Cover the bowl with plastic wrap or a lid and refrigerate for at least 30 minutes. \nServe the fruit salad in individual bowls or on a large platter.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Strawberries","cost":0.99,"location":"Pantry"},{"name":"Blueberries","cost":1.29,"location":"Refrigerator"},{"name":"Grapes","cost":2.99,"location":"Refrigerator"},{"name":"Raspberries","cost":0.79,"location":"Pantry"},{"name":"Lemon Juice","cost":3.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"10 minutes"}},{"title":"Peanut Butter Banana Smoothie","owner":"admin@foo.com","image":"images/peanut_butter_smoothie.jpg","description":"A creamy and satisfying smoothie made with peanut butter, ripe bananas, and a hint of honey, perfect for breakfast or a healthy snack.","instructions":"Peel and cut ripe bananas into chunks. Add bananas, peanut butter, milk, and honey to a blender.\nBlend on high speed until smooth and creamy.\nIf the smoothie is too thick, add more milk to reach your desired consistency.\nPour into glasses and serve immediately, optionally topped with a drizzle of honey or a sprinkle of crushed peanuts.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Ripe Bananas","cost":1.49,"location":"Refrigerator"},{"name":"Peanut Butter","cost":2.99,"location":"Pantry"},{"name":"Milk","cost":1.49,"location":"Refrigerator"},{"name":"Honey","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":4.5,"numberOfServings":2,"totalTime":"5 minutes"}},{"title":"Caprese Salad","owner":"admin@foo.com","image":"images/caprese_salad.jpg","description":"A classic Italian salad featuring fresh tomatoes, mozzarella cheese, and basil, drizzled with balsamic glaze and olive oil.","instructions":"Slice fresh tomatoes and mozzarella cheese into even rounds. Arrange the tomato and mozzarella slices on a serving plate, alternating them in a pattern.\nTear fresh basil leaves and sprinkle them over the salad.\nDrizzle with extra virgin olive oil and balsamic glaze.\nAdd salt and freshly ground black pepper to taste.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Tomatoes","cost":1.99,"location":"Refrigerator"},{"name":"Vegan Mozzarella","cost":3.49,"location":"Refrigerator"},{"name":"Fresh Basil","cost":2.99,"location":"Refrigerator"},{"name":"Balsamic Glaze","cost":3.49,"location":"Pantry"}],"estimations":{"costPerServing":7.5,"numberOfServings":2,"totalTime":"10 minutes"}},{"title":"Vegan Tacos","owner":"john@foo.com","image":"images/vegan_tacos.jpg","description":"Flavorful vegan tacos made with a plant-based filling, fresh vegetables, and a zesty sauce, served in soft or hard taco shells.","instructions":"Heat oil in a skillet over medium-high heat.\nAdd plant-based ground meat or crumbled tofu, along with taco seasoning, and sauté until browned and heated through.\nWarm taco shells in the oven for a few minutes to make them crisp.\nChop fresh vegetables such as lettuce, tomatoes, and onions. \nFill the taco shells with the cooked filling, then add your preferred toppings.\nFinish with a dollop of salsa or vegan sour cream, if desired.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Tofu","cost":3.99,"location":"Refrigerator"},{"name":"Lettuce","cost":1.99,"location":"Refrigerator"},{"name":"Cherry Tomatoes","cost":2.49,"location":"Refrigerator"},{"name":"Onions","cost":1.29,"location":"Refrigerator"},{"name":"Avocado","cost":2.99,"location":"Refrigerator"},{"name":"Vegan Cheese","cost":4.99,"location":"Refrigerator"},{"name":"Salsa","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":3,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Vegan Caesar Salad","owner":"john@foo.com","image":"images/vegan_caesar_salad.jpg","description":"A plant-based version of the classic Caesar salad, featuring crisp romaine lettuce, crunchy croutons, and a creamy vegan Caesar dressing.","instructions":"Wash and chop romaine lettuce into bite-sized pieces.\nIn a large salad bowl, combine the chopped lettuce with vegan croutons.\nIn a blender, combine cashews, lemon juice, garlic, Dijon mustard, nutritional yeast, and water to make the dressing.\nBlend until smooth, adding more water if needed to reach the desired consistency.\nPour the dressing over the salad and toss to coat evenly.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Romaine Lettuce","cost":1.99,"location":"Refrigerator"},{"name":"Cashews","cost":4.99,"location":"Pantry"},{"name":"Lemon Juice","cost":1.29,"location":"Refrigerator"},{"name":"Garlic","cost":0.99,"location":"Pantry"},{"name":"Dijon Mustard","cost":1.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Overnight Oats","owner":"tom@foo.com","image":"images/overnight_oats.jpg","description":"A quick and nutritious breakfast mixed with a variety of fruits and other toppings, and left overnight to set.","instructions":"In a jar or container with a lid, combine rolled oats, and maple syrup.\nStir well to combine, ensuring the oats are fully submerged in the liquid.\nAdd optional ingredients like chia seeds, sliced bananas, berries, or nuts for added flavor and texture.\nSeal the container with a lid and place it in the refrigerator.\nLet the oats soak overnight to soften and absorb the flavors.\nIn the morning, give the oats a good stir before serving.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Rolled Oats","cost":2.49,"location":"Pantry"},{"name":"Plant-Based Milk","cost":1.99,"location":"Refrigerator"},{"name":"Chia Seeds","cost":3.99,"location":"Pantry"},{"name":"Bananas","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"10 minutes of preparation, overnight to set"}},{"title":"Guacamole","owner":"tom@foo.com","image":"images/guacamole.jpg","description":"A classic dip made with ripe avocados, lime juice, tomatoes, onions, and fresh cilantro, perfect for serving with chips or as a topping for tacos and burritos.","instructions":"Cut avocados in half and remove the pits.\nScoop the avocado flesh into a large mixing bowl and mash with a fork until smooth. \nAdd lime juice, diced tomatoes, chopped onions, and chopped cilantro, and stir to combine.\nSeason with salt, black pepper. \nTaste and adjust the seasoning as needed, adding more lime juice or salt to balance the flavors.","dietaryRestrictions":"Vegan","ingredients":[{"name":"Avocados","cost":2.99,"location":"Refrigerator"},{"name":"Lime Juice","cost":0.99,"location":"Refrigerator"},{"name":"Tomatoes","cost":1.49,"location":"Refrigerator"},{"name":"Onions","cost":0.99,"location":"Pantry"},{"name":"Cilantro","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":1.5,"numberOfServings":4,"totalTime":"10 minutes"}},{"title":"Quinoa Salad with Chickpeas","owner":"admin@foo.com","image":"images/quinoa_salad.jpg","description":"A healthy and hearty salad made with quinoa, chickpeas, fresh vegetables, and a zesty dressing, perfect as a side dish or a light meal.","instructions":"Cook quinoa, then let it cool.\nIn a large mixing bowl, combine the cooked quinoa with chickpeas, diced cucumbers, chopped bell peppers, and halved cherry tomatoes.\nAdd fresh cilantro for an aromatic touch.\nFor the dressing, whisk together olive oil, lemon juice, garlic, and salt.\nPour the dressing over the quinoa mixture and toss to coat evenly.\nServe immediately or refrigerate for at least 30 minutes to allow flavors to meld.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Quinoa","cost":2.99,"location":"Pantry"},{"name":"Cucumbers","cost":1.99,"location":"Refrigerator"},{"name":"Lemon Juice","cost":0.99,"location":"Refrigerator"},{"name":"Garlic","cost":0.49,"location":"Pantry"},{"name":"Fresh Cilantro","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2,"numberOfServings":4,"totalTime":"25 minutes"}},{"title":"Spinach and Feta Stuffed Mushrooms","owner":"admin@foo.com","image":"images/stuffed_mushrooms.jpg","description":"A savory appetizer or side dish made with large mushrooms stuffed with a mixture of spinach, feta cheese, garlic, and herbs.","instructions":"Preheat the oven to 375°F (190°C).\nRemove the stems from the mushrooms and set the caps aside.\nChop the mushroom stems finely and sauté in a skillet with olive oil over medium heat.\nAdd minced garlic and sauté for a few more minutes until fragrant.\nStir in chopped spinach and cook until wilted, then remove from heat and let cool slightly.\nAdd crumbled feta cheese and fresh parsley to the spinach mixture, and stir to combine.\nFill the mushroom caps with the spinach and feta mixture, pressing down gently.\nArrange the stuffed mushrooms on a baking sheet and bake for 20-25 minutes, or until the mushrooms are tender and the filling is lightly browned.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Large Portobello Mushrooms","cost":2.99,"location":"Refrigerator"},{"name":"Spinach","cost":1.99,"location":"Refrigerator"},{"name":"Feta Cheese","cost":3.99,"location":"Refrigerator"},{"name":"Garlic","cost":0.49,"location":"Pantry"},{"name":"Fresh Parsley","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"35 minutes"}},{"title":"Rice Paper Spring Rolls with Peanut Sauce","owner":"john@foo.com","image":"images/rpsr_spring_rolls.jpg","description":"Fresh rice paper spring rolls filled with a variety of vegetables, herbs, and optionally tofu or shrimp, served with a creamy peanut sauce for dipping.","instructions":"Slice vegetables and prepare filling.\nCook rice vermicelli and let it cool. \nFill a large shallow dish with warm water and soak the rice paper wrappers one at a time until pliable, but not too soft.\nLay the softened rice paper on a clean, flat surface and add a small amount of each filling ingredient along the center, including the cooked rice vermicelli, vegetables, and fresh cilantro.\nFold the sides of the rice paper over the filling, then roll from the bottom to the top, keeping it tight but not too tight to prevent tearing. Repeat for other rolls.\nTo make the peanut sauce, whisk together peanut butter, soy sauce, lime juice, honey or maple syrup, and a splash of warm water to reach a creamy consistency.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Rice Paper Wrappers","cost":2.99,"location":"Pantry"},{"name":"Rice Vermicelli","cost":1.99,"location":"Pantry"},{"name":"Carrots","cost":1.29,"location":"Refrigerator"},{"name":"Peanut Butter","cost":2.99,"location":"Pantry"},{"name":"Lime Juice","cost":0.99,"location":"Refrigerator"},{"name":"Honey Syrup","cost":1.49,"location":"Pantry"}],"estimations":{"costPerServing":3,"numberOfServings":4,"totalTime":"30 minutes"}},{"title":"Greek Salad","owner":"john@foo.com","image":"images/greek_salad.jpg","description":"A classic Greek salad featuring fresh vegetables like tomatoes, cucumbers, and bell peppers, with Kalamata olives, feta cheese, and a simple vinaigrette dressing.","instructions":"Wash and chop the tomatoes, cucumbers, and bell peppers into bite-sized pieces.\nThinly slice red onion and add it to a large mixing bowl along with the chopped vegetables.\nAdd Kalamata olives and crumbled feta cheese to the bowl.\nIn a separate small bowl, prepare the vinaigrette by whisking together olive oil, red wine vinegar, lemon juice, minced garlic, dried oregano, and salt.\nPour the vinaigrette over the salad and toss to combine. Serve when ready.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Tomatoes","cost":1.99,"location":"Refrigerator"},{"name":"Cucumbers","cost":1.99,"location":"Refrigerator"},{"name":"Kalamata Olives","cost":2.99,"location":"Pantry"},{"name":"Feta Cheese","cost":3.99,"location":"Refrigerator"},{"name":"Garlic","cost":0.49,"location":"Pantry"},{"name":"Dried Oregano","cost":0.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Avocado and Tomato Salad","owner":"tom@foo.com","image":"images/avocado_tomato_salad.jpg","description":"A fresh and vibrant salad made with ripe avocados and juicy tomatoes, tossed with lime juice and fresh herbs.","instructions":"Slice ripe avocados and cut them into bite-sized pieces.\nChop tomatoes into similar-sized pieces.\nIn a large mixing bowl, combine the avocado and tomato pieces.\nAdd chopped red onion for a bit of crunch and fresh basil for extra flavor.\nSqueeze fresh lime juice over the salad, and drizzle with olive oil.\nAdd salt and freshly ground black pepper to taste, and toss gently to combine.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Avocados","cost":2.99,"location":"Refrigerator"},{"name":"Tomatoes","cost":1.99,"location":"Refrigerator"},{"name":"Fresh Basil","cost":1.99,"location":"Refrigerator"},{"name":"Lime Juice","cost":0.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"10 minutes"}},{"title":"Banana Oat Pancakes","owner":"tom@foo.com","image":"images/banana_oat_pancakes.jpg","description":"Fluffy pancakes made with ripe bananas and oats, providing a healthier twist on a classic breakfast favorite.","instructions":"In a blender, blend rolled oats until they form a coarse flour.\nAdd ripe bananas, eggs, baking powder, and a dash of vanilla extract to the blender, and blend until smooth.\nHeat a non-stick griddle over medium heat and lightly grease with cooking spray or butter.\nPour small circles of batter onto the skillet. \nCook for 2-3 minutes on one side. Flip the pancakes and cook for another 1-2 minutes, or until golden brown.\nServe warm with syrup.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Rolled Oats","cost":2.49,"location":"Pantry"},{"name":"Ripe Bananas","cost":1.99,"location":"Refrigerator"},{"name":"Eggs","cost":2.99,"location":"Refrigerator"}],"estimations":{"costPerServing":1.5,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Mango Coconut Chia Pudding","owner":"admin@foo.com","image":"images/mango_coconut_chia_pudding.jpg","description":"A tropical-inspired chia pudding made with mango puree and coconut milk, perfect for a healthy breakfast or dessert.","instructions":"In a large bowl, combine chia seeds with coconut milk and honey.\nStir well to ensure the chia seeds are evenly distributed in the coconut milk.\nCover and refrigerate for at least 4 hours, or overnight, allowing the chia seeds to absorb the liquid and form a pudding-like consistency.\nWhile the chia pudding is setting, peel and dice fresh mango, then blend it to create a smooth puree.\nWhen the chia pudding is ready, layer it in serving glasses or bowls with the mango puree, creating a swirled or layered effect.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Chia Seeds","cost":3.99,"location":"Pantry"},{"name":"Coconut Milk","cost":2.49,"location":"Pantry"},{"name":"Honey","cost":2.49,"location":"Pantry"},{"name":"Shredded Coconut","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":2,"numberOfServings":4,"totalTime":"10 minutes of preparation, 4 hours or overnight to set"}},{"title":"Greek Yogurt Parfait","owner":"admin@foo.com","image":"images/greek_yogurt_parfait.jpg","description":"A nutritious and delicious parfait made with layers of Greek yogurt, fresh fruit, and granola, perfect for breakfast or a healthy snack.","instructions":"In a small bowl, add a layer of Greek yogurt at the bottom.\nTop with a layer of fresh fruit, such as strawberries, blueberries, or bananas.\nAdd a layer of granola for crunch and texture.\nDrizzle with maple syrup for extra sweetness, if desired.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Greek Yogurt","cost":3.99,"location":"Refrigerator"},{"name":"Fresh Fruit (Strawberries, Blueberries, Bananas)","cost":3.49,"location":"Refrigerator"},{"name":"Granola","cost":2.99,"location":"Pantry"},{"name":"Maple Syrup","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"10 minutes"}},{"title":"Chickpea Avocado Salad","owner":"john@foo.com","image":"images/chickpea_avocado_salad.jpg","description":"A hearty and healthy salad made with chickpeas, ripe avocados, fresh vegetables, and a simple dressing, perfect for a quick lunch or light dinner.","instructions":"Drain and rinse the canned chickpeas, then place them in a large mixing bowl.\nPeel and cube ripe avocados into bite-sized pieces, then add them to the chickpeas.\nDice fresh vegetables like tomatoes, cucumbers, and bell peppers, and add them to the bowl.\nChop fresh parsley and mix them into the salad.\nIn a separate small bowl, whisk together lemon juice, olive oil, salt, and pepper to create a simple dressing.\nPour the dressing over the chickpea and avocado mixture, and gently toss to combine.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Chickpeas","cost":1.49,"location":"Pantry"},{"name":"Avocados","cost":2.99,"location":"Refrigerator"},{"name":"Tomatoes","cost":1.99,"location":"Refrigerator"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Lemon Juice","cost":0.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Stuffed Bell Peppers","owner":"john@foo.com","image":"images/stuffed_bell_peppers.jpg","description":"Bell peppers stuffed with a savory mixture of ground meat, rice, and vegetables, baked to perfection for a satisfying meal.","instructions":"Preheat the oven to 375°F (190°C).\nCut the tops off the bell peppers and remove the seeds and membranes inside.\nPlace the bell peppers in a baking dish and set aside.\nIn a skillet over medium heat, sauté turkey until browned, breaking it up as it cooks.\nAdd diced onions and garlic to the skillet and sauté until softened, about 3-4 minutes.\nMix in cooked rice, diced tomatoes, and tomato paste, and season with salt, pepper, and Italian herbs.\nFill each bell pepper with the meat and rice mixture, pressing down gently. \nRemove the foil and bake for an additional 10-15 minutes.","dietaryRestrictions":"Gluten-Free","ingredients":[{"name":"Bell Peppers","cost":2.99,"location":"Refrigerator"},{"name":"Turkey","cost":4.99,"location":"Refrigerator"},{"name":"Garlic","cost":0.49,"location":"Pantry"},{"name":"Diced Tomatoes","cost":1.49,"location":"Pantry"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"60 minutes"}},{"title":"Veggie Stuffed Portobello Mushrooms","owner":"tom@foo.com","image":"images/vege_stuffed_mushrooms.jpg","description":"Large portobello mushrooms stuffed with a flavorful mixture of vegetables, cheese, and herbs, then baked to perfection.","instructions":"Preheat the oven to 375°F (190°C).\nRemove the stems and gills from the portobello mushrooms.\nPlace the mushroom caps in a baking dish, stem-side up.\nIn a skillet over medium heat, sauté diced onions and garlic until softened.\nAdd chopped bell peppers and cook until tender.\nStir in spinach and cook until wilted.\nRemove from heat and mix in breadcrumbs and fresh basil.\nSpoon the mixture into the portobello caps.\nBake for 20-25 minutes, or until the mushrooms are tender and the cheese is melted and bubbly.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Portobello Mushrooms","cost":3.99,"location":"Refrigerator"},{"name":"Spinach","cost":2.49,"location":"Refrigerator"},{"name":"Breadcrumbs","cost":1.99,"location":"Pantry"},{"name":"Fresh Basil","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"40 minutes"}},{"title":"Mediterranean Veggie Sandwich","owner":"tom@foo.com","image":"images/mediterranean_sandwich.jpg","description":"A flavorful sandwich filled with a variety of Mediterranean-inspired vegetables, cheese, and a tangy dressing, served on crusty bread or flatbread.","instructions":"Toast the ciabatta flatbread. \nSpread a layer of hummus on one slice of bread, and a layer of roasted red peppers.\nAdd sliced cucumbers, tomatoes, and red onions for a refreshing crunch.\nInclude mozzarella for a creamy texture and additional flavor.\nAdd fresh basil to enhance the Mediterranean profile. Drizzle with olive oil and balsamic vinegar for a tangy dressing.\nAssemble the sandwich by placing the filled slices together.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Ciabatta Flatbread","cost":2.49,"location":"Pantry"},{"name":"Hummus","cost":2.99,"location":"Refrigerator"},{"name":"Roasted Red Peppers","cost":3.49,"location":"Pantry"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Mozzarella","cost":3.49,"location":"Refrigerator"}],"estimations":{"costPerServing":3,"numberOfServings":2,"totalTime":"10 minutes"}},{"title":"Vegetarian Bibimbap","owner":"admin@foo.com","image":"images/bibimbap.jpg","description":"A Korean-inspired dish featuring a colorful assortment of sautéed vegetables, crispy rice, and a flavorful sauce, typically topped with a fried egg.","instructions":"Cook rice, then set aside and keep warm.\nIn a skillet over medium heat, add sesame oil and sauté a variety of vegetables such as carrots, zucchini, and mushrooms, cooking them separately.\nPrepare the bibimbap sauce by mixing gochujang (Korean chili paste), sesame oil, soy sauce, and sugar in a small bowl.\nIn a separate skillet, fry eggs until the whites are set but the yolks remain slightly runny.\nTo assemble the bibimbap, place a portion of cooked rice in a bowl, then arrange the sautéed vegetables on top in sections.\nAdd the fried egg on top of the vegetables and drizzle with the bibimbap sauce.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Rice","cost":1.49,"location":"Pantry"},{"name":"Sesame Oil","cost":2.49,"location":"Pantry"},{"name":"Mushrooms","cost":2.99,"location":"Refrigerator"},{"name":"Gochujang","cost":3.99,"location":"Pantry"},{"name":"Eggs","cost":2.99,"location":"Refrigerator"},{"name":"Green Onions","cost":1.29,"location":"Refrigerator"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"30 minutes"}},{"title":"Caprese Panini","owner":"admin@foo.com","image":"images/caprese_panini.jpg","description":"A delicious panini with layers of fresh tomatoes, mozzarella cheese, and basil, drizzled with balsamic glaze and toasted to perfection.","instructions":"Preheat a grill pan to medium-high heat.\nSlice fresh tomatoes and mozzarella cheese into even rounds.\nSpread butter on the outside of each slice of bread.\nOn one slice of bread, layer tomato slices, fresh basil leaves, and mozzarella cheese.\nDrizzle with balsamic glaze and sprinkle with salt and pepper.\nTop with the second slice of bread, buttered-side facing out.\nPlace the sandwich on the grill pan and close the lid.\nGrill for 3-5 minutes. Serve when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Sourdough Bread","cost":2.99,"location":"Pantry"},{"name":"Tomatoes","cost":1.99,"location":"Refrigerator"},{"name":"Mozzarella Cheese","cost":3.49,"location":"Refrigerator"},{"name":"Balsamic Glaze","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"15 minutes"}},{"title":"Veggie Omelette","owner":"john@foo.com","image":"images/veggie_omelette.jpg","description":"A hearty omelette filled with a colorful mix of sautéed vegetables and cheese, perfect for a satisfying breakfast or brunch.","instructions":"Crack the eggs into a bowl and whisk until well combined, adding a pinch of salt and pepper.\nIn a skillet over medium heat, sauté diced onions and bell peppers until they soften.\nAdd chopped mushrooms and cook until they release their moisture and begin to brown.\nStir in kale and cook until wilted.\nReduce the heat to low and pour the whisked eggs into the skillet, tilting to distribute evenly.\nCook for 2-3 minutes. Add shredded cheese on one side of the omelette, then fold the other side over the cheese and vegetables.\nCover and cook for an additional 2-3 minutes. Serve when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Eggs","cost":2.99,"location":"Refrigerator"},{"name":"Onions","cost":0.99,"location":"Refrigerator"},{"name":"Mushrooms","cost":2.99,"location":"Refrigerator"},{"name":"Kale","cost":2.49,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"15-20 minutes"}},{"title":"Veggie Sushi Rolls","owner":"john@foo.com","image":"images/vege_sushi_rolls.jpg","description":"Delicious sushi rolls filled with a variety of fresh vegetables, avocado, and other vegetarian ingredients, wrapped in seaweed and sushi rice.","instructions":"Cook sushi rice, then let it cool slightly and season with rice vinegar, sugar, and salt.\nPlace a sheet of nori (seaweed) on a flat surface.\nSpread an even layer of sushi rice on the nori, leaving about an inch of space at the top.\nAdd thinly sliced vegetables such as cucumber, carrot, and avocado along the lower edge of the rice.\nRoll the sushi tightly, pressing gently to keep the roll compact.\nOnce rolled, use a sharp knife to cut the sushi into even slices.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Sushi Rice","cost":2.49,"location":"Pantry"},{"name":"Rice Vinegar","cost":1.49,"location":"Pantry"},{"name":"Nori Sheets","cost":2.99,"location":"Pantry"},{"name":"Cucumber","cost":1.29,"location":"Refrigerator"},{"name":"Wasabi","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"40 minutes"}},{"title":"Mediterranean Veggie Wrap","owner":"tom@foo.com","image":"images/mediterranean_wrap.jpg","description":"A delicious and healthy wrap filled with a variety of Mediterranean-inspired vegetables, olives, and feta cheese, wrapped in a tortilla.","instructions":"Warm the tortilla in the microwave to make it more pliable.\nSpread a layer of hummus on the tortilla to add flavor and moisture.\nAdd a mix of fresh vegetables, such as sliced cucumbers, tomatoes, and bell peppers.\nInclude Kalamata olives for a salty kick, and crumbled feta cheese for a tangy touch.\nAdd a handful of fresh lettuce for a crispy texture.\nRoll the wrap tightly, tucking in the sides as you go to keep the filling secure.\nCut in half and serve when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Tortillas","cost":2.99,"location":"Pantry"},{"name":"Hummus","cost":2.99,"location":"Refrigerator"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Kalamata Olives","cost":2.99,"location":"Pantry"},{"name":"Feta Cheese","cost":3.49,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Mushroom and Spinach Quesadillas","owner":"tom@foo.com","image":"images/mushroom_quesadillas.jpg","description":"Delicious quesadillas filled with sautéed mushrooms, spinach, and cheese, perfect for a quick and satisfying meal.","instructions":"Heat a skillet over medium heat and add a drizzle of olive oil.\nAdd sliced mushrooms to the skillet and sauté for about 5-7 minutes.\nStir in fresh spinach and cook about 2-3 minutes.\nSeason with salt, pepper, and a pinch of garlic powder, then remove from heat.\nIn a separate skillet, warm a tortilla and add a layer of shredded cheese on one half.\nAdd the sautéed mushroom and spinach mixture over the cheese, then fold the tortilla over to create the quesadilla.\nCook for 2-3 minutes on each side, or until the tortilla is golden brown and the cheese has melted.\nCut into wedges and serve with salsa, guacamole, or sour cream.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Tortillas","cost":2.49,"location":"Pantry"},{"name":"Mushrooms","cost":2.99,"location":"Refrigerator"},{"name":"Shredded Cheese","cost":2.99,"location":"Refrigerator"},{"name":"Garlic Powder","cost":0.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Vegetarian Chili","owner":"admin@foo.com","image":"images/vegetarian_chili.jpg","description":"A hearty and flavorful chili made with beans, vegetables, and a rich tomato base, perfect for a comforting meal on a chilly day.","instructions":"In a large pot, heat olive oil over medium heat.\nAdd diced onions and bell peppers, and sauté for 5-7 minutes.Add minced garlic and cook until fragrant for 1 minute.\nStir in diced tomatoes, tomato paste, and vegetable broth.\nAdd black canned beans and bring to a simmer.\nMix in chili powder, smoked paprika, and oregano, and season with salt and pepper to taste.\nSimmer for at least 20 minutes. Serve when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Onions","cost":0.99,"location":"Pantry"},{"name":"Bell Peppers","cost":1.49,"location":"Refrigerator"},{"name":"Garlic","cost":0.49,"location":"Pantry"},{"name":"Vegetable Broth","cost":2.49,"location":"Pantry"},{"name":"Canned Black Beans","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"30-40 minutes"}},{"title":"Antipasto Platter","owner":"admin@foo.com","image":"images/antipasto_platter.jpg","description":"A classic Italian appetizer platter featuring a variety of cured meats, cheeses, marinated vegetables, and olives, ideal for entertaining or as a snack.","instructions":"Choose a large serving platter to arrange the antipasto items.\nArrange slices of cured meats in a decorative pattern.\nAdd an assortment of cheeses such as mozzarella, provolone, and parmesan.\nInclude marinated vegetables like roasted red peppers, and sundried tomatoes.\nAdd a selection of green olives, along with pickled vegetables. Place breadsticks around the edges of the platter for dipping.\nFinish with fresh parsley for garnish, and drizzle with balsamic glaze for extra flavor.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Cured Meats","cost":5.99,"location":"Refrigerator"},{"name":"Cheeses (Mozzarella/Provolone/Parmesan)","cost":4.99,"location":"Refrigerator"},{"name":"Roasted Red Peppers","cost":3.49,"location":"Pantry"},{"name":"Breadsticks","cost":1.99,"location":"Pantry"},{"name":"Balsamic Glaze","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":3.5,"numberOfServings":6,"totalTime":"15 minutes"}},{"title":"Protein Power Bowl","owner":"john@foo.com","image":"images/protein_power_bowl.jpg","description":"A hearty and nutritious bowl loaded with high-protein ingredients like quinoa, beans, and tofu, topped with fresh vegetables and a flavorful dressing.","instructions":"Cook quinoa, then set aside to cool slightly.\nIn a skillet over medium heat, sauté diced tofu with olive oil until golden brown.\nAdd canned black beans to the skillet to heat through. In a large bowl, combine the cooked quinoa, sautéed tofu, and beans.\nAdd fresh vegetables like diced bell peppers, cherry tomatoes, and sliced avocado.\nPrepare a simple dressing by whisking together lemon juice, olive oil, and tahini.\nPour the dressing over the bowl and toss to combine.\nGarnish with fresh cilantro, and a sprinkle of chia seeds for extra texture. Serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Quinoa","cost":2.99,"location":"Pantry"},{"name":"Black Beans","cost":1.49,"location":"Pantry"},{"name":"Bell Peppers","cost":1.49,"location":"Refrigerator"},{"name":"Lemon Juice","cost":0.99,"location":"Refrigerator"},{"name":"Chia Seeds","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"30 minutes"}},{"title":"Stuffed Avocado","owner":"john@foo.com","image":"images/stuffed_avocado.jpg","description":"Ripe avocados stuffed with a savory mix of vegetables and other flavorful ingredients, making a quick and healthy snack or appetizer.","instructions":"Cut ripe avocados in half and remove the pits.\nUse a spoon to carefully scoop out some of the flesh, leaving a border around the edges.\nDice the scooped-out avocado flesh and place it in a mixing bowl.\nAdd diced tomatoes, red onions, and chopped fresh cilantro.\nMix in additional ingredients such as black beans, corn, or cooked quinoa for added texture and flavor.\nSqueeze fresh lime juice over the mixture and season with salt, pepper, and a pinch of chili powder.\nSpoon the mixture back into the avocado halves, pressing down gently. Serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Avocados","cost":2.99,"location":"Refrigerator"},{"name":"Tomatoes","cost":1.99,"location":"Refrigerator"},{"name":"Black Beans","cost":1.49,"location":"Pantry"},{"name":"Corn","cost":1.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Tuna Salad Lettuce Wraps","owner":"tom@foo.com","image":"images/tuna_salad_lettuce_wraps.jpg","description":"A light and refreshing dish featuring tuna salad wrapped in crisp lettuce leaves, perfect for a low-carb lunch or snack.","instructions":"Drain canned tuna and place it in a large mixing bowl. Add diced celery, red onions, and a dollop of mayonnaise to the bowl.\nStir in Dijon mustard, lemon juice, and a pinch of salt and pepper to taste.\nMix everything together until well combined. Separate lettuce leaves from the head, ensuring they remain intact.\nSpoon the tuna salad onto the lettuce leaves, then roll them to create wraps.\nServe when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Canned Tuna","cost":2.49,"location":"Pantry"},{"name":"Celery","cost":1.29,"location":"Refrigerator"},{"name":"Red Onions","cost":0.99,"location":"Refrigerator"},{"name":"Dijon Mustard","cost":1.49,"location":"Pantry"},{"name":"Lemon Juice","cost":0.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Greek Salad Skewers","owner":"tom@foo.com","image":"images/greek_salad_skewers.jpg","description":"Bring the vibrant flavors of a classic Greek salad onto convenient skewers, perfect for parties or appetizers. Each skewer features a balanced combination of fresh vegetables, cheese, and olives, topped with a drizzle of olive oil and herbs.","instructions":"Cut cucumbers and tomatoes into bite-sized pieces, ensuring they're evenly sized for skewering.\nCut feta cheese into small cubes or use pre-cut feta blocks. Thread the skewers with a pattern of cucumbers, tomatoes, Kalamata olives, and feta cheese.\nContinue until all skewers are filled.\nDrizzle with olive oil and sprinkle with dried oregano for extra flavor.\nServe the skewers on a platter before serving.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Cherry Tomatoes","cost":2.49,"location":"Refrigerator"},{"name":"Kalamata Olives","cost":2.99,"location":"Pantry"},{"name":"Dried Oregano","cost":0.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"15 minutes"}},{"title":"Apple Peanut Butter Wraps","owner":"admin@foo.com","image":"images/apple_peanut_butter_wraps.jpg","description":"A quick and tasty snack or breakfast option. They combine crisp apples, creamy peanut butter, and other optional fillings in a soft tortilla wrap.","instructions":"Warm the tortilla in a microwave to make it more pliable. Spread a layer of peanut butter evenly across the tortilla.\nSlice apples thinly and arrange them on top of the peanut butter. \nRoll the tortilla tightly, starting from one edge, and tuck in the sides as you go. Cut the wrap in half for easier serving, or leave it whole for a grab-and-go snack. Serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Tortillas","cost":2.99,"location":"Pantry"},{"name":"Peanut Butter","cost":2.99,"location":"Pantry"},{"name":"Apples","cost":1.99,"location":"Refrigerator"},{"name":"Granola","cost":2.49,"location":"Pantry"},{"name":"Raisins","cost":1.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"10 minutes"}},{"title":"Almond Butter Energy Balls","owner":"admin@foo.com","image":"images/almond_butter_energy_balls.jpg","description":"A quick and healthy snack, perfect for a burst of energy on the go. These bite-sized treats are made with almond butter, oats, and other nutritious ingredients.","instructions":"In a large mixing bowl, combine almond butter, rolled oats, and maple syrup. Add mix-ins like chocolate chips, chia seeds, or shredded coconut for added flavor and texture.\nStir until the mixture is well combined and sticky enough to form balls.\nUse your hands to roll the mixture into bite-sized balls. Place the energy balls on a baking sheet and refrigerate for at least 30 minutes to set. \nServe when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Almond Butter","cost":3.99,"location":"Pantry"},{"name":"Rolled Oats","cost":2.49,"location":"Pantry"},{"name":"Maple Syrup","cost":2.49,"location":"Pantry"},{"name":"Chocolate Chips","cost":2.99,"location":"Pantry"},{"name":"Chia Seeds","cost":3.49,"location":"Pantry"},{"name":"Shredded Coconut","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":12,"totalTime":"40 minutes"}},{"title":"Spinach and Feta Omelette","owner":"john@foo.com","image":"images/spinach_feta_omelette.jpg","description":"This hearty omelette blends the earthy flavors of fresh spinach with the tangy creaminess of crumbled feta cheese. Lightly beaten eggs envelop the savory filling, creating a fluffy and satisfying breakfast dish with a hint of Mediterranean flair.","instructions":"Crack eggs into a bowl and whisk until well combined, adding a pinch of salt and pepper.\nIn a skillet over medium heat, sauté fresh spinach with a little olive oil until wilted, about 2-3 minutes.\nPour the whisked eggs into the skillet and tilt to evenly distribute.\nAdd crumbled feta cheese to one side of the omelette.\nCook until the edges start to set, then fold the omelette over the cheese and spinach.\nContinue cooking for another 1-2 minutes. Serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Eggs","cost":2.99,"location":"Refrigerator"},{"name":"Spinach","cost":2.49,"location":"Refrigerator"},{"name":"Feta Cheese","cost":3.49,"location":"Refrigerator"},{"name":"Fresh Chives)","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"10-15 minutes"}},{"title":"Edamame Salad","owner":"john@foo.com","image":"images/edamame_salad.jpg","description":"A refreshing and nutritious dish featuring cooked edamame beans mixed with fresh vegetables and a light dressing. It's a perfect side dish or a light lunch option.","instructions":"Boil edamame beans then drain and let them cool.\nIn a large mixing bowl, combine the edamame with diced vegetables like bell peppers, cucumbers, and cherry tomatoes.\nAdd sliced red onions and chopped fresh cilantro for more flavor.\nIn a small bowl, whisk together olive oil, rice vinegar, soy sauce, and a touch of maple syrup for the dressing. Pour the dressing over the salad and toss to combine, ensuring everything is evenly coated.\nSeason with salt and pepper to taste. Serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Edamame Beans","cost":2.99,"location":"Refrigerator"},{"name":"Bell Peppers","cost":1.49,"location":"Refrigerator"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Cherry Tomatoes","cost":2.49,"location":"Refrigerator"},{"name":"Rice Vinegar","cost":1.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Mixed Berry Parfait","owner":"tom@foo.com","image":"images/mixed_berry_parfait.jpg","description":"A combination of layers with sweet berries and creamy yogurt for a delightful treat. Topped with a crunchy surprise, it's a perfect breakfast or dessert with a burst of fruity flavor.","instructions":"In a glass or a serving bowl, start by adding a layer of Greek yogurt at the bottom.\nAdd a layer of mixed berries, such as strawberries, blueberries, and raspberries. Top with a layer of granola for extra crunch and texture.\nRepeat the layers with additional yogurt, berries, and granola, finishing with a layer of berries on top. Drizzle with maple syrup for added sweetness, if desired.\nServe when ready or refrigerate for later.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Greek Yogurt","cost":3.99,"location":"Refrigerator"},{"name":"Mixed Berries","cost":3.49,"location":"Refrigerator"},{"name":"Granola","cost":2.99,"location":"Pantry"},{"name":"Maple Syrup","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"10 minutes"}},{"title":"Caprese Zucchini Noodles","owner":"tom@foo.com","image":"images/caprese_zucchini_noodles.jpg","description":"A fresh twist on a classic Italian dish. Spiralized zucchini meets ripe tomatoes, basil, and creamy mozzarella for a light yet satisfying meal.","instructions":"Cut zucchini into thin strips with a julienne peeler.\nHeat a skillet over medium heat and add a small amount of olive oil.\nAdd the zucchini noodles to the skillet and sauté for 2-3 minutes until just tender.\nIn a separate bowl, combine halved cherry tomatoes and mozzarella balls, and add the sautéed zucchini noodles. Toss with fresh basil leaves, torn into small pieces, and drizzle with balsamic vinegar for added flavor.\nSeason with salt and pepper to taste. Serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Zucchini","cost":1.99,"location":"Refrigerator"},{"name":"Cherry Tomatoes","cost":2.49,"location":"Refrigerator"},{"name":"Mozzarella Balls","cost":3.49,"location":"Refrigerator"},{"name":"Balsamic Vinegar","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":3,"numberOfServings":2,"totalTime":"15 minutes"}},{"title":"Veggie and Hummus Pita Pocket","owner":"admin@foo.com","image":"images/veggie_hummus_pita_pocket.jpg","description":"A healthy and satisfying meal featuring a mix of fresh vegetables tucked into a warm pita, complemented by creamy hummus. It’s a perfect choice for a quick lunch or light dinner that’s both flavorful and nutritious.","instructions":"Warm pita bread in a skillet or microwave until it's soft and pliable.\nSlice the pita in half to create pockets, and spread a layer of hummus inside each pocket. Fill the pita pockets with a mix of fresh vegetables like sliced cucumbers, bell peppers, and shredded carrots.\nAdd additional toppings such as cherry tomatoes, olives, or crumbled feta cheese for extra flavor. Drizzle with a dressing like lemon juice, if desired.\nServe when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Pita Bread","cost":2.49,"location":"Pantry"},{"name":"Hummus","cost":2.99,"location":"Refrigerator"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Shredded Carrots","cost":1.99,"location":"Refrigerator"},{"name":"Cherry Tomatoes","cost":2.49,"location":"Refrigerator"}],"estimations":{"costPerServing":3,"numberOfServings":2,"totalTime":"10 minutes"}},{"title":"Almond Butter Banana Chia Pudding","owner":"admin@foo.com","image":"images/almond_butter_banana_chia_pudding.jpg","description":"A creamy dessert made with chia seeds, almond butter, and ripe bananas. This wholesome treat is ideal for a healthy snack or an indulgent breakfast.","instructions":"In a mixing bowl, mash a ripe banana until smooth.\nAdd chia seeds, almond butter, and almond milk, and mix until well combined. Cover the bowl and refrigerate for at least 4 hours, or overnight, to allow the chia seeds to absorb the liquid and thicken.\nStir the pudding before serving to ensure an even texture. Top with additional banana slices, chopped nuts, or fresh berries for extra flavor and texture.\nServe chilled for a refreshing treat.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Ripe Banana","cost":0.99,"location":"Refrigerator"},{"name":"Chia Seeds","cost":3.49,"location":"Pantry"},{"name":"Almond Butter","cost":3.99,"location":"Pantry"},{"name":"Almond Milk","cost":2.49,"location":"Refrigerator"},{"name":"Honey Syrup","cost":1.99,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"10 minutes of preparation, 4 hours to set"}},{"title":"Veggie and Cream Cheese Roll-Ups","owner":"john@foo.com","image":"images/veggie_cream_cheese_roll_ups.jpg","description":"A quick and easy appetizer made with fresh vegetables and creamy cheese, wrapped in soft tortillas. Perfect for parties or snacks, these colorful rolls offer a burst of flavor in every bite.","instructions":"Spread a layer of cream cheese over the entire surface of a tortilla.\nAdd a variety of thinly sliced vegetables, such as bell peppers, cucumbers, and shredded carrots.\nSprinkle with fresh parsley for added flavor. Roll the tortilla tightly from one end to the other. \nUse a sharp knife to cut the roll into even slices to create the roll-ups. Arrange the roll-ups on a serving platter. \nServe when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Tortillas","cost":2.49,"location":"Pantry"},{"name":"Cream Cheese","cost":3.49,"location":"Refrigerator"},{"name":"Bell Peppers","cost":1.49,"location":"Refrigerator"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"10-15 minutes"}},{"title":"Berry Chia Seed Pudding","owner":"john@foo.com","image":"images/berry_chia_seed_pudding.jpg","description":"A delightful dessert made with fresh berries and creamy chia seed mixture. This simple and nutritious treat combines the vibrant flavors of berries with the rich, smooth texture of chia pudding.","instructions":"In a mixing bowl, combine chia seeds and coconut milk. \nAdd maple syrup, and stir well to combine. Cover and refrigerate for at least 4 hours, or overnight, to allow the chia seeds to absorb the liquid and form a pudding-like consistency.\nStir the pudding before serving to ensure even texture and add fresh berries such as strawberries, blueberries, or raspberries. \nServe chilled, when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Chia Seeds","cost":3.49,"location":"Pantry"},{"name":"Coconut Milk","cost":2.49,"location":"Refrigerator"},{"name":"Maple Syrup","cost":1.99,"location":"Pantry"},{"name":"Mixed Berries","cost":3.49,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"10 minutes preparation, 4 hours to set"}},{"title":"Veggie and Cheese Quesadilla","owner":"tom@foo.com","image":"images/veggie_cheese_quesadilla.jpg","description":"A classic dish filled with sautéed vegetables and melted cheese, grilled to perfection. The crispy tortilla envelops a warm, savory mix of vegetables and cheese, creating a satisfying and versatile meal.","instructions":"Heat a skillet over medium heat and add a small amount of olive oil.\nAdd diced bell peppers, onions, and mushrooms, and sauté until soft and lightly browned.\nPlace a tortilla in the skillet and sprinkle one half with shredded cheese.\nAdd the sautéed vegetables on top of the cheese, then fold the tortilla over to create the quesadilla.\nCook for 2-3 minutes on each side. Cut the quesadilla into wedges. \nServe hot, when ready.","dietaryRestrictions":"Vegetarian","ingredients":[{"name":"Tortillas","cost":2.49,"location":"Pantry"},{"name":"Shredded Cheese","cost":3.49,"location":"Refrigerator"},{"name":"Bell Peppers","cost":1.49,"location":"Refrigerator"},{"name":"Onions","cost":0.99,"location":"Refrigerator"},{"name":"Mushrooms","cost":2.49,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":2,"totalTime":"15 minutes"}},{"title":"Greek Salad Pita Pizza","owner":"tom@foo.com","image":"images/greek_salad_pita_pizza.jpg","description":"A combination of flavors with a traditional Greek salad with the convenience of pita bread. Topped with tomatoes, cucumbers, feta cheese, and olives, this quick and healthy pizza offers a nutritious meal ready in minutes.","instructions":"Preheat your oven to 375°F (190°C).\nPlace pita breads on a baking sheet and lightly brush with olive oil.\nTop each pita with a layer of diced tomatoes, sliced cucumbers, and red onions.\nAdd Kalamata olives and crumbled feta cheese on top of the vegetables. Sprinkle with dried oregano or Italian herbs for extra flavor.\nBake for 8-10 minutes. Serve hot, when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Pita Bread","cost":2.49,"location":"Pantry"},{"name":"Olive Oil","cost":2.49,"location":"Pantry"},{"name":"Cucumbers","cost":1.49,"location":"Refrigerator"},{"name":"Kalamata Olives","cost":2.49,"location":"Pantry"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Beef Stir-fry with Broccoli","owner":"admin@foo.com","image":"images/beef_stir_fry_with_broccoli.jpg","description":"Tender slices of beef quickly sautéed with crisp broccoli florets. The dish is coated in a savory sauce and can be served over rice or noodles for a satisfying, speedy meal.","instructions":"Slice beef into thin strips against the grain for tenderness. In a small bowl, mix soy sauce, garlic, ginger, and a touch of cornstarch for the stir-fry sauce.\nHeat a large skillet or wok over high heat, and add a tablespoon of oil.\nAdd the beef strips to the skillet and cook for 2-3 minutes. Remove the beef and set aside.\nAdd broccoli florets to the skillet and stir-fry for 2-3 minutes until tender-crisp.\nReturn the beef to the skillet, and pour the stir-fry sauce over the beef and broccoli.\nStir-fry for an additional 2-3 minutes. Serve hot over steamed rice or noodles, when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Sirloin Beef","cost":7.99,"location":"Refrigerator"},{"name":"Broccoli","cost":2.99,"location":"Refrigerator"},{"name":"Soy Sauce","cost":1.49,"location":"Pantry"},{"name":"Cornstarch","cost":0.99,"location":"Pantry"}],"estimations":{"costPerServing":3.5,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Thai Peanut Noodles","owner":"admin@foo.com","image":"images/thai_peanut_noodles.jpg","description":"A rich and creamy dish featuring noodles tossed in a flavorful peanut sauce. This recipe is often complemented with fresh vegetables and can be customized with your choice of protein for a hearty and delicious meal.","instructions":"Cook noodles, then drain and set aside.\nIn a saucepan over low heat, whisk together peanut butter, soy sauce, lime juice, garlic, ginger, and a touch of sriracha for heat.\nAdd warm water as needed to achieve a smooth, pourable consistency for the sauce.\nIn a large mixing bowl, toss the cooked noodles with the peanut sauce until evenly coated.\nAdd sliced bell peppers, shredded carrots, and chopped green onions for extra crunch and color. \nServe immediately, with lime wedges on the side for an extra burst of citrus.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Soba Noodles","cost":2.99,"location":"Pantry"},{"name":"Peanut Butter","cost":3.49,"location":"Pantry"},{"name":"Lime Juice","cost":0.99,"location":"Refrigerator"},{"name":"Bell Peppers","cost":1.49,"location":"Refrigerator"},{"name":"Shredded Carrots","cost":1.99,"location":"Refrigerator"}],"estimations":{"costPerServing":2.5,"numberOfServings":4,"totalTime":"20 minutes"}},{"title":"Greek Gyros","owner":"john@foo.com","image":"images/greek_gyros.jpg","description":"A classic dish featuring thinly sliced chicken, served in warm pita bread. Topped with fresh vegetables and drizzled with creamy tzatziki sauce for a burst of Mediterranean flavor.","instructions":"Marinate sliced chicken in a mixture of olive oil, lemon juice, garlic, oregano, and a pinch of salt and pepper for at least 30 minutes.\nPreheat a grill or skillet to medium-high heat.\nCook the marinated meat for 4-5 minutes on each side. Warm pita bread on the grill or in a dry skillet until soft and pliable.\nSpread a layer of tzatziki sauce on each pita, then add the cooked meat.\nTop with fresh vegetables like tomatoes, cucumbers, and red onions.\nRoll the pita into a wrap, and serve when ready.","dietaryRestrictions":"No Dietary Restriction","ingredients":[{"name":"Chicken","cost":6.99,"location":"Refrigerator"},{"name":"Lemon Juice","cost":0.99,"location":"Refrigerator"},{"name":"Oregano","cost":0.99,"location":"Pantry"},{"name":"Pita Bread","cost":2.49,"location":"Pantry"},{"name":"Tzatziki Sauce","cost":2.99,"location":"Refrigerator"}],"estimations":{"costPerServing":4.5,"numberOfServings":4,"totalTime":"30-40 minutes"}}],"defaultIngredients":[{"name":"Salt","image":"images/salt.jpg","price":0.99,"location":"Times Supermarket","owner":"admin@foo.com"},{"name":"Sugar","image":"images/sugar.jpg","price":1.49,"location":"Safeway","owner":"admin@foo.com"},{"name":"Flour","image":"images/flour.jpg","price":2.99,"location":"Foodland","owner":"admin@foo.com"}]}
+{
+  "defaultAccounts": [
+    {
+      "email": "tom@foo.com",
+      "password": "changeme",
+      "role": "vendor"
+    },
+    {
+      "email": "admin@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "john@foo.com",
+      "password": "changeme"
+    }
+  ],
+  "defaultData": [
+    {
+      "name": "Basket",
+      "quantity": 3,
+      "owner": "john@foo.com",
+      "condition": "excellent"
+    },
+    {
+      "name": "Bicycle",
+      "quantity": 2,
+      "owner": "john@foo.com",
+      "condition": "poor"
+    },
+    {
+      "name": "Banana",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "good"
+    },
+    {
+      "name": "Boogie Board",
+      "quantity": 2,
+      "owner": "admin@foo.com",
+      "condition": "excellent"
+    }
+  ],
+  "monti": {
+    "appId": "changeme",
+    "appSecret": "changeme"
+  },
+  "defaultRecipes": [
+    {
+      "title": "Pasta Carbonara",
+      "owner": "admin@foo.com",
+      "image": "images/pasta_carbonara.jpg",
+      "description": "An Italian classic, this pasta carbonara features a creamy sauce made from eggs, cheese, crispy pancetta, and black pepper.",
+      "instructions": "Bring a large pot of salted water to a rolling boil and cook spaghetti according to package directions.\nWhile the pasta is cooking, sauté pancetta in a large skillet over medium heat until crispy, about 5-7 minutes.\nIn a separate bowl, whisk together eggs, grated parmesan cheese, and a generous amount of freshly ground black pepper.\nDrain the pasta, reserving a cup of cooking water, and add the pasta to the skillet with the pancetta.\nRemove the skillet from heat and quickly stir in the egg mixture, tossing until the sauce thickens and coats the pasta, adding a splash of the reserved pasta water if necessary to achieve the right consistency.",
+      "dietaryRestrictions": "No Dietary Restriction",
+      "ingredients": [
+        {
+          "name": "Spaghetti",
+          "cost": 1.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Pancetta",
+          "cost": 3.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Eggs",
+          "cost": 2.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "cost": 4.99,
+          "location": "Refrigerator"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 3.5,
+        "numberOfServings": 4,
+        "totalTime": "30 minutes"
+      }
+    },
+    {
+      "title": "Vegetable Stir Fry",
+      "owner": "admin@foo.com",
+      "image": "images/stir_fry.jpg",
+      "description": "A vibrant and healthy stir fry packed with a variety of colorful vegetables, cooked in a savory soy-based sauce and served over rice.",
+      "instructions": "Cook rice and keep warm for serving.\nHeat oil in a large skillet or wok over medium-high heat.\nAdd the chopped vegetables like broccoli, bell peppers, and carrots. Stir-fry for 5-7 minutes, until they begin to soften but still retain a crisp texture.\nAdd your preferred stir fry sauce, such as soy sauce or a combination of soy sauce and other flavorings, and continue to cook, stirring occasionally, for another 2-3 minutes. Allow the vegetables to fully absorb the sauce.\nServe the vegetable stir fry over the cooked rice, and garnish with chopped green onions or sesame seeds if desired.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Broccoli",
+          "cost": 2.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Bell Pepper",
+          "cost": 1.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Carrots",
+          "cost": 1.29,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Soy Sauce",
+          "cost": 3.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Rice",
+          "cost": 2.49,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 2.5,
+        "numberOfServings": 3,
+        "totalTime": "20-25 minutes"
+      }
+    },
+    {
+      "title": "Avocado Toast",
+      "owner": "john@foo.com",
+      "image": "images/avocado_toast.jpg",
+      "description": "A creamy mashed avocado spread on toasted bread, topped with a flavorful mix of seasonings. It's a simple yet satisfying dish that's perfect for breakfast or a quick snack.",
+      "instructions": "Toast your bread of choice until it's golden brown and crisp. You may toast until you achieve your desired level of crisp. \nCut a ripe avocado in half and remove the pit. Scoop the avocado flesh into a bowl and mash it with a fork until smooth or slightly chunky, depending on your preference. Add a pinch of salt and a dash of black pepper to the mashed avocado, stirring to combine. \nSpread the mashed avocado evenly over the toasted bread.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Ripe Avocados",
+          "cost": 2.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Whole Grain Bread",
+          "cost": 3.49,
+          "location": "Pantry"
+        },
+        {
+          "name": "Salt",
+          "cost": 0.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Pepper",
+          "cost": 0.99,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 1.5,
+        "numberOfServings": 2,
+        "totalTime": "5 minutes"
+      }
+    },
+    {
+      "title": "Hummus and Veggie Wraps",
+      "owner": "john@foo.com",
+      "image": "images/hummus_wraps.jpg",
+      "description": "A tasty combination of creamy hummus and an assortment of fresh vegetables, all rolled into soft wraps. Ideal for a quick lunch or snack, they're easy to customize with your favorite veggies and seasonings.",
+      "instructions": "Warm the whole grain wraps in a microwave to make them easier to roll. \nUse a spatula to spread a layer of hummus evenly across the entire surface of each wrap. \nThinly slice cucumbers and bell peppers. Shred carrots using a box grater or a food processor. Wash and pat dry lettuce leaves. \nStart by laying the lettuce leaves flat on top of the hummus layer. Add the sliced cucumbers, bell peppers, and shredded carrots evenly over the lettuce. \nStart at one end and tightly roll the wrap, tucking in the sides as you go to ensure the filling stays in place. Roll until you reach the end, then gently press to seal. \nArrange the wraps on a serving platter or individual plates.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Hummus",
+          "cost": 3.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Whole Grain Wraps",
+          "cost": 2.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Cucumbers",
+          "cost": 1.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Bell Peppers",
+          "cost": 2.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Shredded Carrots",
+          "cost": 1.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Lettuce",
+          "cost": 1.29,
+          "location": "Refrigerator"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 4.25,
+        "numberOfServings": 2,
+        "totalTime": "10 minutes"
+      }
+    },
+    {
+      "title": "Chickpea Salad",
+      "owner": "tom@foo.com",
+      "image": "images/chickpea_salad.jpg",
+      "description": "Hearty chickpeas with a medley of fresh vegetables and a zesty dressing. It's a versatile dish that's great as a light meal or a side, with a satisfying mix of textures and flavors.",
+      "instructions": "Dice the cucumber, tomatoes, and red onion into small, bite-sized pieces. \nFinely chop a handful of fresh parsley leaves. \nIn a large mixing bowl, combine the drained chickpeas, diced cucumber, diced tomatoes, diced red onion, and chopped parsley. \nIn a separate small bowl, whisk together the lemon juice, olive oil, salt, and pepper to make the dressing. \nPour the dressing over the chickpea and vegetable mixture. Stir gently to coat the ingredients evenly with the dressing. \nCover the salad and refrigerate for at least 30 minutes to allow the flavors to meld. \nStir quickly together before serving. ",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Chickpeas",
+          "cost": 0.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Cucumber",
+          "cost": 1.29,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Tomatoes",
+          "cost": 2.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Lemon Juice",
+          "cost": 3.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Olive Oil",
+          "cost": 3.99,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 3.5,
+        "numberOfServings": 4,
+        "totalTime": "15 minutes"
+      }
+    },
+    {
+      "title": "Fruit Salad",
+      "owner": "tom@foo.com",
+      "image": "images/fruit_salad.jpg",
+      "description": "A variety of fresh, juicy fruits for a colorful and refreshing dish. Light and sweet, it's perfect for a healthy dessert or a vibrant addition to any meal.",
+      "instructions": "Thoroughly wash all fruits under cold running water to remove any dirt or pesticides.\nIn a large mixing bowl, combine all the chopped fruits. \nTo enhance flavor, prepare a simple dressing by whisking together honey and fresh lime or lemon juice. \nPour the dressing over the mixed fruit and toss gently to coat evenly. Cover the bowl with plastic wrap or a lid and refrigerate for at least 30 minutes. \nServe the fruit salad in individual bowls or on a large platter.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Strawberries",
+          "cost": 0.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Blueberries",
+          "cost": 1.29,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Grapes",
+          "cost": 2.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Raspberries",
+          "cost": 0.79,
+          "location": "Pantry"
+        },
+        {
+          "name": "Lemon Juice",
+          "cost": 3.99,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 2.5,
+        "numberOfServings": 4,
+        "totalTime": "10 minutes"
+      }
+    },
+    {
+      "title": "Peanut Butter Banana Smoothie",
+      "owner": "admin@foo.com",
+      "image": "images/peanut_butter_smoothie.jpg",
+      "description": "A creamy and satisfying smoothie made with peanut butter, ripe bananas, and a hint of honey, perfect for breakfast or a healthy snack.",
+      "instructions": "Peel and cut ripe bananas into chunks. Add bananas, peanut butter, milk, and honey to a blender.\nBlend on high speed until smooth and creamy.\nIf the smoothie is too thick, add more milk to reach your desired consistency.\nPour into glasses and serve immediately, optionally topped with a drizzle of honey or a sprinkle of crushed peanuts.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Ripe Bananas",
+          "cost": 1.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Peanut Butter",
+          "cost": 2.99,
+          "location": "Pantry"
+        },
+        {
+          "name": "Milk",
+          "cost": 1.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Honey",
+          "cost": 1.99,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 4.5,
+        "numberOfServings": 2,
+        "totalTime": "5 minutes"
+      }
+    },
+    {
+      "title": "Caprese Salad",
+      "owner": "admin@foo.com",
+      "image": "images/caprese_salad.jpg",
+      "description": "A classic Italian salad featuring fresh tomatoes, mozzarella cheese, and basil, drizzled with balsamic glaze and olive oil.",
+      "instructions": "Slice fresh tomatoes and mozzarella cheese into even rounds. Arrange the tomato and mozzarella slices on a serving plate, alternating them in a pattern.\nTear fresh basil leaves and sprinkle them over the salad.\nDrizzle with extra virgin olive oil and balsamic glaze.\nAdd salt and freshly ground black pepper to taste.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Tomatoes",
+          "cost": 1.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Vegan Mozzarella",
+          "cost": 3.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Fresh Basil",
+          "cost": 2.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Balsamic Glaze",
+          "cost": 3.49,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 7.5,
+        "numberOfServings": 2,
+        "totalTime": "10 minutes"
+      }
+    },
+    {
+      "title": "Vegan Tacos",
+      "owner": "john@foo.com",
+      "image": "images/vegan_tacos.jpg",
+      "description": "Flavorful vegan tacos made with a plant-based filling, fresh vegetables, and a zesty sauce, served in soft or hard taco shells.",
+      "instructions": "Heat oil in a skillet over medium-high heat.\nAdd plant-based ground meat or crumbled tofu, along with taco seasoning, and sauté until browned and heated through.\nWarm taco shells in the oven for a few minutes to make them crisp.\nChop fresh vegetables such as lettuce, tomatoes, and onions. \nFill the taco shells with the cooked filling, then add your preferred toppings.\nFinish with a dollop of salsa or vegan sour cream, if desired.",
+      "dietaryRestrictions": "Vegan",
+      "ingredients": [
+        {
+          "name": "Tofu",
+          "cost": 3.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Lettuce",
+          "cost": 1.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Cherry Tomatoes",
+          "cost": 2.49,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Onions",
+          "cost": 1.29,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Avocado",
+          "cost": 2.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Vegan Cheese",
+          "cost": 4.99,
+          "location": "Refrigerator"
+        },
+        {
+          "name": "Salsa",
+          "cost": 1.99,
+          "location": "Pantry"
+        }
+      ],
+      "estimations": {
+        "costPerServing": 3,
+        "numberOfServings": 4,
+        "totalTime": "20 minutes"
+      }
+    }
+  ],
+  "defaultIngredients": [
+    {
+      "name": "Salt",
+      "image": "images/salt.jpg",
+      "price": 0.99,
+      "location": "Times Supermarket",
+      "owner": "admin@foo.com"
+    },
+    {
+      "name": "Sugar",
+      "image": "images/sugar.jpg",
+      "price": 1.49,
+      "location": "Safeway",
+      "owner": "admin@foo.com"
+    },
+    {
+      "name": "Flour",
+      "image": "images/flour.jpg",
+      "price": 2.99,
+      "location": "Foodland",
+      "owner": "admin@foo.com"
+    }
+  ]
+}

@@ -72,8 +72,8 @@ const AddRecipe = () => {
           <Image src="/images/header_banner.png" height="270px" />
         </Col>
       </Row>
-      <Row className="justify-content-center pt-4">
-        <Col xs={10}>
+      <Row className="justify-content-center pt-4 mb-4">
+        <Col xs={9}>
           <AutoForm ref={(ref) => { fRef = ref; }} schema={bridge} onSubmit={(data) => submit(data, fRef)}>
             <Card>
               <Card.Body>

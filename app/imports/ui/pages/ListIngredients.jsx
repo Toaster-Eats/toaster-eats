@@ -27,9 +27,9 @@ const ListIngredients = () => {
         </Col>
       </Row>
       <br />
-      <Row xs={1} md={2} lg={3} className="g-4">
+      <Row xs={1} md={2} lg={5} className="g-3">
         {ingredients.map((ingredient) => (
-          <Col lg={6} key={ingredient._id}>
+          <Col lg={4} key={ingredient._id}>
             <Ingredient ingredient={ingredient} />
           </Col>
         ))}

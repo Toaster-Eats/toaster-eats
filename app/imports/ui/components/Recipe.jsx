@@ -41,7 +41,10 @@ const Recipe = ({ recipe }) => {
         </div>
       </Card.Header>
       <Card.Body>
-        <CardText className="pt-3">
+        <CardText className="pt-2">
+          <h5 className="fw-bold">Description:</h5>
+          <p>{recipe.description}</p>
+
           <Table striped bordered hover>
             <thead>
               <tr>

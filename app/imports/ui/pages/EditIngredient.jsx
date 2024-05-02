@@ -49,8 +49,8 @@ const EditIngredient = () => {
           <Image src="/images/header_banner.png" height={270} />
         </Col>
       </Row>
-      <Row className="justify-content-center py-3">
-        <Col xs={10}>
+      <Row className="justify-content-center pt-4 mb-5">
+        <Col xs={6}>
           <AutoForm schema={bridge} onSubmit={submit} model={doc}>
             <Card>
               <Card.Body>

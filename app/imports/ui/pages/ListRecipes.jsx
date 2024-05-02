@@ -27,9 +27,11 @@ const ListRecipes = () => {
         </Col>
       </Row>
       <br />
-      <Row xs={1} md={2} lg={3} className="g-4">
+      {/* Fix gap in between different cards (recipes) */}
+      <Row xs={1} md={2} lg={5} className="g-3">
         {recipes.map((recipe) => (
-          <Col lg={6} key={recipe._id}>
+          // Change width of recipe card (lg)
+          <Col key={recipe._id} lg={4}>
             <Recipe recipe={recipe} />
           </Col>
         ))}
@@ -38,7 +40,6 @@ const ListRecipes = () => {
       <Row className="mb-3 justify-content-center">
         <Col className="text-center">
           <Link to="/add-recipe">
-            {/* CSS class won't apply to this button specifically */}
             <Button
               variant="primary"
               style={{

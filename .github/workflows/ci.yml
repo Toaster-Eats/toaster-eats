@@ -15,19 +15,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@latest
 
       - name: Cache node modules
-        uses: actions/cache@v3
+        uses: actions/cache@latest
         env:
           cache-name: cache-node-modules
         with:
           path: ~/.npm
           key: ${{ runner.os }}-build-v5-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@latest
         with:
-          node-version: '16.x'
+          node-version: '16.x' # or specify the version you need
 
       - run: npm ci --legacy-peer-deps
 
@@ -39,3 +39,4 @@ jobs:
           meteor npm install
           meteor npm run lint
           meteor npm run testcafe-ci
+

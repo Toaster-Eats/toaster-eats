@@ -4,8 +4,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
 // eslint-disable-next-line import/named
-import { Shops } from '../../api/vendor/Vendors';
-import {Shop} from '../components/'
+import { Shops } from '../../api/shop/Shops';
+import Shop from '../components/Shop';
 
 /* Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 const ListShops = () => {
@@ -20,7 +20,7 @@ const ListShops = () => {
     // Get the Stuff documents
     const shopItems = Shops.collection.find({}).fetch();
     return {
-      Shops: shopItems,
+      shops: shopItems,
       ready: rdy,
     };
   }, []);
@@ -30,7 +30,7 @@ const ListShops = () => {
       <Row className="justify-content-center">
         <Col>
           <Col className="text-center">
-            <h2>List Shops</h2>
+            <h2>Shops Near Campus</h2>
           </Col>
           <Row xs={1} md={2} lg={3} className="g-4">
             {shops.map((shop) => (<Col key={shop._id}><Shop shop={shop} /></Col>))}

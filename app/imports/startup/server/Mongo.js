@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Recipes } from '../../api/recipe/Recipe';
 import { Ingredients } from '../../api/ingredient/Ingredient';
+import { Shops } from '../../api/shop/Shops';
 
 /* eslint-disable no-console */
 
@@ -42,5 +43,18 @@ if (Ingredients.collection.find().count() === 0) {
   if (Meteor.settings.defaultIngredients) {
     console.log('Creating default ingredients.');
     Meteor.settings.defaultIngredients.forEach(ingredient => addIngredient(ingredient));
+  }
+}
+
+const addShop = (shop) => {
+  console.log(`  Adding Shop: ${shop.name}`);
+  Shops.collection.insert(shop);
+};
+
+// Initialize the Shops collection if empty.
+if (Shops.collection.find().count() === 0) {
+  if (Meteor.settings.defaultShops) {
+    console.log('Creating default shops.');
+    Meteor.settings.defaultShops.forEach(shop => addShop(shop));
   }
 }

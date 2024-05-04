@@ -1,5 +1,5 @@
 import { landingPage } from './landing.page';
-import { vendorPage } from './vendor.page';
+import { shopPage } from './shop.page';
 import { ingredientsPage } from './ingredients.page';
 import { recipesPage } from './recipes.page';
 import { addRecipesPage } from './addrecipes.page';
@@ -27,11 +27,11 @@ test('Test: Sign-in and Sign-out Functions', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test: Vendor Page Displays', async (testController) => {
+test('Test: Shop Page Displays', async (testController) => {
   await navBar.gotoSignInPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.gotoVendorPage(testController);
-  await vendorPage.isDisplayed(testController);
+  await navBar.gotoShopPage(testController);
+  await shopPage.isDisplayed(testController);
 });
 
 test('Test: Ingredients Page Displays', async (testController) => {

@@ -56,7 +56,7 @@ class NavBar {
 
   /** Navigate to the vendor page. */
   async gotoVendorPage(testController) {
-    await testController.click('#vendor-nav');
+    await testController.click('#shops-nav');
   }
 
   /** Navigate to the recipes dropdown. */

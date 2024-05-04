@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
-// eslint-disable-next-line import/named
 import { Shops } from '../../api/shop/Shops';
 import Shop from '../components/Shop';
 

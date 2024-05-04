@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 
-class ShopPage {
+class VendorPage {
   constructor() {
-    this.pageId = '#shop-page';
+    this.pageId = '#vendor-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -12,4 +12,4 @@ class ShopPage {
   }
 }
 
-export const shopPage = new ShopPage();
+export const vendorPage = new VendorPage();

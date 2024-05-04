@@ -55,8 +55,12 @@ class NavBar {
   }
 
   /** Navigate to the vendor page. */
-  async gotoShopPage(testController) {
-    await testController.click('#shop-nav');
+  async gotoVendorPage(testController) {
+    const visible = await Selector('#basic-navbar-nav').visible;
+    if (!visible) {
+      await testController.click('button.navbar-toggler');
+    }
+    await testController.click('#vendor-nav');
   }
 
   /** Navigate to the recipes dropdown. */

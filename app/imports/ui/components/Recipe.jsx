@@ -44,7 +44,7 @@ const Recipe = ({ recipe }) => (
 
       <div className="d-flex justify-content-center">
         <Link to={`/recipe/${recipe._id}`}>
-          <Button size="sm" style={{ backgroundColor: '#FFBD59', border: 'none', color: 'white' }}>View Recipe</Button>
+          <Button size="sm" style={{ backgroundColor: '#599AFF', border: 'none', color: 'white' }}>View Recipe</Button>
         </Link>
       </div>
     </Card.Body>

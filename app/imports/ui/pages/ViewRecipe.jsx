@@ -108,7 +108,14 @@ const ViewRecipe = () => {
         </Col>
       </Row>
       <Row className="justify-content-center mt-3 mb-5">
-        <Col xs="auto">
+        <Col
+          xs="auto"
+          style={{
+            fontFamily: 'Titillium Web, sans-serif',
+            fontWeight: 400,
+            fontStyle: 'normal',
+          }}
+        >
           <Link to={`/edit-recipe/${recipe._id}`}>
             <Button variant="success" size="sm">Edit</Button>
           </Link>

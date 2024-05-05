@@ -3,9 +3,8 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
 import { Container, Row, Col, Image, Table, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
 import swal from 'sweetalert';
-import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from '../components/LoadingSpinner';
 import { Recipes } from '../../api/recipe/Recipe';
 
 const ViewRecipe = () => {
@@ -71,15 +70,15 @@ const ViewRecipe = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Cost Per Serving</td>
+                <td>Cost Per Serving:</td>
                 <td>${recipe.estimations.costPerServing.toFixed(2)}</td>
               </tr>
               <tr>
-                <td>Number of Servings</td>
+                <td>Number of Servings:</td>
                 <td>{recipe.estimations.numberOfServings}</td>
               </tr>
               <tr>
-                <td>Total Time</td>
+                <td>Total Time:</td>
                 <td>{recipe.estimations.totalTime}</td>
               </tr>
             </tbody>
@@ -87,7 +86,7 @@ const ViewRecipe = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="mt-3">
+        <Col className="mt-4">
           <h5 className="fw-bold">Ingredients:</h5>
           <ListGroup>
             {recipe.ingredients.map((ingredient, index) => (
@@ -99,7 +98,7 @@ const ViewRecipe = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="mt-3">
+        <Col className="mt-4">
           <h5 className="fw-bold">Instructions:</h5>
           <ol>
             {recipe.instructions.split('\n').map((step, index) => (
@@ -118,29 +117,6 @@ const ViewRecipe = () => {
       </Row>
     </Container>
   );
-};
-
-ViewRecipe.propTypes = {
-  recipe: PropTypes.shape({
-    _id: PropTypes.string,
-    title: PropTypes.string,
-    image: PropTypes.string,
-    description: PropTypes.string,
-    dietaryRestrictions: PropTypes.string,
-    estimations: PropTypes.shape({
-      costPerServing: PropTypes.number,
-      numberOfServings: PropTypes.number,
-      totalTime: PropTypes.string,
-    }),
-    ingredients: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string,
-        cost: PropTypes.number,
-        location: PropTypes.string,
-      }),
-    ),
-    instructions: PropTypes.string,
-  }).isRequired,
 };
 
 export default ViewRecipe;

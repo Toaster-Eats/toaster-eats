@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Recipe = ({ recipe }) => (
   <Card className="h-100">
     <Card.Header className="d-flex flex-column align-items-center">
-      <Image className="mt-2" src={recipe.image} height={250} width={250} style={{ objectFit: 'cover' }} />
+      <Image className="mt-2 rounded-3" src={recipe.image} height={250} width={275} style={{ objectFit: 'cover' }} />
       <div className="text-center mt-2">
         <Card.Title className="fw-bold">{recipe.title}</Card.Title>
         <Card.Subtitle>{recipe.dietaryRestrictions}</Card.Subtitle>

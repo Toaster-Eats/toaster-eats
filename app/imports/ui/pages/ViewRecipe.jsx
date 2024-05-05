@@ -54,11 +54,11 @@ const ViewRecipe = () => {
           <Image src="/images/header_banner.png" height={270} alt="Recipes Banner" />
         </Col>
       </Row>
-      <Row className="mt-4 mx-5">
+      <Row className="mt-3 mx-5">
         <Col>
-          <Image className="mt-4" src={recipe.image} height={300} width={400} style={{ objectFit: 'cover' }} />
+          <Image className="mt-4 mx-4 rounded-4" src={recipe.image} height={325} width={400} style={{ objectFit: 'cover' }} />
         </Col>
-        <Col className="mx-4 text-center" style={{ fontFamily: 'Titillium Web, sans-serif', fontWeight: 400, fontStyle: 'normal' }}>
+        <Col className="mx-4 mt-3 text-center" style={{ fontFamily: 'Titillium Web, sans-serif', fontWeight: 400, fontStyle: 'normal' }}>
           <h3 className="fw-bold">{recipe.title}</h3>
           <h5>{recipe.dietaryRestrictions}</h5>
           <p>{recipe.description}</p>
@@ -70,15 +70,15 @@ const ViewRecipe = () => {
             </thead>
             <tbody>
               <tr>
-                <td>Cost Per Serving:</td>
+                <td>Cost Per Serving</td>
                 <td>${recipe.estimations.costPerServing.toFixed(2)}</td>
               </tr>
               <tr>
-                <td>Number of Servings:</td>
+                <td>Number of Servings</td>
                 <td>{recipe.estimations.numberOfServings}</td>
               </tr>
               <tr>
-                <td>Total Time:</td>
+                <td>Total Time</td>
                 <td>{recipe.estimations.totalTime}</td>
               </tr>
             </tbody>
@@ -107,7 +107,7 @@ const ViewRecipe = () => {
           </ol>
         </Col>
       </Row>
-      <Row className="justify-content-center mt-3 mb-4">
+      <Row className="justify-content-center mt-3 mb-5">
         <Col xs="auto">
           <Link to={`/edit-recipe/${recipe._id}`}>
             <Button variant="success" size="sm">Edit</Button>

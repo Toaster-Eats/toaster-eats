@@ -40,6 +40,7 @@ const ListIngredients = () => {
           <Link to="/add-ingredient">
             {/* CSS class won't apply to this button specifically */}
             <Button
+              size="sm"
               variant="primary"
               style={{
                 fontFamily: 'Titillium Web, sans-serif',

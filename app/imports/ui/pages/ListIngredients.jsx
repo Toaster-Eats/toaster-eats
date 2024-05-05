@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useTracker } from 'meteor/react-meteor-data';
 import LoadingSpinner from '../components/LoadingSpinner';
 import Ingredient from '../components/Ingredient';
-import { Ingredients } from '../../api/ingredient/Ingredient'; // Assuming this is the correct import path
+import { Ingredients } from '../../api/ingredient/Ingredient';
 
 /** Renders a list of ingredients from the database. */
 const ListIngredients = () => {
@@ -35,13 +35,16 @@ const ListIngredients = () => {
         ))}
       </Row>
       <br />
-      <Row className="mb-3 justify-content-center">
+      <Row className="mb-4 justify-content-center">
         <Col className="text-center">
           <Link to="/add-ingredient">
             {/* CSS class won't apply to this button specifically */}
             <Button
+              size="sm"
               variant="primary"
               style={{
+                // Gray button
+                // backgroundColor: '#7E888C', border: 'none', color: 'white',
                 fontFamily: 'Titillium Web, sans-serif',
                 fontWeight: 400,
                 fontStyle: 'normal',

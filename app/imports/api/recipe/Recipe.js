@@ -6,8 +6,6 @@ class RecipesCollection {
   constructor() {
     this.name = 'RecipesCollection';
     this.collection = new Mongo.Collection(this.name);
-
-    // Define the schema with totalTime as a flexible string
     this.schema = new SimpleSchema({
       title: String,
       owner: String,

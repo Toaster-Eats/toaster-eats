@@ -85,12 +85,13 @@ const ListRecipes = () => {
         ))}
       </Row>
       <br />
-      <Row className="mb-3 justify-content-center">
+      <Row className="mb-4 justify-content-center">
         <Col className="text-center">
           <Link to="/add-recipe">
             <Button
-              variant="primary"
+              size="sm"
               style={{
+                backgroundColor: '#7E888C', border: 'none', color: 'white',
                 fontFamily: 'Titillium Web, sans-serif',
                 fontWeight: 400,
                 fontStyle: 'normal',

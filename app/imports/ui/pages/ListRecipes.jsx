@@ -89,6 +89,7 @@ const ListRecipes = () => {
         <Col className="text-center">
           <Link to="/add-recipe">
             <Button
+              size="sm"
               variant="primary"
               style={{
                 fontFamily: 'Titillium Web, sans-serif',

@@ -4,6 +4,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 import { Recipes } from '../../api/recipe/Recipe';
 import { Ingredients } from '../../api/ingredient/Ingredient';
 import { Shops } from '../../api/shop/Shops';
+import { ShopsIngredient } from '../../api/shop/ShopsIngredient';
 
 // Allows viewing all ingredients as long as you are logged in
 Meteor.publish(Ingredients.userPublicationName, function () {
@@ -26,6 +27,9 @@ Meteor.publish(Recipes.userPublicationName, function () {
   }
   return this.ready();
 });
+
+/** Define a publication to publish this collection. */
+Meteor.publish(ShopsIngredient.userPublicationName, () => ShopsIngredient.collection.find());
 
 /* Keep below code for future permission lock for ability to edit Recipes based on owner
 // User-level publication.

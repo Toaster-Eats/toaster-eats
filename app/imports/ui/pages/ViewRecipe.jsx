@@ -12,7 +12,7 @@ const ViewRecipe = () => {
   const { _id } = useParams(); // Get recipe ID from URL
 
   const { ready, recipe } = useTracker(() => {
-    const subscription = Meteor.subscribe(Recipes.userPublicationName);
+    const subscription = Meteor.subscribe(Recipes.PublicationName);
     const isReady = subscription.ready();
     const recipeItem = Recipes.collection.findOne(_id);
     return {

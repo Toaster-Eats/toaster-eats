@@ -27,6 +27,12 @@ Meteor.publish(Recipes.userPublicationName, function () {
   return this.ready();
 });
 
+// Allows viewing recipes for public viewing without requiring login
+// Used for TopPicks page
+Meteor.publish(Recipes.PublicationName, function () {
+  return Recipes.collection.find();
+});
+
 /* Keep below code for future permission lock for ability to edit Recipes based on owner
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.

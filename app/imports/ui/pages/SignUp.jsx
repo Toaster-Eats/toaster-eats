@@ -57,8 +57,8 @@ const SignUp = ({ location }) => {
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
-                <TextField name="email" placeholder="E-mail address" />
-                <TextField name="password" placeholder="Password" type="password" />
+                <TextField name="email" placeholder="Enter an e-mail address" />
+                <TextField name="password" placeholder="Enter a password" type="password" />
                 <ErrorsField />
                 <SubmitField className="text-center" />
               </Card.Body>

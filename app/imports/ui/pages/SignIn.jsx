@@ -21,7 +21,6 @@ const SignIn = () => {
 
   // Handle Signin submission using Meteor's account mechanism.
   const submit = (doc) => {
-    // console.log('submit', doc, redirect);
     const { email, password } = doc;
     Meteor.loginWithPassword(email, password, (err) => {
       if (err) {
@@ -30,16 +29,12 @@ const SignIn = () => {
         setRedirect(true);
       }
     });
-    // console.log('submit2', email, password, error, redirect);
   };
 
-  // Render the signin form.
-  // console.log('render', error, redirect);
-  // if correct authentication, redirect to page instead of login screen
   if (redirect) {
     return (<Navigate to="/" />);
   }
-  // Otherwise return the Login form.
+
   return (
     <Container id="signin-page" fluid>
       <Row className="align-middle text-center header-background">
@@ -55,16 +50,24 @@ const SignIn = () => {
             <br />
             <h3 className="fw-semibold">Sign In</h3>
           </Col>
-          <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+          <AutoForm schema={bridge} onSubmit={submit}>
             <Card>
               <Card.Body>
-                <TextField id="signin-form-email" name="email" placeholder="E-mail address" />
-                <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
+                <TextField id="signin-form-email" name="email" placeholder="Enter your e-mail address" />
+                <TextField id="signin-form-password" name="password" type="password" placeholder="Enter your password" />
                 <ErrorsField />
                 <SubmitField id="signin-form-submit" className="text-center" />
               </Card.Body>
             </Card>
           </AutoForm>
+          {error === '' ? (
+            ''
+          ) : (
+            <Alert variant="danger" className="mt-3 text-center">
+              <Alert.Heading>Login failed</Alert.Heading>
+              {error}
+            </Alert>
+          )}
           <br />
           <br />
           <br />
@@ -88,18 +91,11 @@ const SignIn = () => {
                   fontWeight: 400,
                   fontStyle: 'normal',
                 }}
-              >Create a new account
+              >
+                Create a new account
               </Button>
             </div>
           </Alert>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger">
-              <Alert.Heading>Login was not successful</Alert.Heading>
-              {error}
-            </Alert>
-          )}
         </Col>
       </Row>
     </Container>

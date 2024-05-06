@@ -49,6 +49,8 @@
     {
       "title": "Pasta Carbonara",
       "owner": "admin@foo.com",
+      "rating": 5,
+      "reviewCount": 1304,
       "image": "/images/pasta_carbonara.jpg",
       "description": "An Italian classic, this pasta carbonara features a creamy sauce made from eggs, cheese, crispy pancetta, and black pepper.",
       "instructions": "Bring a large pot of salted water to a rolling boil and cook spaghetti according to package directions.\nWhile the pasta is cooking, sauté pancetta in a large skillet over medium heat until crispy, about 5-7 minutes.\nIn a separate bowl, whisk together eggs, grated parmesan cheese, and a generous amount of freshly ground black pepper.\nDrain the pasta, reserving a cup of cooking water, and add the pasta to the skillet with the pancetta.\nRemove the skillet from heat and quickly stir in the egg mixture, tossing until the sauce thickens and coats the pasta, adding a splash of the reserved pasta water if necessary to achieve the right consistency.",
@@ -84,6 +86,8 @@
     {
       "title": "Vegetable Stir Fry",
       "owner": "admin@foo.com",
+      "rating": 3.5,
+      "reviewCount": 506,
       "image": "/images/stir_fry.jpg",
       "description": "A vibrant and healthy stir fry packed with a variety of colorful vegetables, cooked in a savory soy-based sauce and served over rice.",
       "instructions": "Cook rice and keep warm for serving.\nHeat oil in a large skillet or wok over medium-high heat.\nAdd the chopped vegetables like broccoli, bell peppers, and carrots. Stir-fry for 5-7 minutes, until they begin to soften but still retain a crisp texture.\nAdd your preferred stir fry sauce, such as soy sauce or a combination of soy sauce and other flavorings, and continue to cook, stirring occasionally, for another 2-3 minutes. Allow the vegetables to fully absorb the sauce.\nServe the vegetable stir fry over the cooked rice, and garnish with chopped green onions or sesame seeds if desired.",
@@ -124,6 +128,8 @@
     {
       "title": "Avocado Toast",
       "owner": "john@foo.com",
+      "rating": 4,
+      "reviewCount": 1172,
       "image": "/images/avocado_toast.jpg",
       "description": "A creamy mashed avocado spread on toasted bread, topped with a flavorful mix of seasonings. It's a simple yet satisfying dish that's perfect for breakfast or a quick snack.",
       "instructions": "Toast your bread of choice until it's golden brown and crisp. You may toast until you achieve your desired level of crisp. \nCut a ripe avocado in half and remove the pit. Scoop the avocado flesh into a bowl and mash it with a fork until smooth or slightly chunky, depending on your preference. Add a pinch of salt and a dash of black pepper to the mashed avocado, stirring to combine. \nSpread the mashed avocado evenly over the toasted bread.",
@@ -159,6 +165,8 @@
     {
       "title": "Hummus and Veggie Wraps",
       "owner": "john@foo.com",
+      "rating": 3,
+      "reviewCount": 279,
       "image": "/images/hummus_wraps.jpg",
       "description": "A tasty combination of creamy hummus and an assortment of fresh vegetables, all rolled into soft wraps. Ideal for a quick lunch or snack, they're easy to customize with your favorite veggies and seasonings.",
       "instructions": "Warm the whole grain wraps in a microwave to make them easier to roll. \nUse a spatula to spread a layer of hummus evenly across the entire surface of each wrap. \nThinly slice cucumbers and bell peppers. Shred carrots using a box grater or a food processor. Wash and pat dry lettuce leaves. \nStart by laying the lettuce leaves flat on top of the hummus layer. Add the sliced cucumbers, bell peppers, and shredded carrots evenly over the lettuce. \nStart at one end and tightly roll the wrap, tucking in the sides as you go to ensure the filling stays in place. Roll until you reach the end, then gently press to seal. \nArrange the wraps on a serving platter or individual plates.",
@@ -204,6 +212,8 @@
     {
       "title": "Chickpea Salad",
       "owner": "tom@foo.com",
+      "rating": 1,
+      "reviewCount": 183,
       "image": "/images/chickpea_salad.jpg",
       "description": "Hearty chickpeas with a medley of fresh vegetables and a zesty dressing. It's a versatile dish that's great as a light meal or a side, with a satisfying mix of textures and flavors.",
       "instructions": "Dice the cucumber, tomatoes, and red onion into small, bite-sized pieces. \nFinely chop a handful of fresh parsley leaves. \nIn a large mixing bowl, combine the drained chickpeas, diced cucumber, diced tomatoes, diced red onion, and chopped parsley. \nIn a separate small bowl, whisk together the lemon juice, olive oil, salt, and pepper to make the dressing. \nPour the dressing over the chickpea and vegetable mixture. Stir gently to coat the ingredients evenly with the dressing. \nCover the salad and refrigerate for at least 30 minutes to allow the flavors to meld. \nStir quickly together before serving. ",
@@ -244,6 +254,8 @@
     {
       "title": "Fruit Salad",
       "owner": "tom@foo.com",
+      "rating": 3,
+      "reviewCount": 427,
       "image": "/images/fruit_salad.jpg",
       "description": "A variety of fresh, juicy fruits for a colorful and refreshing dish. Light and sweet, it's perfect for a healthy dessert or a vibrant addition to any meal.",
       "instructions": "Thoroughly wash all fruits under cold running water to remove any dirt or pesticides.\nIn a large mixing bowl, combine all the chopped fruits. \nTo enhance flavor, prepare a simple dressing by whisking together honey and fresh lime or lemon juice. \nPour the dressing over the mixed fruit and toss gently to coat evenly. Cover the bowl with plastic wrap or a lid and refrigerate for at least 30 minutes. \nServe the fruit salad in individual bowls or on a large platter.",
@@ -284,6 +296,8 @@
     {
       "title": "Peanut Butter Banana Smoothie",
       "owner": "admin@foo.com",
+      "rating": 5,
+      "reviewCount": 598,
       "image": "/images/peanut_butter_smoothie.jpg",
       "description": "A creamy and satisfying smoothie made with peanut butter, ripe bananas, and a hint of honey, perfect for breakfast or a healthy snack.",
       "instructions": "Peel and cut ripe bananas into chunks. Add bananas, peanut butter, milk, and honey to a blender.\nBlend on high speed until smooth and creamy.\nIf the smoothie is too thick, add more milk to reach your desired consistency.\nPour into glasses and serve immediately, optionally topped with a drizzle of honey or a sprinkle of crushed peanuts.",
@@ -319,6 +333,8 @@
     {
       "title": "Caprese Salad",
       "owner": "admin@foo.com",
+      "rating": 5,
+      "reviewCount": 374,
       "image": "/images/caprese_salad.jpg",
       "description": "A classic Italian salad featuring fresh tomatoes, mozzarella cheese, and basil, drizzled with balsamic glaze and olive oil.",
       "instructions": "Slice fresh tomatoes and mozzarella cheese into even rounds. Arrange the tomato and mozzarella slices on a serving plate, alternating them in a pattern.\nTear fresh basil leaves and sprinkle them over the salad.\nDrizzle with extra virgin olive oil and balsamic glaze.\nAdd salt and freshly ground black pepper to taste.",
@@ -354,6 +370,8 @@
     {
       "title": "Vegan Tacos",
       "owner": "john@foo.com",
+      "rating": 3,
+      "reviewCount": 309,
       "image": "/images/vegan_tacos.jpg",
       "description": "Flavorful vegan tacos made with a plant-based filling, fresh vegetables, and a zesty sauce, served in soft or hard taco shells.",
       "instructions": "Heat oil in a skillet over medium-high heat.\nAdd plant-based ground meat or crumbled tofu, along with taco seasoning, and sauté until browned and heated through.\nWarm taco shells in the oven for a few minutes to make them crisp.\nChop fresh vegetables such as lettuce, tomatoes, and onions. \nFill the taco shells with the cooked filling, then add your preferred toppings.\nFinish with a dollop of salsa or vegan sour cream, if desired.",

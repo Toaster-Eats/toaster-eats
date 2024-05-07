@@ -12,7 +12,7 @@ const ViewRecipe = () => {
   const { _id } = useParams(); // Get recipe ID from URL
 
   const { ready, recipe } = useTracker(() => {
-    const subscription = Meteor.subscribe(Recipes.userPublicationName);
+    const subscription = Meteor.subscribe(Recipes.PublicationName);
     const isReady = subscription.ready();
     const recipeItem = Recipes.collection.findOne(_id);
     return {
@@ -20,10 +20,6 @@ const ViewRecipe = () => {
       recipe: recipeItem,
     };
   }, [_id]);
-
-  if (!ready) {
-    return <LoadingSpinner />;
-  }
 
   const handleDelete = () => {
     swal({
@@ -39,13 +35,21 @@ const ViewRecipe = () => {
             swal('Error', error.message, 'error');
           } else {
             swal('Success', 'Recipe deleted successfully', 'success').then(() => {
-              navigate('/recipes');
+              navigate('/recipes'); // Navigate to the recipe list after deletion
             });
           }
         });
       }
     });
   };
+
+  if (!ready) {
+    return <LoadingSpinner />;
+  }
+
+  if (!recipe) {
+    return <p>Recipe not found.</p>; // Case where recipe is not found
+  }
 
   return (
     <Container fluid>

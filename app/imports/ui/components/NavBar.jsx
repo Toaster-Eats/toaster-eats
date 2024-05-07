@@ -21,6 +21,7 @@ const NavBar = () => {
           <Nav className="w-100 justify-content-between">
             <Nav className="justify-content-start">
               <Nav.Link id="about-us-nav" as={NavLink} to="/aboutus" key="about-us">About Us</Nav.Link>
+              <Nav.Link id="top-picks-nav" as={NavLink} to="/top-picks" key="top-picks">Our Picks</Nav.Link>
               {currentUser && (
                 <>
                   <NavDropdown id="recipes-dropdown" title="Recipes">

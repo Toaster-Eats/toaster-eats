@@ -28,6 +28,7 @@ import AboutUs from '../pages/AboutUs';
 import Vendor from '../pages/Vendor';
 import ListShops from '../pages/ListShops';
 import ViewRecipe from '../pages/ViewRecipe';
+import TopPicks from '../pages/TopPicks';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signout" element={<SignOut />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/top-picks" element={<TopPicks />} />
           <Route path="/vendor" element={<Vendor />} />
           <Route path="/list" element={<ProtectedRoute><ListStuff /></ProtectedRoute>} />
           <Route path="/shops" element={<ProtectedRoute><ListShops /></ProtectedRoute>} />

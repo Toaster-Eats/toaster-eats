@@ -9,6 +9,14 @@ class RecipesCollection {
     this.schema = new SimpleSchema({
       title: String,
       owner: String,
+      rating: {
+        type: Number,
+        optional: true, // Not required when adding a new recipe
+      },
+      reviewCount: {
+        type: Number,
+        optional: true, // Not needed when adding a new recipe
+      },
       image: String,
       description: String,
       instructions: String,
@@ -24,8 +32,9 @@ class RecipesCollection {
       'estimations.totalTime': String,
     }, { tracker: Tracker });
     this.collection.attachSchema(this.schema);
+    this.PublicationName = `${this.name}.publication`;
     this.userPublicationName = `${this.name}.publication.user`;
-    this.adminPublicationName = `${this.name}.publication.admin`;
+    // this.adminPublicationName = `${this.name}.publication.admin`;
   }
 }
 

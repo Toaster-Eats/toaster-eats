@@ -9,8 +9,14 @@ class RecipesCollection {
     this.schema = new SimpleSchema({
       title: String,
       owner: String,
-      rating: Number,
-      reviewCount: Number,
+      rating: {
+        type: Number,
+        optional: true, // Not required when adding a new recipe
+      },
+      reviewCount: {
+        type: Number,
+        optional: true, // Not needed when adding a new recipe
+      },
       image: String,
       description: String,
       instructions: String,

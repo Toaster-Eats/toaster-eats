@@ -25,7 +25,7 @@ const BottomMsg = ({ currentUser }) => {
 
   return (
     <div>
-      <h3>{welcomemsg}</h3><br />
+      <h3>{welcomemsg}</h3>
 
     </div>
   );

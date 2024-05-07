@@ -21,10 +21,6 @@ const ViewRecipe = () => {
     };
   }, [_id]);
 
-  if (!ready) {
-    return <LoadingSpinner />;
-  }
-
   const handleDelete = () => {
     swal({
       title: 'Are you sure?',
@@ -39,13 +35,21 @@ const ViewRecipe = () => {
             swal('Error', error.message, 'error');
           } else {
             swal('Success', 'Recipe deleted successfully', 'success').then(() => {
-              navigate('/recipes');
+              navigate('/recipes'); // Navigate to the recipe list after deletion
             });
           }
         });
       }
     });
   };
+
+  if (!ready) {
+    return <LoadingSpinner />;
+  }
+
+  if (!recipe) {
+    return <p>Recipe not found.</p>; // Case where recipe is not found
+  }
 
   return (
     <Container fluid>

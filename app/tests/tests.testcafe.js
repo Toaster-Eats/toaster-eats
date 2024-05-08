@@ -3,6 +3,7 @@ import { shopPage } from './shops.page';
 import { ingredientsPage } from './ingredients.page';
 import { recipesPage } from './recipes.page';
 import { addRecipesPage } from './addrecipes.page';
+import { addIngredientsPage } from './addingredients.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
@@ -53,4 +54,11 @@ test('Test: Add Recipes Page is Displayed', async (testController) => {
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.gotoAddRecipesPage(testController);
   await addRecipesPage.isDisplayed(testController);
+});
+
+test('Test: Add Ingredients Page is Displayed', async (testController) => {
+  await navBar.gotoSignInPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.gotoAddIngredientsPage(testController);
+  await addIngredientsPage.isDisplayed(testController);
 });

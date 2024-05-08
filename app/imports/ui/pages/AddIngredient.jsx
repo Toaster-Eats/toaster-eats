@@ -41,7 +41,7 @@ const AddIngredient = () => {
   let fRef = null; // Form reference
 
   return (
-    <Container className="py-0" fluid>
+    <Container id="addingredients-page" className="py-0" fluid>
       <Row className="align-middle text-center header-background">
         <Col>
           <Image src="/images/header_banner.png" height={270} />

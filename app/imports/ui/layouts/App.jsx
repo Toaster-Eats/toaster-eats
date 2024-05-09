@@ -57,7 +57,7 @@ const App = () => {
           <Route path="/recipe/:_id" element={<ViewRecipe />} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
-          <Route path="/addshop" element={<AddShop />} />
+          <Route path="/addshop" element={<VendorProtectedRoute ready={ready}><AddShop /></VendorProtectedRoute>} />
           <Route path="/recipes" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
           <Route path="/ingredients" element={<ProtectedRoute><ListIngredients /></ProtectedRoute>} />
           <Route path="/add-recipe" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />

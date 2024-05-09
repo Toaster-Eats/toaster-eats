@@ -34,7 +34,7 @@ const NavBar = () => {
                     <NavDropdown.Item id="add-ingredients-nav" as={NavLink} to="/add-ingredient">Add an Ingredient</NavDropdown.Item>
                   </NavDropdown>
 
-                  <Nav.Link id="shops-nav" as={NavLink} to="/shops">Stores Near Campus</Nav.Link>
+                  <Nav.Link id="shops-nav" as={NavLink} to="/shops">Shops Near Campus</Nav.Link>
                   {/* eslint-disable-next-line no-undef */}
                   {Roles.userIsInRole(Meteor.userId(), 'vendor') ? (
                     <Nav.Link id="add-store-vendor-nav" as={NavLink} to="/addshop">Your Shop Profile</Nav.Link>

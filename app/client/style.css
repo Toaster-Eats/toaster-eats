@@ -71,3 +71,13 @@ nav,
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
+.rounded-background {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.white-background {
+  background-color: rgba(255, 255, 255, 1);
+}
+

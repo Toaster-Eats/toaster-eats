@@ -36,69 +36,86 @@ const SignIn = () => {
   }
 
   return (
-    <Container id="signin-page" fluid>
-      <Row className="align-middle text-center header-background">
-        <Col className="justify-content-center">
-          <Image src="/images/header_banner.png" height="270px" />
-        </Col>
-      </Row>
-      <Row className="justify-content-center pb-5">
-        <Col xs={5}>
-          <Col className="text-center">
-            <br />
-            <br />
-            <br />
-            <h3 className="fw-semibold">Sign In</h3>
+    <div style={{ position: 'relative' }}>
+      {/* Background Image */}
+      <Image
+        src="/images/signin_background.jpg"
+        fluid
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          opacity: 1, // Adjust opacity as needed
+          zIndex: -1,
+        }}
+      />
+      <Container id="signin-page" fluid>
+        <Row className="align-middle text-center header-background">
+          <Col className="justify-content-center">
+            <Image src="/images/header_banner.png" height="270px" />
           </Col>
-          <AutoForm schema={bridge} onSubmit={submit}>
-            <Card>
-              <Card.Body>
-                <TextField id="signin-form-email" name="email" placeholder="Enter your e-mail address" />
-                <TextField id="signin-form-password" name="password" type="password" placeholder="Enter your password" />
-                <ErrorsField />
-                <SubmitField id="signin-form-submit" className="text-center" />
-              </Card.Body>
-            </Card>
-          </AutoForm>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger" className="mt-3 text-center">
-              <Alert.Heading>Login failed</Alert.Heading>
-              {error}
+        </Row>
+        <Row className="justify-content-center pb-5">
+          <Col xs={5}>
+            <Col className="text-center">
+              <br />
+              <br />
+              <br />
+              <h3 className="fw-semibold text-black">Sign In</h3>
+            </Col>
+            <AutoForm schema={bridge} onSubmit={submit}>
+              <Card>
+                <Card.Body>
+                  <TextField id="signin-form-email" name="email" placeholder="Enter your e-mail address" />
+                  <TextField id="signin-form-password" name="password" type="password" placeholder="Enter your password" />
+                  <ErrorsField />
+                  <SubmitField id="signin-form-submit" className="text-center" />
+                </Card.Body>
+              </Card>
+            </AutoForm>
+            {error === '' ? (
+              ''
+            ) : (
+              <Alert variant="danger" className="mt-3 text-center">
+                <Alert.Heading>Login failed</Alert.Heading>
+                {error}
+              </Alert>
+            )}
+            <br />
+            <br />
+            <br />
+            <Alert
+              style={{
+                fontFamily: 'Titillium Web, sans-serif',
+                fontWeight: 400,
+                fontStyle: 'normal',
+              }}
+              variant="light"
+            >
+              <div className="text-center">
+                Don&#39;t have an account? <br />
+                <Button
+                  className="mt-2"
+                  as={Link}
+                  to="/signup"
+                  variant="primary"
+                  style={{
+                    fontFamily: 'Titillium Web, sans-serif',
+                    fontWeight: 400,
+                    fontStyle: 'normal',
+                  }}
+                >
+                  Create a new account
+                </Button>
+              </div>
             </Alert>
-          )}
-          <br />
-          <br />
-          <br />
-          <Alert
-            style={{
-              fontFamily: 'Titillium Web, sans-serif',
-              fontWeight: 400,
-              fontStyle: 'normal',
-            }}
-            variant="light"
-          >
-            <div className="text-center">
-              Don&#39;t have an account? <br />
-              <Button
-                className="mt-2"
-                as={Link}
-                to="/signup"
-                variant="primary"
-                style={{
-                  fontFamily: 'Titillium Web, sans-serif',
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                }}
-              >
-                Create a new account
-              </Button>
-            </div>
-          </Alert>
-        </Col>
-      </Row>
-    </Container>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

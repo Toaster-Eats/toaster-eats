@@ -5,6 +5,7 @@ import { Recipes } from '../../api/recipe/Recipe';
 import { Ingredients } from '../../api/ingredient/Ingredient';
 import { Shops } from '../../api/shop/Shops';
 import { Favorites } from '../../api/favorite/Favorite';
+import { ShopsIngredient } from '../../api/shop/ShopsIngredient';
 
 // Adjusted publication for Favorites: restrict to the logged-in user's favorites
 Meteor.publish(Favorites.userPublicationName, function () {
@@ -30,6 +31,14 @@ Meteor.publish(Shops.userPublicationName, function () {
 });
 
 // Existing publication for Recipes: allows viewing recipes if logged in
+
+/** Define a publication to publish this collection. */
+Meteor.publish(ShopsIngredient.userPublicationName, () => ShopsIngredient.collection.find());
+
+/* Keep below code for future permission lock for ability to edit Recipes based on owner
+// User-level publication.
+// If logged in, then publish documents owned by this user. Otherwise, publish nothing.
+*/
 Meteor.publish(Recipes.userPublicationName, function () {
   if (this.userId) {
     return Recipes.collection.find(); // No additional filtering required

@@ -9,11 +9,14 @@ const Shop = ({ shop }) => (
     <Card.Header>
       <Image src={shop.image} width={75} />
       <Card.Title>{shop.name} </Card.Title>
-      <Card.Subtitle>{shop.address}</Card.Subtitle>
+      <Card.Subtitle>{shop.location}</Card.Subtitle>
     </Card.Header>
     <Card.Body>
       <Card.Text>{shop.description}</Card.Text>
-      <Link to={`/edit/${shop._id}`}>Edit</Link>
+      {/* eslint-disable-next-line no-undef */}
+      {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
+        <Link to={`/edit/${shop._id}`}>Edit</Link>
+      ) : ''}
     </Card.Body>
   </Card>
 );
@@ -28,6 +31,7 @@ Shop.propTypes = {
     description: String,
     location: String,
     _id: PropTypes.string,
+    owner: PropTypes.string,
   }).isRequired,
 };
 

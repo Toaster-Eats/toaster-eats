@@ -29,6 +29,7 @@ import Vendor from '../pages/Vendor';
 import ListShops from '../pages/ListShops';
 import ViewRecipe from '../pages/ViewRecipe';
 import TopPicks from '../pages/TopPicks';
+import AddShop from '../pages/AddShop';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/recipe/:_id" element={<ViewRecipe />} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><ListStuffAdmin /></AdminProtectedRoute>} />
+          <Route path="/addshop" element={<AddShop />} />
           <Route path="/recipes" element={<ProtectedRoute><ListRecipes /></ProtectedRoute>} />
           <Route path="/ingredients" element={<ProtectedRoute><ListIngredients /></ProtectedRoute>} />
           <Route path="/add-recipe" element={<ProtectedRoute><AddRecipe /></ProtectedRoute>} />

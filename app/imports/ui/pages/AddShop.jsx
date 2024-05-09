@@ -10,11 +10,10 @@ import { Shops } from '../../api/shop/Shops';
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   name: String,
-  address: String,
   image: String,
   hours: String,
-  description: String,
   location: String,
+  description: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -24,10 +23,11 @@ const AddShop = () => {
 
   // On submit, insert the data.
   const submit = (data, formRef) => {
-    const { firstName, lastName, address, image, description } = data;
+    const { name, image, hours, location, description } = data;
+    // eslint-disable-next-line no-unused-vars
     const owner = Meteor.user().username;
-    Contacts.collection.insert(
-      { firstName, lastName, address, image, description, owner },
+    Shops.collection.insert(
+      { name, image, hours, location, description },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -45,17 +45,17 @@ const AddShop = () => {
     <Container className="py-3" id="addshops-page">
       <Row className="justify-content-center">
         <Col xs={10}>
-          <Col className="text-center"><h2>Add Contact</h2></Col>
+          <Col className="text-center"><h2>Add Your Shop Profile</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
                 <Row>
-                  <Col><TextField name="firstName" /></Col>
-                  <Col><TextField name="lastName" /></Col>
+                  <Col><TextField name="name" /></Col>
+                  <Col><TextField name="image" /></Col>
                 </Row>
                 <Row>
-                  <Col><TextField name="address" /></Col>
-                  <Col><TextField name="image" /></Col>
+                  <Col><TextField name="hours" /></Col>
+                  <Col><TextField name="location" /></Col>
                 </Row>
                 <LongTextField name="description" />
                 <SubmitField />
@@ -69,4 +69,4 @@ const AddShop = () => {
   );
 };
 
-export default AddContact;
+export default AddShop;

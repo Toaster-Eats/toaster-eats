@@ -429,14 +429,14 @@
   "defaultShops": [
     {
       "name": "Nijiya Supermarket",
-      "image": "images/sugar.jpg",
+      "image": "images/nijiya.png",
       "hours": "9am to 9pm, Everyday",
       "description": "Delicious and authentic Japanese Groceries",
       "location": "King and University, 1F Pucks Ally"
     },
     {
       "name": "Safeway",
-      "image": "images/sugar.jpg",
+      "image": "images/SafewayKapahulu.jpeg",
       "hours": "24 hours, Everyday",
       "description": "We got everything!",
       "location": "888 Kapahulu Ave"

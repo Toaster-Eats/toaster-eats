@@ -40,68 +40,85 @@ const SignUp = ({ location }) => {
     return <Navigate to={from} />;
   }
   return (
-    <Container id="signup-page" fluid>
-      <Row className="align-middle text-center header-background">
-        <Col className="justify-content-center">
-          <Image src="/images/header_banner.png" height="270px" />
-        </Col>
-      </Row>
-      <Row className="justify-content-center pb-5">
-        <Col xs={5}>
-          <Col className="text-center">
-            <br />
-            <br />
-            <br />
-            <h3 className="fw-semibold">Create a New Account</h3>
+    <div style={{ position: 'relative' }}>
+      {/* Background Image */}
+      <Image
+        src="/images/signup_background.jpg"
+        fluid
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          opacity: 1, // Adjust opacity as needed
+          zIndex: -1,
+        }}
+      />
+      <Container id="signup-page" fluid>
+        <Row className="align-middle text-center header-background">
+          <Col className="justify-content-center">
+            <Image src="/images/header_banner.png" height="270px" />
           </Col>
-          <AutoForm schema={bridge} onSubmit={data => submit(data)}>
-            <Card>
-              <Card.Body>
-                <TextField name="email" placeholder="Enter an e-mail address" />
-                <TextField name="password" placeholder="Enter a password" type="password" />
-                <ErrorsField />
-                <SubmitField className="text-center" />
-              </Card.Body>
-            </Card>
-          </AutoForm>
-          <br />
-          <br />
-          <br />
-          <Alert
-            style={{
-              fontFamily: 'Titillium Web, sans-serif',
-              fontWeight: 400,
-              fontStyle: 'normal',
-            }}
-            variant="light"
-          >
-            <div className="text-center">
-              Already have an account? <br />
-              <Button
-                className="mt-2"
-                as={Link}
-                to="/signin"
-                variant="primary"
-                style={{
-                  fontFamily: 'Titillium Web, sans-serif',
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                }}
-              >Login Here
-              </Button>
-            </div>
-          </Alert>
-          {error === '' ? (
-            ''
-          ) : (
-            <Alert variant="danger">
-              <Alert.Heading>Registration was not successful</Alert.Heading>
-              {error}
+        </Row>
+        <Row className="justify-content-center pb-5">
+          <Col xs={5}>
+            <Col className="text-center">
+              <br />
+              <br />
+              <br />
+              <h3 className="fw-semibold text-black">Create a New Account</h3>
+            </Col>
+            <AutoForm schema={bridge} onSubmit={data => submit(data)}>
+              <Card>
+                <Card.Body>
+                  <TextField name="email" placeholder="Enter an e-mail address" />
+                  <TextField name="password" placeholder="Enter a password" type="password" />
+                  <ErrorsField />
+                  <SubmitField className="text-center" />
+                </Card.Body>
+              </Card>
+            </AutoForm>
+            <br />
+            <br />
+            <br />
+            <Alert
+              style={{
+                fontFamily: 'Titillium Web, sans-serif',
+                fontWeight: 400,
+                fontStyle: 'normal',
+              }}
+              variant="light"
+            >
+              <div className="text-center">
+                Already have an account? <br />
+                <Button
+                  className="mt-2"
+                  as={Link}
+                  to="/signin"
+                  variant="primary"
+                  style={{
+                    fontFamily: 'Titillium Web, sans-serif',
+                    fontWeight: 400,
+                    fontStyle: 'normal',
+                  }}
+                >Login Here
+                </Button>
+              </div>
             </Alert>
-          )}
-        </Col>
-      </Row>
-    </Container>
+            {error === '' ? (
+              ''
+            ) : (
+              <Alert variant="danger">
+                <Alert.Heading>Registration was not successful</Alert.Heading>
+                {error}
+              </Alert>
+            )}
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
